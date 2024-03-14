@@ -1,23 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 body {
-    background: rgb(19, 6, 0);
+    background: rgb(0, 0, 0);
     margin: 0;
     padding: 0 4em 0 4em;
+    height: 1500px;
 }
 
-.xCenter{
+.xCenter {
     margin-left: auto;
     margin-right: auto;
+}
+
+#headshot {
+    height: 40em;
+    width: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
 }
 
 #navbar, #infoCard {
     display: flex;
     align-items: center;
-    background: white;
+    background: rgb(0, 0, 0);
     max-width: 1500px;
     min-width: 700px;
     margin: 1em auto 1em auto;
     border-radius: 1em;
     padding: 10px;
+    box-shadow: 0 0 30px 0px rgb(21, 21, 21);
 }
 
 #infoCard {
@@ -26,9 +38,11 @@ body {
 }
 
 .navbarButtonLeft, .navbarButtonRight {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    background: none;
+    color: rgb(207, 207, 207);
+    font-family: "Source Code Pro", monospace;
     font-size: x-large;
+    font-weight: 400;
     border: 0;
     padding: 0;
     margin: 0 0 0 1em;
