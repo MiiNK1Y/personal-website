@@ -13,11 +13,12 @@ body {
 }
 
 #headshot {
-    height: 40em;
+    height: 25em;
     width: auto;
     border-radius: 50%;
     display: flex;
-    align-items: center;
+    float: right;
+    box-shadow: 0 0 30px 0 white;
 }
 
 #navbar, #infoCard {
