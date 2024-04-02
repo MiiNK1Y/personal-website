@@ -2,11 +2,16 @@
 
 html, body {
     background: #0a0917;
-    margin: 0;
+    margin: 0; /* to avoid the whitespace that appears if this isn't here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* "vh" = viewport height. 100vh = 100% of the usable client display */
+    width: 100%;
 }
 
-body {
-    max-width: 1200px;
+p {
+    margin-top: 0;
 }
 
 .xCenter {
@@ -14,50 +19,56 @@ body {
     margin-right: auto;
 }
 
-/* 
- * make a "content" -box for everything, that way darkmode wont change color on the background and make the body look small and funky. 
- * for that to work, the body and html tags need to be the same with / height, then the "content" -box will overlay that 100%.
-*/
+#application {
+    max-width: 1000px;
+    height: auto;
+    padding: 0 20px 0 20px;
+}
+
+#headshot {
+    height: 300px;
+    width: auto;
+    border-radius: 50%;
+    display: flex;
+    padding: 7px;
+    border: 3px solid #f1fa8c;
+}
 
 #navbar {
+    max-width: 600px;
     display: flex;
-    width: auto;
-    padding: 10px;
-    margin: 0 3em 0 3em;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .navbarButtonLeft, .navbarButtonRight {
     background: none;
     color: rgb(207, 207, 207);
     font-family: "Source Code Pro", monospace;
-    font-size: 22px;
-    border: 0;
-    padding: 0;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 25px;
+    padding: 10px;
     vertical-align: middle;
+}
+
+.navbarButtonLeft {
+    margin-right: 25px;
+}
+
+.navbarButtonLeft:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
 }
 
 .navbarButtonRight {
     margin-left: auto;
 }
 
-.navbarButtonLeft {
-    margin-right: 2em;
-}
-
-#headshot {
-    margin-top: 5em;
-    margin-bottom: 5em;
-    height: 25em;
-    width: auto;
-    border-radius: 50%;
-    display: flex;
-}
-
 #homeTextbox {
-    margin: 0 3em 0 3em;
-    width: auto;
-    height: auto;
     font-family: "Source Code Pro", monospace;
-    color: white;
-    font-size: large;
+    color: rgb(207, 207, 207);
+    font-size: 18px;
+    margin: 0 5px 0 5px;
 }
