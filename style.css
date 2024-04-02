@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 html, body {
-    background: rgb(0, 0, 0);
+    background: #0a0917;
     margin: 0;
-    padding: 0 2em 0 2em;
-    height: 1500px;
-    max-width: 1500px;
-    min-width: 700px;
+}
+
+body {
+    max-width: 1200px;
 }
 
 .xCenter {
@@ -14,36 +14,50 @@ html, body {
     margin-right: auto;
 }
 
-#headshot {
-    margin-top: 10em;
-    height: 25em;
-    width: auto;
-    border-radius: 50%;
-    display: flex;
-}
+/* 
+ * make a "content" -box for everything, that way darkmode wont change color on the background and make the body look small and funky. 
+ * for that to work, the body and html tags need to be the same with / height, then the "content" -box will overlay that 100%.
+*/
 
 #navbar {
     display: flex;
-    background: rgb(0, 0, 0);
     width: auto;
-    margin: 1em 0 1em 0;
-    border-radius: 1em;
     padding: 10px;
-    box-shadow: 0 0 30px 0px rgb(21, 21, 21);
+    margin: 0 3em 0 3em;
 }
 
 .navbarButtonLeft, .navbarButtonRight {
     background: none;
     color: rgb(207, 207, 207);
     font-family: "Source Code Pro", monospace;
-    font-size: x-large;
-    font-weight: 400;
+    font-size: 22px;
     border: 0;
     padding: 0;
-    margin: 0 0 0 1em;
     vertical-align: middle;
 }
 
 .navbarButtonRight {
-    margin: 0 1em 0 auto;
+    margin-left: auto;
+}
+
+.navbarButtonLeft {
+    margin-right: 2em;
+}
+
+#headshot {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    height: 25em;
+    width: auto;
+    border-radius: 50%;
+    display: flex;
+}
+
+#homeTextbox {
+    margin: 0 3em 0 3em;
+    width: auto;
+    height: auto;
+    font-family: "Source Code Pro", monospace;
+    color: white;
+    font-size: large;
 }
