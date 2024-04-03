@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* The foundation. */
 html, body {
     background: #0a0917;
     margin: 0; /* to avoid the whitespace that appears if this isn't here */
@@ -10,22 +11,26 @@ html, body {
     width: 100%;
 }
 
+/* Paragraph-tags with margin on the top makes for an uneven layout. */
 p {
     margin-top: 0;
 }
 
-.xCenter {
+/* The go-to for centering content on the x-plane. */
+.x-center {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* The active working-area for the website. */
 #application {
     max-width: 1000px;
     height: auto;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 0 20px; /* Padding left and right for when the viewing window becomes slim, makes the text legible. */
 }
 
-#headshot {
+/* My photo. */
+#portrait {
     height: 300px;
     width: auto;
     border-radius: 50%;
@@ -34,39 +39,78 @@ p {
     border: 3px solid #f1fa8c;
 }
 
+/* The navigation-menu and its components. */
 #navbar {
     max-width: 600px;
+    height: 50px;
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding: 10px;
 }
 
-.navbarButtonLeft, .navbarButtonRight {
+#navbar-home-button, #navbar-projects-button, #navbar-github-button, #navbar-contact-button {
     background: none;
     color: rgb(207, 207, 207);
     font-family: "Source Code Pro", monospace;
     font-size: 20px;
+    margin-right: 25px;
     border: 3px solid;
     border-radius: 25px;
     padding: 10px;
     vertical-align: middle;
+    transition: border 5ms, box-shadow 5ms;
 }
 
-.navbarButtonLeft {
-    margin-right: 25px;
+#navbar-home-button {
+    border-color: #ffb86c;
 }
 
-.navbarButtonLeft:hover {
-    cursor: pointer;
-    color: black;
-    background-color: white;
+#navbar-home-button:hover {
+    background-color: #ffb86c;
+    border: 3px solid #0a0917;
+    box-shadow: 0 0 0 5px #ffb86c;
 }
 
-.navbarButtonRight {
+#navbar-projects-button {
+    border-color: #ff79c6;
+}
+
+#navbar-projects-button:hover {
+    background-color: #ff79c6;     
+    border: 3px solid #0a0917;    
+    box-shadow: 0 0 0 5px #ff79c6;
+}
+
+#navbar-github-button {
+    border-color: #bd93f9;
+}
+
+#navbar-github-button:hover {
+    background-color: #bd93f9;     
+    border: 3px solid #0a0917;    
+    box-shadow: 0 0 0 5px #bd93f9;
+}
+
+#navbar-contact-button {
+    border-color: #50fa7b;
+    margin-right: 0;
     margin-left: auto;
 }
 
-#homeTextbox {
+#navbar-contact-button:hover {
+    background-color: #50fa7b;     
+    border: 3px solid #0a0917;    
+    box-shadow: 0 0 0 5px #50fa7b;
+}
+
+#navbar-home-button:hover, #navbar-projects-button:hover, #navbar-github-button:hover, #navbar-contact-button:hover {
+    cursor: pointer;
+    color: #0a0917;
+}
+
+/* The webpage introduction. */
+#home-text-box {
     font-family: "Source Code Pro", monospace;
     color: rgb(207, 207, 207);
     font-size: 18px;
