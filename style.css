@@ -24,6 +24,7 @@ p {
 
 /* The active working-area for the website. */
 #application {
+    width: 1000px;
     max-width: 1000px;
     height: auto;
     padding: 0 20px 0 20px; /* Padding left and right for when the viewing window becomes slim, makes the text legible. */
