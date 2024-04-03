@@ -46,7 +46,7 @@ p {
     height: 50px;
     display: flex;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     padding: 10px;
 }
 
@@ -67,14 +67,23 @@ p {
     border-color: #ffb86c;
 }
 
+#navbar-projects-button {
+    border-color: #ff79c6;
+}
+
+#navbar-github-button {
+    border-color: #bd93f9;
+}
+
+#navbar-contact-button {
+    border-color: #50fa7b;
+    margin-right: 0;
+}
+
 #navbar-home-button:hover {
     background-color: #ffb86c;
     border: 3px solid #0a0917;
     box-shadow: 0 0 0 5px #ffb86c;
-}
-
-#navbar-projects-button {
-    border-color: #ff79c6;
 }
 
 #navbar-projects-button:hover {
@@ -83,20 +92,10 @@ p {
     box-shadow: 0 0 0 5px #ff79c6;
 }
 
-#navbar-github-button {
-    border-color: #bd93f9;
-}
-
 #navbar-github-button:hover {
     background-color: #bd93f9;     
     border: 3px solid #0a0917;    
     box-shadow: 0 0 0 5px #bd93f9;
-}
-
-#navbar-contact-button {
-    border-color: #50fa7b;
-    margin-right: 0;
-    margin-left: auto;
 }
 
 #navbar-contact-button:hover {
@@ -116,4 +115,39 @@ p {
     color: rgb(207, 207, 207);
     font-size: 18px;
     margin: 0 5px 0 5px;
+    pointer-events: none;
+}
+
+.per-site-header {
+    color: rgb(207, 207, 207);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 50px;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+/* Projects-page-spesifics starts here. */
+/* Container isolating each project. */
+.projects-iframe-container {
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    margin-top: 50px;
+    pointer-events: none;
+}
+
+.projects-iframe-title {
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    margin: 5px 0 5px 0;
+    color: rgb(207, 207, 207);
+}
+
+.projects-project-iframe {
+    width: 550px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid pink;
+    border-radius: 20px;
 }
