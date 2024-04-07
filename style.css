@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+:root {
+    --darkmode-main: #0a0917;
+    --darkmode-yellow: ;
+    --darkmode-orange: ;
+    --darkmode-pink: ;
+    --darkmode-purple: ;
+    --darkmode-green: ;
+}
+
 /* The foundation. */
 html, body {
-    background: #0a0917;
+    background: var(--darkmode-main);
     margin: 0; /* to avoid the whitespace that appears if this isn't here */
     display: flex;
     align-items: center;
