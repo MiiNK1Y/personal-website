@@ -1,55 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-:root {
-    --darkmode-main: #0a0917;
-    --darkmode-yellow: ;
-    --darkmode-orange: ;
-    --darkmode-pink: ;
-    --darkmode-purple: ;
-    --darkmode-green: ;
+@font-face {
+    font-family: 'Nunito';
+    src: url(fonts/Nunito/Nunito-VariableFont_wght.ttf) format('truetype');
 }
 
-/* The foundation. */
+:root {
+    --darkmode-background: #0a0917;
+    --darkmode-text-color: rgb(207, 207, 207);
+    --darkmode-text-invert-color: black;
+
+    --darkmode-yellow: #f1fa8c;
+    --darkmode-orange: #ffb86c;
+    --darkmode-pink: #ff79c6;
+    --darkmode-purple: #bd93f9;
+    --darkmode-green: #50fa7b;
+}
+
 html, body {
-    background: var(--darkmode-main);
-    margin: 0; /* to avoid the whitespace that appears if this isn't here */
+    background: var(--darkmode-background);
+    margin: 0; 
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* "vh" = viewport height. 100vh = 100% of the usable client display */
+    height: 100vh; 
     width: 100%;
 }
 
-/* Paragraph-tags with margin on the top makes for an uneven layout. */
 p {
     margin-top: 0;
 }
 
-/* The go-to for centering content on the x-plane. */
 .x-center {
     margin-left: auto;
     margin-right: auto;
 }
 
-/* The active working-area for the website. */
 #application {
     width: 1000px;
     max-width: 1000px;
     height: auto;
-    padding: 0 20px 0 20px; /* Padding left and right for when the viewing window becomes slim, makes the text legible. */
+    padding: 0 20px 0 20px; 
 }
 
-/* My photo. */
 #portrait {
     height: 300px;
     width: auto;
     border-radius: 50%;
     display: flex;
     padding: 7px;
-    border: 3px solid #f1fa8c;
+    border: 3px solid var(--darkmode-yellow);
 }
 
-/* The navigation-menu and its components. */
 #navbar {
     max-width: 600px;
     height: 50px;
@@ -59,12 +61,15 @@ p {
     padding: 10px;
 }
 
-#navbar-home-button, #navbar-projects-button, #navbar-github-button, #navbar-contact-button {
+a.navbar-button-spacing {
+    margin-right: 25px;
+}
+
+.navbar-button {
     background: none;
-    color: rgb(207, 207, 207);
+    color: var(--darkmode-text-color);
     font-family: "Source Code Pro", monospace;
     font-size: 20px;
-    margin-right: 25px;
     border: 3px solid;
     border-radius: 25px;
     padding: 10px;
@@ -72,71 +77,69 @@ p {
     transition: border 5ms, box-shadow 5ms;
 }
 
+.navbar-button:hover {
+    cursor: pointer;
+    color: var(--darkmode-text-invert-color);
+}
+
 #navbar-home-button {
-    border-color: #ffb86c;
+    border-color: var(--darkmode-orange);
 }
 
 #navbar-projects-button {
-    border-color: #ff79c6;
+    border-color: var(--darkmode-pink);
 }
 
 #navbar-github-button {
-    border-color: #bd93f9;
+    border-color: var(--darkmode-purple);
 }
 
 #navbar-contact-button {
-    border-color: #50fa7b;
+    border-color: var(--darkmode-green);
     margin-right: 0;
 }
 
 #navbar-home-button:hover {
-    background-color: #ffb86c;
-    border: 3px solid #0a0917;
-    box-shadow: 0 0 0 5px #ffb86c;
+    background-color: var(--darkmode-orange);
+    border: 3px solid var(--darkmode-background);
+    box-shadow: 0 0 0 5px var(--darkmode-orange);
 }
 
 #navbar-projects-button:hover {
-    background-color: #ff79c6;     
-    border: 3px solid #0a0917;    
-    box-shadow: 0 0 0 5px #ff79c6;
+    background-color: var(--darkmode-pink);     
+    border: 3px solid var(--darkmode-background);
+    box-shadow: 0 0 0 5px var(--darkmode-pink);
 }
 
 #navbar-github-button:hover {
-    background-color: #bd93f9;     
-    border: 3px solid #0a0917;    
-    box-shadow: 0 0 0 5px #bd93f9;
+    background-color: var(--darkmode-purple);
+    border: 3px solid var(--darkmode-background);
+    box-shadow: 0 0 0 5px var(--darkmode-purple);
 }
 
 #navbar-contact-button:hover {
-    background-color: #50fa7b;     
-    border: 3px solid #0a0917;    
-    box-shadow: 0 0 0 5px #50fa7b;
+    background-color: var(--darkmode-green);
+    border: 3px solid var(--darkmode-background);
+    box-shadow: 0 0 0 5px var(--darkmode-green);
 }
 
-#navbar-home-button:hover, #navbar-projects-button:hover, #navbar-github-button:hover, #navbar-contact-button:hover {
-    cursor: pointer;
-    color: #0a0917;
-}
-
-/* The webpage introduction. */
 #home-text-box {
     font-family: "Source Code Pro", monospace;
-    color: rgb(207, 207, 207);
+    color: var(--darkmode-text-color);
     font-size: 18px;
     margin: 0 5px 0 5px;
     pointer-events: none;
 }
 
 .per-site-header {
-    color: rgb(207, 207, 207);
-    font-family: 'Source Code Pro', monospace;
+    color: var(--darkmode-text-color);
+    font-family: Nunito;
     font-size: 50px;
     text-align: center;
     margin: 0 0 50px 0;
+    pointer-events: none;
 }
 
-/* Projects-page-spesifics starts here. */
-/* Container isolating each project. */
 .projects-iframe-container {
     width: 600px;
     height: 500px;
@@ -146,10 +149,11 @@ p {
 }
 
 .projects-iframe-title {
-    font-family: 'Source Code Pro', monospace;
+    font-family: Nunito;
     text-align: center;
     margin: 5px 0 5px 0;
-    color: rgb(207, 207, 207);
+    color: var(--darkmode-text-color);
+    pointer-events: none;
 }
 
 .projects-project-iframe {
