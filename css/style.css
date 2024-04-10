@@ -43,6 +43,36 @@ p {
     padding: 0 20px 0 20px; 
 }
 
+#portrait-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    width: auto;
+    height: auto;
+}
+
+#portrait-text-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+h2#portrait-text {
+    font-family: Nunito;
+    color: var(--darkmode-text-color);
+    font-size: 50px;
+    text-align: left;
+    margin: 0;
+}
+
+#portrait-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: right;
+}
+
 #portrait {
     height: 300px;
     width: auto;
@@ -56,7 +86,7 @@ p {
     max-width: 600px;
     height: 50px;
     display: flex;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -138,29 +168,4 @@ a.navbar-button-spacing {
     text-align: center;
     margin: 0 0 50px 0;
     pointer-events: none;
-}
-
-.projects-iframe-container {
-    width: 600px;
-    height: 500px;
-    text-align: center;
-    margin-top: 50px;
-    pointer-events: none;
-}
-
-.projects-iframe-title {
-    font-family: Nunito;
-    text-align: center;
-    margin: 5px 0 5px 0;
-    color: var(--darkmode-text-color);
-    pointer-events: none;
-}
-
-.projects-project-iframe {
-    width: 550px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid pink;
-    border-radius: 20px;
 }
