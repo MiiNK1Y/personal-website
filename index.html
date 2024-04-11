@@ -9,24 +9,24 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div id="application">
-            <div id="portrait-section-container">
-                <div id="portrait-container">
-                    <img draggable="false" id="portrait" src="images/portrait_compressed.jpg"></img> <!-- #TODO: make the image file smaller by compressing the px... its ~4MB as of writing... -->
-                </div>
-                <div id="portrait-text-container">
-                    <h2 id="portrait-text">Aleksander N. Knoph</h2>
-                </div>
+        <div id="set-language">language: &#127468;&#127463;</div> <!-- UTF-8 code for the British flag emoji -->
+
+        <div class="main">
+            <div class="portrait x-center">
+                <h2>Aleksander N.<br> 
+                    Knoph</h2>
+                <img src="images/portrait_compressed.jpg" draggable="false"></img>
             </div>
-            <div style="width: auto; height: 1px; background-color: pink; margin-bottom: 40px; margin-top: 40px;"></div>
-            <div id="navbar" class="x-center">
-                <a class="navbar-button-spacing" draggable="false" href="index.html"><button class="navbar-button" id="navbar-home-button">home</button></a>
-                <a class="navbar-button-spacing" draggable="false" href="projects.html"><button class="navbar-button" id="navbar-projects-button">projects</button></a>
-                <a draggable="false" href="https://github.com/MiiNK1Y" target="_blank"><button class="navbar-button" id="navbar-github-button">github</button></a>
-                <a draggable="false" style="margin-left: auto;" href="contact.html"><button class="navbar-button" id="navbar-contact-button">contact</button></a>
+
+            <div class="navbar x-center">
+                <a href="index.html" draggable="false"><button id="navbar__home">home</button></a>
+                <a href="projects.html" draggable="false"><button id="navbar__projects">projects</button></a>
+                <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank"><button id="navbar__github">github</button></a>
+                <a href="curriculum_vitae.pdf" draggable="false" target="_blank"><button id="navbar__cv">curriculum vitae</button></a>
+                <a href="contact.html" draggable="false"><button id="navbar__contact">contact</button></a>
             </div>
-            <div style="width: auto; height: 1px; background-color: pink; margin-bottom: 50px; margin-top: 40px;"></div>
-            <div id="home-text-box" class="x-center">
+
+            <div class="home-text-box x-center">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
