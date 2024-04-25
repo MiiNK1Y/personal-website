@@ -1,35 +1,43 @@
 @import url('style.css');
 
-.projects-iframe-container {
-    width: 600px;
-    height: 500px;
-    text-align: center;
-    margin-top: 50px;
-    pointer-events: none;
-}
-
-.projects-iframe-title {
-    font-family: Nunito;
-    text-align: center;
-    margin: 5px 0 5px 0;
-    color: var(--darkmode-text-color);
-    pointer-events: none;
-}
-
-.projects-project-iframe {
-    width: 550px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid pink;
-    border-radius: 20px;
-}
-
 .site-header {
     color: var(--darkmode-text-color);
     font-family: Nunito;
     font-size: 50px;
     text-align: center;
     margin: 0 0 50px 0;
+    pointer-events: none;
+}
+
+.card-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    border: 2px solid red;
+}
+
+.card__content {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 380px;
+    height: 340px;
+    border: 2px solid green;
+}
+
+.card__title {
+    font-family: Nunito;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 0 5px 0;
+    color: var(--darkmode-text-color);
     pointer-events: none;
 }

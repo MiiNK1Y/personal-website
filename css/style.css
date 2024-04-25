@@ -61,7 +61,7 @@ body {
 }
 
 .main {
-    max-width: 50rem;
+    max-width: auto;
     padding: 20px; 
 }
 
@@ -164,6 +164,7 @@ body {
 }
 
 .home-text-box {
+    max-width: 50rem;;
     font-family: "Source Code Pro", monospace;
     color: var(--darkmode-text-color);
     font-size: 18px;
