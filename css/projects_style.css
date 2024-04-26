@@ -1,5 +1,12 @@
 @import url('style.css');
 
+body {
+    display: inline;
+    height: auto;
+    max-width: 1500px;
+
+}
+
 .site-header {
     color: var(--darkmode-text-color);
     font-family: Nunito;
@@ -9,9 +16,11 @@
     pointer-events: none;
 }
 
-.card-grid {
+.card-wrapper {
     margin-top: 50px;
-    display: grid;
+    display: flex;
+    max-width: 1500px;
+    min-width: 600px;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px
 }
@@ -21,7 +30,6 @@
     width: 400px;
     height: 400px;
     pointer-events: none;
-    border: 2px solid red;
 }
 
 .card__content {
@@ -31,6 +39,7 @@
     width: 380px;
     height: 340px;
     border: 2px solid green;
+    border-radius: 20px;
 }
 
 .card__title {
