@@ -1,12 +1,5 @@
 @import url('style.css');
 
-body {
-    display: inline;
-    height: auto;
-    max-width: 1500px;
-
-}
-
 .site-header {
     color: var(--darkmode-text-color);
     font-family: Nunito;
@@ -17,16 +10,14 @@ body {
 }
 
 .card-wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto auto;
     margin-top: 50px;
-    display: flex;
-    max-width: 1500px;
-    min-width: 600px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px
 }
 
 .card {
-    position: relative;
+    position: sticky;
     width: 400px;
     height: 400px;
     pointer-events: none;

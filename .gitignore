@@ -1,2 +1,5 @@
 #MACOS
 .DS_Store
+
+#vscode
+/.vscode
