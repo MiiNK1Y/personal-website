@@ -24,18 +24,25 @@ html, body {
     height: 100vh;
 }
 
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 footer {
     color: var(--darkmode-text-color);
     background-color: #161524;
     text-align: center;
-}
-
-#site-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
 }
 
 #set-language {
