@@ -1,10 +1,5 @@
 @import url('style.css');
 
-body {
-    display: unset;
-    height: auto;
-}
-
 .site-header {
     color: var(--darkmode-text-color);
     font-family: Nunito;
@@ -16,9 +11,7 @@ body {
 
 .card-wrapper {
     display: flex;
-    vertical-align: middle;
     justify-content: center;
-    width: 1500px;
 }
 
 .card-container {

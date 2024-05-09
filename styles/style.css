@@ -21,13 +21,21 @@
 html, body {
     background: var(--darkmode-background-color);
     margin: 0;
+    height: 100vh;
 }
 
-body {
-    height: 100svh;
+footer {
+    color: var(--darkmode-text-color);
+    background-color: #161524;
+    text-align: center;
+}
+
+#site-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 #set-language {
