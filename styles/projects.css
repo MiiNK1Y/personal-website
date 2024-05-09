@@ -1,4 +1,4 @@
-@import url('style.css');
+@import url("style.css");
 
 .site-header {
     color: var(--darkmode-text-color);
@@ -9,31 +9,23 @@
     pointer-events: none;
 }
 
-.card-wrapper {
-    display: flex;
+.card-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 500px);
+    margin-top: 50px;
     justify-content: center;
 }
 
-.card-container {
-    width: auto;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: auto auto auto;
-    margin-top: 50px;
-}
-
 .card {
-    position: sticky;
-    width: 400px;
+    width: 500px;
     height: 400px;
     pointer-events: none;
 }
 
 .card__content {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
-    width: 380px;
+    width: 480px;
     height: 340px;
     border: 2px solid green;
     border-radius: 20px;
