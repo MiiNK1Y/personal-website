@@ -42,25 +42,6 @@ body {
     animation-fill-mode: forwards;
 }
 
-footer {
-    color: var(--darkmode-text-color);
-    background-color: #1f1f30;
-    text-align: center;
-    margin-top: 100px;
-}
-
-footer > p {
-    margin-bottom: 0; 
-}
-
-footer > a {
-    color: beige;
-}
-
-footer > a:hover {
-    color: red;
-}
-
 #set-language {
     background-color: inherit;
     position: absolute;
@@ -201,4 +182,34 @@ footer > a:hover {
     font-size: 18px;
     margin: 0 5px 0 5px;
     pointer-events: none;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: var(--darkmode-text-color);
+    background-color: #1f1f30;
+    text-align: center;
+    padding: 15px;
+}
+
+footer > p {
+    margin: 0;
+}
+
+#signature-divider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 1px;
+    background-color: white;
+}
+
+footer > a {
+    color: beige;
+}
+
+footer > a:hover {
+    color: red;
 }

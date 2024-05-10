@@ -1,5 +1,21 @@
 @import url("style.css");
 
+.card__content > a {
+    width: inherit;
+    height: inherit;
+    transition: 0.5s;
+}
+
+.card__content > a:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+a > img {
+    width: inherit;
+    height: inherit;
+}
+
 .site-header {
     color: var(--darkmode-text-color);
     font-family: Nunito;
@@ -20,7 +36,6 @@
 .card {
     width: 500px;
     height: 400px;
-    pointer-events: none;
 }
 
 .card__content {
@@ -36,9 +51,4 @@
     margin: 5px 0 5px 0;
     color: var(--darkmode-text-color);
     pointer-events: none;
-}
-
-.card__content > img {
-    width: inherit;
-    height: inherit;
 }
