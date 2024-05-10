@@ -27,8 +27,8 @@ a > img {
 
 .card-container {
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, 500px);
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 500px);
     margin-top: 50px;
     justify-content: center;
 }
@@ -39,8 +39,8 @@ a > img {
 }
 
 .card__content {
-    position: absolute;
-    width: 480px;
+    position: relative;
+    width: 500px;
     height: 340px;
 }
 
