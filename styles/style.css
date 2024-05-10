@@ -44,13 +44,26 @@ body {
 
 footer {
     color: var(--darkmode-text-color);
-    background-color: #161524;
+    background-color: #1f1f30;
     text-align: center;
+    margin-top: 100px;
+}
+
+footer > p {
+    margin-bottom: 0; 
+}
+
+footer > a {
+    color: beige;
+}
+
+footer > a:hover {
+    color: red;
 }
 
 #set-language {
     background-color: inherit;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     border: 1px solid white;
