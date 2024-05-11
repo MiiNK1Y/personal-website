@@ -1,4 +1,6 @@
 # We need some fucking order in here
+- [ ] 0.1 fix footer not sticking to bottom after cards auto-row past its position.
+- [ ] 0.2 move the language-button to the footer?
 - [ ] 1. add project Excel Vertical Data-binder to 'Pojects' page.
     - [x] 1.1 take pictures for the project.
     - [ ] 1.2 design the project-cards templates
