@@ -47,9 +47,9 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 7px;
-    padding: 2px 5px 2px 5px;
+    padding: 3px 6px 3px 6px;
     color: white;
     font-family: var(--defualt-font);
     font-size: 1rem;
