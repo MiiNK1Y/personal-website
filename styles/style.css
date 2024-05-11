@@ -88,6 +88,7 @@ body {
     border-radius: 50%;
     border: 3px solid var(--darkmode-yellow);
     margin: auto auto auto 0;
+    user-select: none;
 }
 
 .portrait h2 {
@@ -96,6 +97,7 @@ body {
     font-size: 45px;
     margin: auto 40px auto auto;
     text-align: right;
+    user-select: none;
 }
 
 .navbar {
@@ -184,6 +186,7 @@ body {
     font-size: 18px;
     margin: 0 5px 0 5px;
     pointer-events: none;
+    user-select: none;
 }
 
 footer {
