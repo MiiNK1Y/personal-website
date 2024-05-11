@@ -1,7 +1,5 @@
 /* THIS STYLE-FILE IS THE BASE FOR THE SITE. INDEX.HTML, PROJECTS.CSS HAS THEIR OWN STYLE-FILES FOR THEIR OWN UNIQUENESS */
 
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-
 @font-face {
     font-family: "Nunito";
     src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf) format("truetype");
@@ -27,6 +25,8 @@
     --darkmode-purple: #bd93f9;
     --darkmode-cyan: #8be9fd;
     --darkmode-green: #50fa7b;
+
+    --defualt-font: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -51,7 +51,7 @@ body {
     border-radius: 7px;
     padding: 2px 5px 2px 5px;
     color: white;
-    font-family: "Source Code Pro", monospace;
+    font-family: var(--defualt-font);
     font-size: 1rem;
 }
 
@@ -118,7 +118,7 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 10px 0 10px 0;
-    font-family: "Source Code Pro", monospace;
+    font-family: var(--defualt-font);
     font-size: 16px;
     transition: border 5ms, box-shadow 5ms;
     vertical-align: middle;
@@ -181,7 +181,7 @@ body {
 
 .home-text-box {
     max-width: 50rem;
-    font-family: "Source Code Pro", monospace;
+    font-family: var(--defualt-font);
     color: var(--darkmode-text-color);
     font-size: 18px;
     margin: 0 5px 0 5px;
