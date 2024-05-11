@@ -33,7 +33,7 @@ html,
 body {
     background: var(--darkmode-background-color);
     margin: 0;
-    height: 100vh;
+    min-height: 100svh;
 }
 
 body {
@@ -187,13 +187,12 @@ body {
 }
 
 footer {
-    position: absolute;
     width: 100%;
-    bottom: 0;
     color: var(--darkmode-text-color);
     background-color: #1f1f30;
     text-align: center;
     padding: 15px 0 15px 0;
+    margin-top: 50px;
 }
 
 footer > p {
