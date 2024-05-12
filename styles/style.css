@@ -26,7 +26,7 @@
     --darkmode-cyan: #8be9fd;
     --darkmode-green: #50fa7b;
 
-    --defualt-font: Arial, Helvetica, sans-serif;
+    --default-font: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -52,7 +52,7 @@ body {
     border-radius: 7px;
     padding: 3px 6px 3px 6px;
     color: white;
-    font-family: var(--defualt-font);
+    font-family: var(--default-font);
     font-size: 1rem;
     transition: 0.3s;
 }
@@ -127,7 +127,7 @@ body {
     border-radius: 20px;
     padding: 10px;
     margin: 10px 0 10px 0;
-    font-family: var(--defualt-font);
+    font-family: var(--default-font);
     font-size: 16px;
     transition: border 5ms, box-shadow 5ms;
     vertical-align: middle;
@@ -188,9 +188,9 @@ body {
     box-shadow: 0 0 0 4px var(--darkmode-green);
 }
 
-.home-text-box {
+#home-text-box {
     max-width: 50rem;
-    font-family: var(--defualt-font);
+    font-family: var(--default-font);
     color: var(--darkmode-text-color);
     font-size: 18px;
     margin: 0 5px 0 5px;
