@@ -1,3 +1,5 @@
+localStorage.setItem("language", "eng");
+
 function setLanguage() {
 
     // set language flags
@@ -26,3 +28,6 @@ function setLanguage() {
         document.getElementById("home-text-box").innerHTML = "English text here";
     }
 }
+
+currentLang = localStorage.getItem("language");
+console.log(currentLang);

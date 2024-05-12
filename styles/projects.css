@@ -9,16 +9,6 @@
     height: inherit;
 }
 
-.site-header {
-    color: var(--darkmode-text-color);
-    font-family: Nunito;
-    font-size: 50px;
-    text-align: center;
-    margin: 0 0 50px 0;
-    pointer-events: none;
-    user-select: none;
-}
-
 .card-container {
     display: grid;
     gap: 20px;
