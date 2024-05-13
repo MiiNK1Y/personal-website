@@ -1,97 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
         <title>Aleksander Knoph</title>
-        <meta name="description" content="Aleksanders projects page.">
+        <meta charset="utf-8">
+        <meta name="description" content="Aleksanders projects.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="styles/projects.css">
     </head>
     <body>
-        <div class="site-container">
-            <div class="language">
-                language |
-                <div id="language__flag">
-                    &#127468;&#127463; <!-- UTF-8 code for the British flag emoji -->
-                </div>
+        <div id="site-container">
+            <h1>Projects</h1>
+            <div id="navbar">
+                <a href="index.html" draggable="false">
+                    <button id="navbar__home">home</button>
+                </a>
+
+                <a href="projects.html" draggable="false">
+                    <button id="navbar__projects">projects</button>
+                </a>
+
+                <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank">
+                    <button id="navbar__github">github</button>
+                </a>
+
+                <a href="/download/cv_aleksander-nk.pdf" draggable="false" target="_blank">
+                    <button id="navbar__cv">curriculum vitae</button>
+                </a>
+
+                <a href="contact.html" draggable="false">
+                    <button id="navbar__contact">contact</button>
+                </a>
             </div>
 
-            <div class="main">
-                <h1 class="site-header">Projects</h1>
+            <div class="site-divider"></div>
 
-                <div class="navbar x-center">
-                    <a href="index.html" draggable="false"><button id="navbar__home">home</button></a>
-                    <a href="projects.html" draggable="false"><button id="navbar__projects">projects</button></a>
-                    <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank"><button id="navbar__github">github</button></a>
-                    <a href="download/aleksander_nk_cv.pdf" draggable="false" target="_blank"><button id="navbar__cv">curriculum vitae</button></a>
-                    <a href="contact.html" draggable="false"><button id="navbar__contact">contact</button></a>
+            <div id="cards-container">
+                <div class="card">
+                    <div class="card__title">.xlsx vertical data binder</div>
+                    <div class="card__content">
+                        <a href="https://github.com">
+                            <img src="images/project_aksospm.png" />
+                        </a>
+                    </div>
                 </div>
 
-                <div class="site-divider"></div>
-
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card__title">.xlsx vertical data-binder</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/aksospm.png" />
-                            </a>
-                        </div>
+                <div class="card">
+                    <div class="card__title">GET Academy entrance submission</div>
+                    <div class="card__content">
+                        <a href="https://github.com">
+                            <img src="images/project_get-academy-oppgave.png" />
+                        </a>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
+                <div class="card">
+                    <div class="card__title">Test card photo</div>
+                    <div class="card__content">
+                        <a href="https://github.com">
+                            <img src="images/portrait.jpg" />
+                        </a>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__title">GET Academy entrance submission</div>
-                        <div class="card__content">
-                            <a href="https://github.com">
-                                <img src="images/get_academy_oppgave.png" />
-                            </a>
-                        </div>
+                <div class="card">
+                    <div class="card__title">Test image / wallpaper</div>
+                    <div class="card__content">
+                        <a href="https://github.com">
+                            <img src="images/tst.jpeg" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -99,10 +76,8 @@
 
         <footer>
             <p>Author: Aleksander N. Knoph</p>
-            <div id="signature-divider"></div>
+            <div class="signature-divider"></div>
             <a href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
         </footer>
-
-        <script type="text/javascript" src="scripts/app.js"></script>
     </body>
 </html>

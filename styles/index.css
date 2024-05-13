@@ -1,14 +1,56 @@
-@import url('style.css');
+/* ---------- META SITE DESIGN >BEGIN< ---------- */
 
-html, body {
-    background: var(--darkmode-background-color);
-    margin: 0;
-    height: 100vh;
+@import url("style.css");
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.navbar {
-    margin: 40px;
+/* ---------- META SITE DESIGN >END< ---------- */
+
+/* ---------- MAIN CONTAINER DESIGN >BEGIN< ---------- */
+
+#main {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    border: 3px solid var(--catppuccin-lavender);
+    border-radius: 2rem;
 }
+
+#portrait-container {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+#portrait-container h1 {
+    text-align: right;
+    padding: 0;
+    margin: auto 25px auto 10px;
+}
+
+#portrait-container img {
+    height: 170px;
+    border: 3px solid var(--catppuccin-yellow);
+    border-radius: 50%;
+    margin: auto auto auto 0;
+}
+
+#home-text-box {
+    max-width: 510px;
+    font-size: 1.1rem;
+    margin: 0 auto 0 auto;
+    user-select: none;
+}
+
+#home-text-box br {
+    margin-bottom: 10px;
+}
+
+#home-text-box p,
+#home-text-box br:first-child{
+    margin: 0;
+}
+
+/* ---------- MAIN CONTAINER DESIGN >END< ---------- */

@@ -1,50 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
         <title>Aleksander Knoph</title>
-        <meta name="description" content="Aleksanders personal website, for publishing and posting projects.">
+        <meta charset="utf-8">
+        <meta name="description" content="Aleksanders personal website.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="styles/index.css">
     </head>
     <body>
-        <div class="language" onclick="setLanguage()">
-            language |
-            <div id="language__flag">&#127468;&#127463;</div>
-        </div>
-
-        <div class="main">
-            <div class="portrait">
-                <h2>Aleksander N.<br> 
-                    Knoph</h2>
-                <img src="images/portrait_compressed.jpg" draggable="false"></img>
+        <div id="main">
+            <div id="portrait-container">
+                <h1>Aleksander N.<br>
+                Knoph</h1>
+                <img src="images/portrait.jpg" draggable="false"></img>
             </div>
 
-            <div class="navbar">
-                <a href="index.html" draggable="false"><button id="navbar__home">home</button></a>
-                <a href="projects.html" draggable="false"><button id="navbar__projects">projects</button></a>
-                <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank"><button id="navbar__github">github</button></a>
-                <a href="/download/aleksander_nk_cv.pdf" draggable="false" target="_blank"><button id="navbar__cv">curriculum vitae</button></a>
-                <a href="contact.html" draggable="false"><button id="navbar__contact">contact</button></a>
+            <div id="navbar">
+                <a href="index.html" draggable="false">
+                    <button id="navbar__home">home</button>
+                </a>
+
+                <a href="projects.html" draggable="false">
+                    <button id="navbar__projects">projects</button>
+                </a>
+
+                <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank">
+                    <button id="navbar__github">github</button>
+                </a>
+
+                <a href="/download/cv_aleksander-nk.pdf" draggable="false" target="_blank">
+                    <button id="navbar__cv">curriculum vitae</button>
+                </a>
+
+                <a href="contact.html" draggable="false">
+                    <button id="navbar__contact">contact</button>
+                </a>
             </div>
 
             <div id="home-text-box">
                 <p>
-                    Hi there,
-                    <br>
-                    I'm Aleksander, welcome to my website.
-                </p>
-                <p>
-                    Here, I share the projects I write trough my career as an up-and-coming web-developer.
-                </p>
-                <p>
+                    Hi there,<br>
+                    I'm Aleksander, welcome to my website.<br>
+                    Here, I share the projects I write trough my career as an up-and-coming web-developer.<br>
                     You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.
                 </p>
             </div>
         </div>
-
-        <script type="text/javascript" src="scripts/app.js"></script>
-
     </body>
 </html>

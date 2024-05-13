@@ -1,4 +1,6 @@
-/* THIS STYLE-FILE IS THE BASE FOR THE SITE. INDEX.HTML, PROJECTS.CSS HAS THEIR OWN STYLE-FILES FOR THEIR OWN UNIQUENESS */
+/* base styling sheet for site-wide purpose */
+
+/* ---------- META SITE DESIGN >BEGIN< ---------- */
 
 @font-face {
     font-family: "Nunito";
@@ -15,222 +17,154 @@
 }
 
 :root {
-    --darkmode-background-color: #0a0917;
-    --darkmode-text-color: rgb(207, 207, 207);
-    --darkmode-text-invert-color: black;
+    /* colors following the catppuccin color schema */
+    --catppuccin-background-color: #1e1e2e;
+    --catppuccin-footer: #10101a;
 
-    --darkmode-yellow: #f1fa8c;
-    --darkmode-orange: #ffb86c;
-    --darkmode-pink: #ff79c6;
-    --darkmode-purple: #bd93f9;
-    --darkmode-cyan: #8be9fd;
-    --darkmode-green: #50fa7b;
+    --catppuccin-rosewater: #f5e0dc;
+    --catppuccin-flamingo: #f2cdcd;
+    --catppuccin-pink: #f5c2e7;
+    --catppuccin-mauve: #cba6f7;
+    --catppuccin-red: #f38ba8;
+    --catppuccin-maroon: #eba0ac;
+    --catppuccin-peach: #fab387;
+    --catppuccin-yellow: #f9e2af;
+    --catppuccin-green: #a6e3a1;
+    --catppuccin-teal: #94e2d5;
+    --catppuccin-sky: #89dceb;
+    --catppuccin-sapphire: #74c7ec;
+    --catppuccin-blue: #89b4fa;
+    --catppuccin-lavender: #b4befe;
 
-    --default-font: Arial, Helvetica, sans-serif;
+    --catppuccin-text-color: #cdd6f4;
+    --catppuccin-text-invert-color: #11111b;
+
+    --default-font: Nunito;
 }
 
-html,
 body {
-    background: var(--darkmode-background-color);
+    background-color: var(--catppuccin-background-color);
+    font-family: var(--default-font);
+    color: var(--catppuccin-text-color);
+    height: 100svh;
     margin: 0;
-    min-height: 100svh;
-}
-
-body {
+    /* setting the fade-in animation site-wide */
     animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
 
-.language {
-    display: flex;
-    background-color: inherit;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 2px solid white;
-    border-radius: 7px;
-    padding: 3px 6px 3px 6px;
-    color: white;
-    font-family: var(--default-font);
-    font-size: 1rem;
-    transition: 0.3s;
-}
-
-.language:hover {
-    cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-}
-
-#language__flag {
-    margin: 1px 0 0 5px;
-    border: 0;
-}
-
-.site-header {
-    color: var(--darkmode-text-color);
-    font-family: Nunito;
-    font-size: 50px;
-    text-align: center;
+h1 {
+    font-size: 3rem;
     margin: 0;
-    pointer-events: none;
-    user-select: none;
+    padding-top: 50px;
 }
 
-.x-center {
-    margin-left: auto;
-    margin-right: auto;
-}
+/* ---------- META SITE DESIGN >END< ---------- */
 
-.site-divider {
-    height: 1px;
-    background-color: pink;
-    margin: 20px 0 20px 0;
-}
+/* ---------- NAVBAR DESIGN >BEGIN< ---------- */
 
-.main {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 2500px;
-    padding: 20px;
-}
-
-.portrait {
-    display: flex;
-}
-
-.portrait img {
-    height: 170px;
-    border-radius: 50%;
-    border: 3px solid var(--darkmode-yellow);
-    margin: auto auto auto 0;
-    user-select: none;
-}
-
-.portrait h2 {
-    font-family: Nunito;
-    color: var(--darkmode-text-color);
-    font-size: 45px;
-    margin: auto 40px auto auto;
-    text-align: right;
-    user-select: none;
-}
-
-.navbar {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0; /* to remove whitespace from between buttons */
+#navbar {
+    margin: 30px auto 30px auto;
+    font-size: 0; /* to remove whitespace between buttons */
     text-align: center;
-    margin: 15px;
 }
 
-.navbar a {
-    margin: 10px;
-}
-
-.navbar button {
+#navbar button {
     background: none;
-    color: var(--darkmode-text-color);
-    border: 2px solid;
-    border-radius: 20px;
+    color: var(--catppuccin-text-color);
+    font-size: 1rem;
     padding: 10px;
-    margin: 10px 0 10px 0;
-    font-family: var(--default-font);
-    font-size: 16px;
+    border-radius: 20px;
+    margin: 10px;
     transition: border 5ms, box-shadow 5ms;
-    vertical-align: middle;
+}
+
+#navbar button:hover {
+    cursor: pointer;
+    color: var(--catppuccin-text-invert-color);
+    border: 2px solid var(--catppuccin-background-color);
 }
 
 #navbar__home {
-    border-color: var(--darkmode-orange);
-}
-
-#navbar__projects {
-    border-color: var(--darkmode-pink);
-}
-
-#navbar__github {
-    border-color: var(--darkmode-purple);
-}
-
-#navbar__cv {
-    border-color: var(--darkmode-cyan);
-}
-
-#navbar__contact {
-    border-color: var(--darkmode-green);
-}
-
-.navbar button:hover {
-    cursor: pointer;
-    color: var(--darkmode-text-invert-color);
+    border: 2px solid var(--catppuccin-peach);
 }
 
 #navbar__home:hover {
-    background-color: var(--darkmode-orange);
-    border: 2px solid var(--darkmode-background-color);
-    box-shadow: 0 0 0 4px var(--darkmode-orange);
+    background-color: var(--catppuccin-peach);
+    box-shadow: 0 0 0 4px var(--catppuccin-peach);
+}
+
+#navbar__projects {
+    border: 2px solid var(--catppuccin-maroon);
 }
 
 #navbar__projects:hover {
-    background-color: var(--darkmode-pink);
-    border: 2px solid var(--darkmode-background-color);
-    box-shadow: 0 0 0 4px var(--darkmode-pink);
+    background-color: var(--catppuccin-maroon);
+    box-shadow: 0 0 0 4px var(--catppuccin-maroon);
+}
+
+#navbar__github {
+    border: 2px solid var(--catppuccin-flamingo);
 }
 
 #navbar__github:hover {
-    background-color: var(--darkmode-purple);
-    border: 2px solid var(--darkmode-background-color);
-    box-shadow: 0 0 0 4px var(--darkmode-purple);
+    background-color: var(--catppuccin-flamingo);
+    box-shadow: 0 0 0 4px var(--catppuccin-flamingo);
+}
+
+#navbar__cv {
+    border: 2px solid var(--catppuccin-teal);
 }
 
 #navbar__cv:hover {
-    background-color: var(--darkmode-cyan);
-    border: 2px solid var(--darkmode-background-color);
-    box-shadow: 0 0 0 4px var(--darkmode-cyan);
+    background-color: var(--catppuccin-teal);
+    box-shadow: 0 0 0 4px var(--catppuccin-teal);
+}
+
+#navbar__contact {
+    border: 2px solid var(--catppuccin-green);
 }
 
 #navbar__contact:hover {
-    background-color: var(--darkmode-green);
-    border: 2px solid var(--darkmode-background-color);
-    box-shadow: 0 0 0 4px var(--darkmode-green);
+    background-color: var(--catppuccin-green);
+    box-shadow: 0 0 0 4px var(--catppuccin-green);
 }
 
-#home-text-box {
-    max-width: 50rem;
-    font-family: var(--default-font);
-    color: var(--darkmode-text-color);
-    font-size: 18px;
-    margin: 0 5px 0 5px;
-    pointer-events: none;
-    user-select: none;
+/* ---------- NAVBAR DESIGN >END< ---------- */
+
+/* ---------- SITE COMPONENTS >BEGIN< ---------- */
+
+.site-divider {
+    background-color: var(--catppuccin-rosewater);
+    max-width: 2200px;
+    height: 1px;
+    margin: 0 auto 0 auto;
+} 
+
+.signature-divider {
+    background-color: var(--catppuccin-text-color);
+    max-width: 500px;
+    height: 1px;
+    margin: 5px auto 5px auto;
 }
 
 footer {
     width: 100%;
-    color: var(--darkmode-text-color);
-    background-color: #1f1f30;
+    background-color: var(--catppuccin-footer);
     text-align: center;
-    padding: 15px 0 15px 0;
+    padding: 10px 0 10px 0;
 }
 
-footer > p {
-    margin: 0;
-}
-
-#signature-divider {
-    margin: 5px auto 5px auto;
-    max-width: 50%;
-    min-width: 350px;
-    height: 1px;
-    background-color: white;
-}
+footer > p,
+footer > a {
+    margin: 5px 0 5px 0;
+} 
 
 footer > a {
-    color: beige;
+    color: var(--catppuccin-text-color);
 }
 
 footer > a:hover {
-    color: red;
+    color: var(--catppuccin-red);
 }
+
+/* ---------- SITE COMPONENTS >END< ---------- */
