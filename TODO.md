@@ -1,8 +1,8 @@
 # We need some fucking order in here
-- [ ] 0001. re-add language-button.
-- [x] 001. clean up code and abstractions.
-- [x] 0.1 fix footer not sticking to bottom after cards auto-row past its position.
-- [ ] 0.2 move the language-button to the footer?
+- [x] -3. re-add language-button.
+- [x] -2. clean up code and abstractions.
+- [x] -1. fix footer not sticking to bottom after cards auto-row past its position.
+- [-] 0. move the language-button to the footer?
 - [x] 1. add project Excel Vertical Data-binder to 'Pojects' page.
     - [x] 1.1 take pictures for the project.
     - [ ] 1.2 design the project-cards templates
@@ -13,3 +13,10 @@
 - [x] 6. get some better colors on page-divider, footer, and font colors.
 - [ ] 7. make an PDF viewer to CV (or rely on built-in viewer?).
 - [ ] 8. fix font on cv.
+- [ ] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
+- [ ] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
+- [ ] 11. get language switch to "stick" by using localStorage.
+- [ ] 12. better way to go about the language-switch tech?
+- [ ] 13. finnish the "contact me" page.
+- [ ] 14. make alt version of the index page with default navbar positioning.
+- [ ] 15. not reload page when clicking on current page in navbar.

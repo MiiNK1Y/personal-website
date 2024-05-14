@@ -96,7 +96,7 @@ footer a:hover {
     padding: 10px;
     border-radius: 20px;
     margin: 10px;
-    transition: border 5ms, box-shadow 5ms;
+    transition: border 0.2s, box-shadow 0.2s;
 }
 
 #navbar button:hover {
