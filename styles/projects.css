@@ -6,7 +6,7 @@
 
 /* ---------- SITE CONTAINER DESIGN >BEGIN< ---------- */
 
-#site-container {
+.site-container {
     max-width: 2500px;
     min-height: 100svh;
     text-align: center;
@@ -18,7 +18,7 @@
 
 /* ---------- PROJECT CARDS >BEGIN< ---------- */
 
-#cards-container {
+.cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 500px);
     gap: 20px;

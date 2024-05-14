@@ -16,6 +16,7 @@ body {
     padding: 1.5rem 1rem 1.5rem 1rem;
     border: 3px solid var(--catppuccin-lavender);
     border-radius: 2rem;
+    margin: 20px
 }
 
 #portrait-container {
@@ -27,7 +28,7 @@ body {
 #portrait-container h1 {
     text-align: right;
     padding: 0;
-    margin: auto 25px auto 10px;
+    margin: auto 25px auto auto;
 }
 
 #portrait-container img {

@@ -42,6 +42,8 @@
     --default-font: Nunito;
 }
 
+/* ---------- META SITE DESIGN >END< ---------- */
+
 body {
     background-color: var(--catppuccin-background-color);
     font-family: var(--default-font);
@@ -58,7 +60,25 @@ h1 {
     padding-top: 50px;
 }
 
-/* ---------- META SITE DESIGN >END< ---------- */
+footer {
+    width: 100%;
+    background-color: var(--catppuccin-footer);
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+footer > p,
+footer > a {
+    margin: 5px 0 5px 0;
+} 
+
+footer > a {
+    color: var(--catppuccin-text-color);
+}
+
+footer > a:hover {
+    color: var(--catppuccin-red);
+}
 
 /* ---------- NAVBAR DESIGN >BEGIN< ---------- */
 
@@ -134,7 +154,7 @@ h1 {
 /* ---------- SITE COMPONENTS >BEGIN< ---------- */
 
 .site-divider {
-    background-color: var(--catppuccin-rosewater);
+    background-color: var(--catppuccin-text-color);
     max-width: 2200px;
     height: 1px;
     margin: 0 auto 0 auto;
@@ -147,24 +167,22 @@ h1 {
     margin: 5px auto 5px auto;
 }
 
-footer {
-    width: 100%;
-    background-color: var(--catppuccin-footer);
-    text-align: center;
-    padding: 10px 0 10px 0;
-}
-
-footer > p,
-footer > a {
-    margin: 5px 0 5px 0;
-} 
-
-footer > a {
+#language-switch {
+    position: absolute;
+    background-color: inherit;
     color: var(--catppuccin-text-color);
+    border: 2px solid var(--catppuccin-text-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 3px 7px 3px 7px;
+    margin: 20px;
+    right: 0;
+    top: 0;
 }
 
-footer > a:hover {
-    color: var(--catppuccin-red);
+#language-switch:hover {
+    opacity: 50%;
+    cursor: pointer;
 }
 
 /* ---------- SITE COMPONENTS >END< ---------- */
