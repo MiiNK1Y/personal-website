@@ -15,6 +15,12 @@ function setLanguage() {
                             Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "up-and-coming" webutvikler.<br>
                             Du kan se gjennom mine prosjekter, ta en titt på min Github eller CV, eller finne min foretrukne måte å bli kontaktet.`;
 
+    // header text
+    const projectsHeaderEng = "Projects";
+    const projectsHeaderNor = "Prosjekter";
+    const contactHeaderEng = "Contact me";
+    const contactHeaderNor = "Kontakt meg";
+
     // english buttons
     const navbarButtonHomeEng = "home";
     const navbarButtonProjectsEng = "projects";
@@ -24,6 +30,10 @@ function setLanguage() {
     const navbarButtonHomeNor = "hjem";
     const navbarButtonProjectsNor = "prosjekter";
     const navbarButtonContactNor = "kontakt";
+
+    // footer text
+    const footerTextEng = "Author: Aleksander N. Knoph";
+    const footerTextNor = "Forfatter: Aleksander N. Knoph";
 
     // set language flags
     // since "innerHTML" fetches the emoji, and not the HTML Doc Code, the Emoji itself is needed to check current language
@@ -40,28 +50,49 @@ function setLanguage() {
         (curLang == langButtonEng)
     ) {
         document.getElementById("language-switch").innerHTML = langButtonNor;
-        // start replacing all text boxes
+
+        // replacing navbar buttons
         document.getElementById("navbar__home").innerHTML = navbarButtonHomeNor;
         document.getElementById("navbar__projects").innerHTML = navbarButtonProjectsNor;
         document.getElementById("navbar__contact").innerHTML = navbarButtonContactNor;
+
+        // try these if they are present, skip if not
         try {
-        document.getElementById("home-text-box").innerHTML = homeTextBoxNor;
-        } catch (TypeError) {
-            console.log("'#home-text-box' is not on this page, it returned null");
-        }
+            document.getElementById("projects-header-text").innerHTML = projectsHeaderNor;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("contact-header-text").innerHTML = contactHeaderNor;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("home-text-box").innerHTML = homeTextBoxNor;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("footer-author-text").innerHTML = footerTextNor;
+        } catch (TypeError) {}
+
     } else if (
         (curLang == langButtonNorEmoji) || 
         (curLang == langButtonNor)
     ) {
         document.getElementById("language-switch").innerHTML = langButtonEng;
-        // start replacing all text boxes
+
+        // replacing navbar buttons
         document.getElementById("navbar__home").innerHTML = navbarButtonHomeEng;
         document.getElementById("navbar__projects").innerHTML = navbarButtonProjectsEng;
         document.getElementById("navbar__contact").innerHTML = navbarButtonContactEng;
+
+        // try these if they are present, skip if not
         try {
-        document.getElementById("home-text-box").innerHTML = homeTextBoxEng;
-        } catch (TypeError) {
-            console.log("'#home-text-box' is not on this page, it returned null");
-        }
+            document.getElementById("projects-header-text").innerHTML = projectsHeaderEng;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("contact-header-text").innerHTML = contactHeaderEng;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("home-text-box").innerHTML = homeTextBoxEng;
+        } catch (TypeError) {}
+        try {
+            document.getElementById("footer-author-text").innerHTML = footerTextEng;
+        } catch (TypeError) {}
     }
 }

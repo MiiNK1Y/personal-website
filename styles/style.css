@@ -54,9 +54,9 @@ body {
     animation: fadeInAnimation ease 1s;
 }
 
-h1 {
+h1,
+.header-text {
     font-size: 3rem;
-    margin: 0;
     padding-top: 50px;
 }
 
@@ -67,7 +67,7 @@ footer {
     padding: 10px 0 10px 0;
 }
 
-footer > p,
+#footer-author-text p,
 footer > a {
     margin: 5px 0 5px 0;
 } 
