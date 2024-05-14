@@ -30,13 +30,13 @@
 .card__title {
     font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .card__content {
     position: relative;
-    height: 340px;
     width: 500px;
+    height: 340px;
 }
 
 .card__content a {
@@ -51,14 +51,10 @@
 }
 
 .card__content img {
-    position: absolute;
     max-width: 500px;
     max-height: 340px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    border: 2px solid var(--catppuccin-rosewater);
+    border-radius: 10px;
 }
 
 /* ---------- PROJECT CARDS >END< ---------- */
