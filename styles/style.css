@@ -58,6 +58,7 @@ h1,
 .header-text {
     font-size: 3rem;
     padding-top: 50px;
+    user-select: none;
 }
 
 footer {
@@ -68,15 +69,15 @@ footer {
 }
 
 #footer-author-text p,
-footer > a {
+footer a {
     margin: 5px 0 5px 0;
 } 
 
-footer > a {
+footer a {
     color: var(--catppuccin-text-color);
 }
 
-footer > a:hover {
+footer a:hover {
     color: var(--catppuccin-red);
 }
 

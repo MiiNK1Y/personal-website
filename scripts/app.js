@@ -2,9 +2,6 @@ localStorage.setItem("language", "eng");
 
 function setLanguage() {
 
-    // log
-    console.log("setting lang");
-
     const homeTextBoxEng = `Hi there,<br>
                             I'm Aleksander, welcome to my website.<br>
                             Here, I share the projects I write trough my career as an "up-and-coming" web developer.<br>
@@ -17,16 +14,14 @@ function setLanguage() {
 
     // header text
     const projectsHeaderEng = "Projects";
-    const projectsHeaderNor = "Prosjekter";
     const contactHeaderEng = "Contact me";
+    const projectsHeaderNor = "Prosjekter";
     const contactHeaderNor = "Kontakt meg";
 
-    // english buttons
+    // navbar buttons
     const navbarButtonHomeEng = "home";
     const navbarButtonProjectsEng = "projects";
     const navbarButtonContactEng = "contact";
-
-    // norwegian buttons
     const navbarButtonHomeNor = "hjem";
     const navbarButtonProjectsNor = "prosjekter";
     const navbarButtonContactNor = "kontakt";
@@ -43,8 +38,12 @@ function setLanguage() {
     // HTML Doc Codes to view as consistent emoji.
     const langButtonNor = "språk | &#127475;&#127476;";
     const langButtonEng = "language | &#127468;&#127463;";
+
+    // check current language
     const curLang = document.getElementById("language-switch").innerHTML;
 
+    // swap language based on current set language
+	// English case
     if (
         (curLang == langButtonEngEmoji) || 
         (curLang == langButtonEng)
@@ -70,6 +69,7 @@ function setLanguage() {
             document.getElementById("footer-author-text").innerHTML = footerTextNor;
         } catch (TypeError) {}
 
+	// Norwegian case
     } else if (
         (curLang == langButtonNorEmoji) || 
         (curLang == langButtonNor)
