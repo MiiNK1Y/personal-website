@@ -1,98 +1,120 @@
-localStorage.setItem("language", "eng");
+function langSwitch(
+    // always available
+    langButton,
+    navbarButtonHome,
+    navbarButtonProjects,
+    navbarButtonContact,
+    // maybe available
+    homeTextBox,
+    projectsHeader,
+    contactHeader,
+    footerText
+) {
+    document.getElementById("language-switch").innerHTML = langButton;
+    document.getElementById("navbar__home").innerHTML = navbarButtonHome;
+    document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
+    document.getElementById("navbar__contact").innerHTML = navbarButtonContact;
+    // try these if they are present, skip if not
+    try {
+        document.getElementById("projects-header-text").innerHTML = projectsHeader;
+    } catch (TypeError) {}
+    try {
+        document.getElementById("contact-header-text").innerHTML = contactHeader;
+    } catch (TypeError) {}
+    try {
+        document.getElementById("home-text-box").innerHTML = homeTextBox;
+    } catch (TypeError) {}
+    try {
+        document.getElementById("footer-author-text").innerHTML = footerText;
+    } catch (TypeError) {}
+}
 
-function setLanguage() {
+function setLangEng() {
+    // swap the set localStorage language
+    localStorage.setItem("language", "eng");
 
     const homeTextBoxEng = `Hi there,<br>
                             I'm Aleksander, welcome to my website.<br>
                             Here, I share the projects I write trough my career as an "up-and-coming" web developer.<br>
                             You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.`;
 
+    const projectsHeaderEng = "Projects";
+    const contactHeaderEng = "Contact me";
+    const navbarButtonHomeEng = "home";
+    const navbarButtonProjectsEng = "projects";
+    const navbarButtonContactEng = "contact";
+    const footerTextEng = "Author: Aleksander N. Knoph";
+    // HTML Doc Code for Britain flag emoji.
+    const langButtonEng = "language | &#127468;&#127463;";
+
+    langSwitch(
+        // always available
+        langButtonEng,
+        navbarButtonHomeEng,
+        navbarButtonProjectsEng,
+        navbarButtonContactEng,
+        // maybe available
+        homeTextBoxEng,
+        projectsHeaderEng,
+        contactHeaderEng,
+        footerTextEng
+    )
+}
+
+function setLangNor() {
+    // swap the set localStorage language
+    localStorage.setItem("language", "nor");
+
     const homeTextBoxNor = `Hei der, <br>
                             Jeg er Aleksander, velkommen til min nettside.<br>
                             Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "up-and-coming" webutvikler.<br>
                             Du kan se gjennom mine prosjekter, ta en titt på min Github eller CV, eller finne min foretrukne måte å bli kontaktet.`;
 
-    // header text
-    const projectsHeaderEng = "Projects";
-    const contactHeaderEng = "Contact me";
     const projectsHeaderNor = "Prosjekter";
     const contactHeaderNor = "Kontakt meg";
-
-    // navbar buttons
-    const navbarButtonHomeEng = "home";
-    const navbarButtonProjectsEng = "projects";
-    const navbarButtonContactEng = "contact";
     const navbarButtonHomeNor = "hjem";
     const navbarButtonProjectsNor = "prosjekter";
     const navbarButtonContactNor = "kontakt";
-
-    // footer text
-    const footerTextEng = "Author: Aleksander N. Knoph";
     const footerTextNor = "Forfatter: Aleksander N. Knoph";
-
-    // set language flags
-    // since "innerHTML" fetches the emoji, and not the HTML Doc Code, the Emoji itself is needed to check current language
-    const langButtonNorEmoji = "språk | 🇳🇴";
-    const langButtonEngEmoji = "language | 🇬🇧";
-
-    // HTML Doc Codes to view as consistent emoji.
+    // HTML Doc Code for Norwegian flag emoji.
     const langButtonNor = "språk | &#127475;&#127476;";
-    const langButtonEng = "language | &#127468;&#127463;";
 
-    // check current language
-    const curLang = document.getElementById("language-switch").innerHTML;
+    langSwitch(
+        // always available
+        langButtonNor,
+        navbarButtonHomeNor,
+        navbarButtonProjectsNor,
+        navbarButtonContactNor,
+        // maybe available
+        homeTextBoxNor,
+        projectsHeaderNor,
+        contactHeaderNor,
+        footerTextNor
+    )
+}
 
-    // swap language based on current set language
-	// English case
-    if (
-        (curLang == langButtonEngEmoji) || 
-        (curLang == langButtonEng)
-    ) {
-        document.getElementById("language-switch").innerHTML = langButtonNor;
+// check if there are data stored from a previous visit, setting language accordingly
+let languageSet = localStorage.getItem("language");
 
-        // replacing navbar buttons
-        document.getElementById("navbar__home").innerHTML = navbarButtonHomeNor;
-        document.getElementById("navbar__projects").innerHTML = navbarButtonProjectsNor;
-        document.getElementById("navbar__contact").innerHTML = navbarButtonContactNor;
+console.log(`localStorage "language" stores: ${languageSet}`); // log
 
-        // try these if they are present, skip if not
-        try {
-            document.getElementById("projects-header-text").innerHTML = projectsHeaderNor;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("contact-header-text").innerHTML = contactHeaderNor;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("home-text-box").innerHTML = homeTextBoxNor;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("footer-author-text").innerHTML = footerTextNor;
-        } catch (TypeError) {}
+if (
+    (languageSet == null)
+) {
+    console.log("First time visitor, welcome! Setting default language English.");
+    // default key pairs
+    localStorage.setItem("language", "eng");
+} else if (
+    (languageSet == "nor")
+) {
+    setLangNor();
+}
 
-	// Norwegian case
-    } else if (
-        (curLang == langButtonNorEmoji) || 
-        (curLang == langButtonNor)
-    ) {
-        document.getElementById("language-switch").innerHTML = langButtonEng;
-
-        // replacing navbar buttons
-        document.getElementById("navbar__home").innerHTML = navbarButtonHomeEng;
-        document.getElementById("navbar__projects").innerHTML = navbarButtonProjectsEng;
-        document.getElementById("navbar__contact").innerHTML = navbarButtonContactEng;
-
-        // try these if they are present, skip if not
-        try {
-            document.getElementById("projects-header-text").innerHTML = projectsHeaderEng;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("contact-header-text").innerHTML = contactHeaderEng;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("home-text-box").innerHTML = homeTextBoxEng;
-        } catch (TypeError) {}
-        try {
-            document.getElementById("footer-author-text").innerHTML = footerTextEng;
-        } catch (TypeError) {}
+function setLangButton() {
+    let curLang = localStorage.getItem("language");
+    if (curLang == "nor") {
+        setLangEng();
+    } else if (curLang == "eng") {
+        setLangNor();
     }
 }

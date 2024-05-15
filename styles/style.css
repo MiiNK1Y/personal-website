@@ -16,6 +16,12 @@
     }
 }
 
+/* setting fade-in animation on the main body components, but not the body itself */
+#main,
+.site-container {
+    animation: fadeInAnimation ease 0.5s;
+}
+
 :root {
     /* colors following the catppuccin color schema */
     --catppuccin-background-color: #1e1e2e;
@@ -50,8 +56,6 @@ body {
     color: var(--catppuccin-text-color);
     height: 100svh;
     margin: 0;
-    /* setting the fade-in animation site-wide */
-    animation: fadeInAnimation ease 1s;
 }
 
 h1,
