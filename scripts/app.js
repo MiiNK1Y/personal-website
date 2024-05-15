@@ -9,7 +9,7 @@ function langSwitch(
     projectsHeader,
     contactHeader,
     footerText
-) {
+    ) {
     document.getElementById("language-switch").innerHTML = langButton;
     document.getElementById("navbar__home").innerHTML = navbarButtonHome;
     document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
@@ -94,19 +94,13 @@ function setLangNor() {
 }
 
 // check if there are data stored from a previous visit, setting language accordingly
-let languageSet = localStorage.getItem("language");
+let langSet = localStorage.getItem("language");
 
-console.log(`localStorage "language" stores: ${languageSet}`); // log
-
-if (
-    (languageSet == null)
-) {
-    console.log("First time visitor, welcome! Setting default language English.");
+if (langSet == null) {
+    console.log("First time visitor, welcome! Setting default language: English.");
     // default key pairs
     localStorage.setItem("language", "eng");
-} else if (
-    (languageSet == "nor")
-) {
+} else if (langSet == "nor") {
     setLangNor();
 }
 

@@ -15,8 +15,8 @@
 - [ ] 8. fix font on cv.
 - [ ] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
 - [ ] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
-- [ ] 11. get language switch to "stick" by using localStorage.
-- [ ] 12. better way to go about the language-switch tech?
+- [x] 11. get language switch to "stick" by using localStorage.
+- [x] 12. better way to go about the language-switch tech?
 - [ ] 13. finnish the "contact me" page.
 - [ ] 14. make alt version of the index page with default navbar positioning.
-- [ ] 15. not reload page when clicking on current page in navbar.
+- [x] 15. not reload page when clicking on current page in navbar.
