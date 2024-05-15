@@ -4,3 +4,27 @@
 @import url("projects.css");
 
 /* ---------- META SITE DESIGN >END< ---------- */
+
+/* main site container >BEGIN< */
+
+#contact-container {
+    position: absolute;
+    background-color: red;
+    width: 1000px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contact-container h1 {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#contact-container h2 {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
