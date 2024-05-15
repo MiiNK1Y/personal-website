@@ -8,6 +8,8 @@ function langSwitch(
     homeTextBox,
     projectsHeader,
     contactHeader,
+    contactTextHead,
+    contactTextSub,
     footerText
 ) {
     document.getElementById("language-switch").innerHTML = langButton;
@@ -25,6 +27,12 @@ function langSwitch(
         document.getElementById("home-text-box").innerHTML = homeTextBox;
     } catch (TypeError) {}
     try {
+        document.getElementById("contact__head").innerHTML = contactTextHead;
+    } catch (TypeError) {}
+    try {
+        document.getElementById("contact__sub").innerHTML = contactTextSub;
+    } catch (TypeError) {}
+    try {
         document.getElementById("footer-author-text").innerHTML = footerText;
     } catch (TypeError) {}
 }
@@ -38,6 +46,8 @@ function setLangEng() {
                             Here, I share the projects I write trough my career as an "up-and-coming" web developer.<br>
                             You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.`;
 
+    const contactTextHead = "Nothing beats a good ol' email!";
+    const contactTextSub = "Clicking on the address bellow opens your email client.";
     const projectsHeaderEng = "Projects";
     const contactHeaderEng = "Contact me";
     const navbarButtonHomeEng = "home";
@@ -57,6 +67,8 @@ function setLangEng() {
         homeTextBoxEng,
         projectsHeaderEng,
         contactHeaderEng,
+        contactTextHead,
+        contactTextSub,
         footerTextEng
     );
 }
@@ -70,6 +82,8 @@ function setLangNor() {
                             Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "up-and-coming" webutvikler.<br>
                             Du kan se gjennom mine prosjekter, ta en titt på min Github eller CV, eller finne min foretrukne måte å bli kontaktet.`;
 
+    const contactTextHead = "Ingenting slår en god, gammel E-post!";
+    const contactTextSub = "Trykk på adressen under for å åpne mail-klienten din.";
     const projectsHeaderNor = "Prosjekter";
     const contactHeaderNor = "Kontakt meg";
     const navbarButtonHomeNor = "hjem";
@@ -89,6 +103,8 @@ function setLangNor() {
         homeTextBoxNor,
         projectsHeaderNor,
         contactHeaderNor,
+        contactTextHead,
+        contactTextSub,
         footerTextNor
     );
 }
