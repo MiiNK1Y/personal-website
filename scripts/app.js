@@ -9,7 +9,7 @@ function langSwitch(
     projectsHeader,
     contactHeader,
     footerText
-    ) {
+) {
     document.getElementById("language-switch").innerHTML = langButton;
     document.getElementById("navbar__home").innerHTML = navbarButtonHome;
     document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
@@ -58,7 +58,7 @@ function setLangEng() {
         projectsHeaderEng,
         contactHeaderEng,
         footerTextEng
-    )
+    );
 }
 
 function setLangNor() {
@@ -90,7 +90,7 @@ function setLangNor() {
         projectsHeaderNor,
         contactHeaderNor,
         footerTextNor
-    )
+    );
 }
 
 // check if there are data stored from a previous visit, setting language accordingly
