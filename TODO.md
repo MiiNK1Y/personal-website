@@ -5,15 +5,15 @@
 - [-] 0. move the language-button to the footer?
 - [x] 1. add project Excel Vertical Data-binder to 'Pojects' page.
     - [x] 1.1 take pictures for the project.
-    - [ ] 1.2 design the project-cards templates
+    - [x] 1.2 design the project-cards templates
 - [ ] 2. add button-hover-dropdown for when clicking "home" while on the home-screen, same with projects page.
 - [x] 3. get language button to work (make javascript read from file and paste? Or hardcode into javascript?).
 - [x] 4. down-size the cv-file for better performance when previewing.
-- [ ] 5. play a GIF of the application in question, in action, when hovering over a project card.
+- [-] 5. play a GIF of the application in question, in action, when hovering over a project card.
 - [x] 6. get some better colors on page-divider, footer, and font colors.
 - [ ] 7. make an PDF viewer for CV (or rely on built-in viewer?).
 - [ ] 8. fix font on cv.
-- [ ] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
+- [x] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
 - [ ] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
 - [x] 11. get language switch to "stick" by using localStorage.
 - [x] 12. better way to go about the language-switch tech?
