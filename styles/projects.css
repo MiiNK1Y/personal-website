@@ -34,27 +34,39 @@
 }
 
 .card__content {
-    position: relative;
     width: 500px;
     height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card__content a {
-    width: 500px;
-    height: 340px;
-    transition: 0.5s;
+.card__content > img {
+    max-width: 500px;
+    max-height: 340px;
+    transition: 0.3s;
 }
 
-.card__content a:hover {
-    opacity: 0.5;
+.card__content:hover > img {
+    filter: blur(4px);
+    transition: filter 0.3s;
+}
+
+.card__link-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
     transition: opacity 0.3s;
 }
 
-.card__content img {
-    max-width: 500px;
-    max-height: 340px;
-    border: 2px solid var(--catppuccin-rosewater);
-    border-radius: 10px;
+.card__content:hover > .card__link-container {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card__link-container > a > img {
+    margin: 0 10px 0 10px;
 }
 
 /* ---------- PROJECT CARDS >END< ---------- */
