@@ -86,6 +86,25 @@ footer a:hover {
     color: var(--catppuccin-red);
 }
 
+.credits {
+    position: absolute;
+    font-family: var(--default-font);
+    font-size: 1rem;
+    border: 2px solid var(--catppuccin-text-color);
+    border-radius: 10px;
+    background-color: inherit;
+    color: var(--catppuccin-text-color);
+    left: 25px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.credits:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
 /* ---------- NAVBAR DESIGN >BEGIN< ---------- */
 
 #navbar {
