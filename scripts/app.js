@@ -122,3 +122,8 @@ function setLangButton() {
         setLangNor();
     }
 }
+
+// wip
+function showCredits() {
+    document.getElementById("credits-window").style.display = "block";
+}

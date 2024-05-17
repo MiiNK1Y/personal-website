@@ -22,3 +22,4 @@
 - [x] 15. not reload page when clicking on current page in navbar.
 - [x] 16. implement the JS function to check the current page-url, to set the language and functions accordingly. (remove that 'try{}catch(){}' B.S dumdum!)
 - [x] 17. change project-card link SVGs to emojis? Photoshop the icons to make them even?
+- [ ] 18. add translation for 'credits' window and button.
