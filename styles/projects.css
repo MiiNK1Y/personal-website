@@ -56,24 +56,41 @@
 .card__link-container {
     display: flex;
     align-items: center;
-    cursor: default;
     position: absolute;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
-.card__link-container > a {
-    margin: 0 10px 0 10px;
+.card__link-container__icon-container {
+    width: auto;
+    margin: 10px;
 }
 
-.card__link-container > a:hover {
-    cursor: pointer;
-    margin: 0 10px 0 10px;
+.card__link-container > .card__link-container__icon-container > a {
+    font-size: 0;
 }
 
 .card__content:hover > .card__link-container {
     opacity: 1;
     transition: opacity 0.7s;
+}
+
+.card__link-container > .card__link-container__icon-container > a > img {
+    height: 70px;
+}
+
+.card__link-container__icon-container__icon-underline {
+    opacity: 0;
+    height: 5px;
+    width: auto;
+    background-color: var(--catppuccin-text-color);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.card__link-container__icon-container:hover .card__link-container__icon-container__icon-underline {
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 /* ---------- PROJECT CARDS >END< ---------- */

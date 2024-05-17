@@ -6,7 +6,7 @@
 - [x] 1. add project Excel Vertical Data-binder to 'Pojects' page.
     - [x] 1.1 take pictures for the project.
     - [x] 1.2 design the project-cards templates
-- [ ] 2. add button-hover-dropdown for when clicking "home" while on the home-screen, same with projects page.
+- [-] 2. add button-hover-dropdown for when clicking "home" while on the home-screen, same with projects page.
 - [x] 3. get language button to work (make javascript read from file and paste? Or hardcode into javascript?).
 - [x] 4. down-size the cv-file for better performance when previewing.
 - [-] 5. play a GIF of the application in question, in action, when hovering over a project card.
@@ -21,3 +21,5 @@
 - [ ] 14. make alt version of the index page with default navbar positioning.
 - [x] 15. not reload page when clicking on current page in navbar.
 - [x] 16. implement the JS function to check the current page-url, to set the language and functions accordingly. (remove that 'try{}catch(){}' B.S dumdum!)
+- [x] 17. change project-card link SVGs to emojis? Photoshop the icons to make them even?
+- [ ] 18. implement hovering over the lang button changes the site-content before clicking.
