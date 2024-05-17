@@ -66,11 +66,13 @@ h1,
 }
 
 #credits-window {
-    display: none;
     position: absolute;
+    display: none;
     bottom: 0;
-    width: 300px;
+    width: 250px;
     height: auto;
+    font-size: 1.1rem;
+    text-align: center;
     border: 2px solid var(--catppuccin-text-color);
     border-radius: 1rem;
     box-shadow: 0 0 15px 3px #000000;
@@ -80,6 +82,14 @@ h1,
 #credits-window > p{
     padding: 20px;
     margin: 0;
+}
+
+#credits-window > p > a {
+    color: var(--catppuccin-text-color);
+}
+
+#credits-window > p > a:hover {
+    color: var(--catppuccin-red);
 }
 
 footer {

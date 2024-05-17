@@ -123,7 +123,12 @@ function setLangButton() {
     }
 }
 
-// wip
 function showCredits() {
-    document.getElementById("credits-window").style.display = "block";
+    creditsWindow = document.getElementById("credits-window").style.display;
+    if (creditsWindow == "block") {
+        document.getElementById("credits-window").style.display = "none";
+    }
+    else {
+        document.getElementById("credits-window").style.display = "block";
+    }
 }
