@@ -116,7 +116,7 @@ footer a:hover {
 }
 
 #sources {
-    background-color: inherit;
+    background-color: var(--catppuccin-background-color);
     font-family: var(--default-font);
     font-size: 1rem;
     border: 2px solid var(--catppuccin-text-color);
