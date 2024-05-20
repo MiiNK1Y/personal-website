@@ -67,7 +67,27 @@ body {
     padding-top: 50px;
 }
 
+#sources-button {
+    background-color: inherit;
+    font-family: var(--default-font);
+    font-size: 1rem;
+    border: 2px solid var(--catppuccin-text-color);
+    border-radius: 10px;
+    color: var(--catppuccin-text-color);
+    position: absolute;
+    left: 25px;
+    margin-top: 15px;
+    transition: var(--default-hoverOff-phase);
+}
+
+#sources-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: var(--default-hoverOn-phase);
+}
+
 #sources-window {
+    background-color: inherit;
     width: auto;
     height: auto;
     border-radius: 1rem;
@@ -113,25 +133,6 @@ footer a {
 footer a:hover {
     cursor: pointer;
     color: var(--catppuccin-red);
-}
-
-#sources {
-    background-color: var(--catppuccin-background-color);
-    font-family: var(--default-font);
-    font-size: 1rem;
-    border: 2px solid var(--catppuccin-text-color);
-    border-radius: 10px;
-    color: var(--catppuccin-text-color);
-    position: absolute;
-    left: 25px;
-    margin-top: 15px;
-    transition: var(--default-hoverOff-phase);
-}
-
-#sources:hover {
-    opacity: 0.5;
-    cursor: pointer;
-    transition: var(--default-hoverOn-phase);
 }
 
 /* ---------- NAVBAR DESIGN >BEGIN< ---------- */
