@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Aleksander Knoph</title>
+        <title>Aleksanders Projects</title>
         <meta charset="utf-8">
         <meta name="description" content="Aleksanders projects.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,115 +9,101 @@
         <link rel="stylesheet" href="styles/projects.css">
     </head>
     <body>
-        <button id="language-switch" onclick="setLangButton()">language | &#127468&#127463</button>
-
+        <button id="lang-switch" onclick="setLangButton()">language | &#127468&#127463</button>
         <div class="site-container">
-
-            <div class="header-text" id="projects-header-text">Projects</div>
-
+            <div id="projects-header-text" class="header-text">Projects</div>
             <div id="navbar">
                 <a href="index.html" draggable="false">
                     <button id="navbar__home">home</button>
                 </a>
-
                 <a draggable="false">
                     <button id="navbar__projects">projects</button>
                 </a>
-
                 <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank">
                     <button id="navbar__github">github &#10548;</button>
                 </a>
-
                 <a href="/download/cv_aleksander-nk.pdf" draggable="false" target="_blank">
                     <button id="navbar__cv">curriculum vitae &#10548;</button>
                 </a>
-
                 <a href="contact.html" draggable="false">
                     <button id="navbar__contact">contact</button>
                 </a>
             </div>
-
             <div class="site-divider"></div>
-
             <div class="cards-container">
                 <div class="card">
-                    <div class="card__title">.xlsx vertical data binder</div>
-                    <div class="card__content">
+                    <div class="card-title">.xlsx vertical data binder</div>
+                    <div class="card-content">
                         <img src="images/project-thumbnails/aksospm.png" draggable="false">
-                        <div class="card__link-container">
-                            <div class="card__link-container__icon-container">
+                        <div class="card-icons">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/download.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
-                            <div class="card__link-container__icon-container">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/github.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
-                            <div class="card__link-container__icon-container">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/information.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="card">
-                    <div class="card__title">GET Academy entrance submission</div>
-                    <div class="card__content">
+                    <div class="card-title">GET Academy entrance submission</div>
+                    <div class="card-content">
                         <img src="images/project-thumbnails/get-academy-oppgave.png" draggable="false">
-                        <div class="card__link-container">
-                            <div class="card__link-container__icon-container">
+                        <div class="card-icons">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/arrow.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
-                            <div class="card__link-container__icon-container">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/download.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
-                            <div class="card__link-container__icon-container">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/github.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
-                            <div class="card__link-container__icon-container">
+                            <div class="card-icon-wrapper">
                                 <a href="https://google.com" target="_blank" draggable="false">
                                     <img src="icons/information.png" draggable="false">
                                 </a>
-                                <div class="card__link-container__icon-container__icon-underline"></div>
+                                <div class="card-icon-underline"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="credits-window">
+        <div id="sources-window">
             <p>
                 Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
                 Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
                 Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
             </p>
         </div>
-
         <footer>
-            <button class="credits" onclick="showCredits()">credits</button>
+            <button id="sources" onclick="showSources()">credits</button>
             <div id="footer-author-text"><p>Author: Aleksander N. Knoph</p></div>
             <div class="signature-divider"></div>
             <a href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
         </footer>
-
         <script type="text/javascript" src="scripts/app.js"></script>
-
     </body>
 </html>

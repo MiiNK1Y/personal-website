@@ -9,36 +9,27 @@
         <link rel="stylesheet" href="styles/contact.css">
     </head>
     <body>
-        <button id="language-switch" onclick="setLangButton()">language | &#127468&#127463</button>
-
+        <button id="lang-switch" onclick="setLangButton()">language | &#127468&#127463</button>
         <div class="site-container">
-
             <div class="header-text" id="contact-header-text">Contact me</div>
-
             <div id="navbar">
                 <a href="index.html" draggable="false">
                     <button id="navbar__home">home</button>
                 </a>
-
                 <a href="projects.html" draggable="false">
                     <button id="navbar__projects">projects</button>
                 </a>
-
                 <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank">
                     <button id="navbar__github">github &#10548;</button>
                 </a>
-
                 <a href="/download/cv_aleksander-nk.pdf" draggable="false" target="_blank">
                     <button id="navbar__cv">curriculum vitae &#10548;</button>
                 </a>
-
                 <a draggable="false">
                     <button id="navbar__contact">contact</button>
                 </a>
             </div>
-
             <div class="site-divider"></div>
-
             <div id="contact">
                 <div id="contact__text">
                     <div id="contact__head">Nothing beats a good ol' email!</div>
@@ -47,23 +38,19 @@
                 </div>
             </div>
         </div>
-
-        <div id="credits-window">
+        <div id="sources-window">
             <p>
                 Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
                 Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
                 Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
             </p>
         </div>
-
         <footer>
-            <button class="credits" onclick="showCredits()">credits</button>
+            <button id="sources" onclick="showSources()">credits</button>
             <div id="footer-author-text"><p>Author: Aleksander N. Knoph</p></div>
             <div class="signature-divider"></div>
             <a href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
         </footer>
-
         <script type="text/javascript" src="scripts/app.js"></script>
-
     </body>
 </html>

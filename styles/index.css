@@ -12,26 +12,25 @@ body {
 
 /* ---------- MAIN CONTAINER DESIGN >BEGIN< ---------- */
 
-#main {
+#intro-window {
     padding: 1.5rem 1rem 1.5rem 1rem;
     border: 3px solid var(--catppuccin-lavender);
     border-radius: 2rem;
     margin: 20px;
 }
 
-#portrait-container {
-    display: flex;
-    justify-content: center;
-    user-select: none;
-}
-
-#portrait-container h1 {
+.header-text {
     text-align: right;
     padding: 0;
     margin: auto 25px auto auto;
 }
 
-#portrait-container img {
+#portrait-container {
+    display: flex;
+    justify-content: center;
+}
+
+#portrait-container > img {
     height: 170px;
     border: 3px solid var(--catppuccin-yellow);
     border-radius: 50%;
@@ -42,15 +41,14 @@ body {
     max-width: 550px;
     font-size: 1.1rem;
     margin: 0 auto 0 auto;
-    user-select: none;
 }
 
-#home-text-box br {
+#home-text-box > p> br {
     margin-bottom: 10px;
 }
 
-#home-text-box p,
-#home-text-box br:first-child{
+#home-text-box > p,
+#home-text-box > p > br:first-child{
     margin: 0;
 }
 

@@ -14,7 +14,7 @@
 - [ ] 7. make a PDF viewer for CV (or rely on built-in viewer?).
 - [ ] 8. fix font on cv.
 - [x] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
-- [ ] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
+- [x] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
 - [x] 11. get language switch to "stick" by using localStorage.
 - [x] 12. better way to go about the language-switch tech?
 - [x] 13. finnish the "contact me" page.
@@ -22,5 +22,8 @@
 - [x] 15. not reload page when clicking on current page in navbar.
 - [x] 16. implement the JS function to check the current page-url, to set the language and functions accordingly. (remove that 'try{}catch(){}' B.S dumdum!)
 - [x] 17. change project-card link SVGs to emojis? Photoshop the icons to make them even?
-- [ ] 18. add translation for 'credits' window and button.
+- [x] 18. add translation for 'credits' window and button.
 - [ ] 19. contact-page is bad. fix that.
+- [x] 20. rename some stuff. Current names bad.
+- [ ] 21. make a proton mail account for website to receive mails.
+- [ ] 22. add rock-paper-scissors game to projects-website.
