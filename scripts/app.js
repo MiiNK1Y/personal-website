@@ -24,14 +24,14 @@ function langSwitch(
         document.getElementById("home-text-box").innerHTML = homeTextBox;
     } else if (document.URL.includes("projects.html")) {
         document.getElementById("projects-header-text").innerHTML = projectsHeader;
-        document.getElementById("sources").innerHTML = sourcesButton;
+        document.getElementById("sources-button").innerHTML = sourcesButton;
         document.getElementById("sources-window").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     } else if (document.URL.includes("contact.html")) {
         document.getElementById("contact-header-text").innerHTML = contactHeader;
         document.getElementById("contact__head").innerHTML = contactTextHead;
         document.getElementById("contact__sub").innerHTML = contactTextSub;
-        document.getElementById("sources").innerHTML = sourcesButton;
+        document.getElementById("sources-button").innerHTML = sourcesButton;
         document.getElementById("sources-window").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     }
