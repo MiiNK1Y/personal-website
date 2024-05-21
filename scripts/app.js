@@ -1,4 +1,4 @@
-function langSwitch(
+function switchLang(
     // always available
     langButton,
     navbarButtonHome,
@@ -66,7 +66,7 @@ function setLangEng() {
     // HTML Doc Code for Britain flag emoji.
     const langButtonEng = "language | &#127468;&#127463;";
 
-    langSwitch(
+    switchLang(
         // always available
         langButtonEng,
         navbarButtonHomeEng,
@@ -113,7 +113,7 @@ function setLangNor() {
     // HTML Doc Code for Norwegian flag emoji.
     const langButtonNor = "språk | &#127475;&#127476;";
 
-    langSwitch(
+    switchLang(
         // always available
         langButtonNor,
         navbarButtonHomeNor,

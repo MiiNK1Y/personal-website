@@ -27,3 +27,4 @@
 - [x] 20. rename some stuff. Current names bad.
 - [ ] 21. make a proton mail account for website to receive mails.
 - [ ] 22. add rock-paper-scissors game to projects-website.
+- [ ] 23. as etiquette, 'button' tag should not be nested inside a 'a' tag, which confuses the browsers site tab-select-rotation. fix that by styling the 'a' tag, and not use 'button'.
