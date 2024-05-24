@@ -27,6 +27,7 @@
 - [x] 20. rename some stuff. Current names bad.
 - [ ] 21. make a proton mail account for website to receive mails.
 - [ ] 22. add rock-paper-scissors game to projects-website.
-- [ ] 23. as etiquette, 'button' tag should not be nested inside a 'a' tag, which confuses the browsers site tab-select-rotation. fix that by styling the 'a' tag, and not use 'button'.
+- [x] 23. as etiquette, 'button' tag should not be nested inside a 'a' tag, which confuses the browsers site tab-select-rotation. fix that by styling the 'a' tag, and not use 'button'.
 - [ ] 24. see the 'a'-tag sizing on the project-icons, can they cover the whole image-size?
-- [ ] 25. make 'GET Academy' project website available. Keep web-projects in their own folder, what to do   ? 
+- [ ] 25. make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
+- [ ] 26. for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?

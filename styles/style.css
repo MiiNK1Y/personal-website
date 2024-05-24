@@ -138,20 +138,22 @@ footer a:hover {
 /* ---------- NAVBAR DESIGN >BEGIN< ---------- */
 
 #navbar {
-    margin: 50px auto 50px auto;
+    margin: 30px auto 30px auto;
+    font-size: 0; /* to remove whitespace between buttons */
+    text-align: center;
 }
 
-#navbar > a {
+#navbar button {
+    background: none;
     color: var(--catppuccin-text-color);
     font-size: 1rem;
-    text-decoration: none;
     padding: 10px;
     border-radius: 20px;
     margin: 10px;
     transition: box-shadow var(--default-hoverOff-phase);
 }
 
-#navbar > a:hover {
+#navbar button:hover {
     cursor: pointer;
     color: var(--catppuccin-text-invert-color);
     border: 2px solid var(--catppuccin-background-color);

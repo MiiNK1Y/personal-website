@@ -27,6 +27,7 @@ body {
 
 #portrait-container {
     display: flex;
+    flex-wrap: wrap-reverse;
     justify-content: center;
 }
 
