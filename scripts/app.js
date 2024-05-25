@@ -160,3 +160,11 @@ function showSources() {
         document.getElementById("sources-window").style.display = "block";
     }
 }
+
+function goTo(page) {
+    window.location = page;
+}
+
+function openTab(page) {
+    window.open(page);
+}

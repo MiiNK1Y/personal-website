@@ -33,8 +33,6 @@
 }
 
 .card-content {
-    width: 500px;
-    height: 340px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +60,6 @@
 }
 
 .card-icon-wrapper {
-    width: auto;
     margin: 10px;
 }
 
@@ -94,3 +91,15 @@
 }
 
 /* ---------- PROJECT CARDS >END< ---------- */
+
+/* mobile device compatibility */
+@media screen and (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, 480px);
+    }
+
+    .card-content > img {
+        max-width: 480px;
+        max-height: 280px;
+    }
+}

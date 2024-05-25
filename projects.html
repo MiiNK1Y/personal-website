@@ -13,21 +13,11 @@
         <div class="site-container">
             <div id="projects-header-text" class="header-text">Projects</div>
             <div id="navbar">
-                <a href="index.html" draggable="false">
-                    <button id="navbar__home">home</button>
-                </a>
-                <a draggable="false">
-                    <button id="navbar__projects">projects</button>
-                </a>
-                <a href="https://github.com/MiiNK1Y" draggable="false" target="_blank">
-                    <button id="navbar__github">github &#10548;</button>
-                </a>
-                <a href="/download/cv_aleksander-nk.pdf" draggable="false" target="_blank">
-                    <button id="navbar__cv">curriculum vitae &#10548;</button>
-                </a>
-                <a href="contact.html" draggable="false">
-                    <button id="navbar__contact">contact</button>
-                </a>
+                <button id="navbar__home" onclick="goTo('index.html')">home</button>
+                <button id="navbar__projects">projects</button>
+                <button id="navbar__github" onclick="openTab('https://github.com/MiiNK1Y')">github &#10548;</button>
+                <button id="navbar__cv" onclick="openTab('/download/cv_aleksander-nk.pdf')">curriculum vitae &#10548;</button>
+                <button id="navbar__contact" onclick="goTo('contact.html')">contact</button>
             </div>
             <div class="site-divider"></div>
             <div class="cards-container">
@@ -58,7 +48,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-title">GET Academy entrance submission</div>
+                    <div class="card-title">GET Academy submission</div>
                     <div class="card-content">
                         <img src="images/project-thumbnails/get-academy-oppgave.png" draggable="false">
                         <div class="card-icons">
