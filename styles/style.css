@@ -252,15 +252,34 @@ footer a:hover {
     }
 
     .header-text {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     #lang-switch {
         font-size: 0.7rem;
+        border: 1px solid var(--catppuccin-text-color);
+        border-radius: 6px;
+    }
+
+    #navbar button {
+        font-size: 0.8rem;
+        padding: 7px;
+        margin: 5px;
     }
 
     #sources-button {
         font-size: 0.7rem;
         left: 10px;
+        border: 1px solid var(--catppuccin-text-color);
+        border-radius: 6px;
+    }
+
+    #footer-author-text p,
+    footer a {
+        font-size: 0.8rem;
+    }
+
+    #sources-window {
+        font-size: 1rem;
     }
 }

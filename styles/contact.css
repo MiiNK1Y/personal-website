@@ -8,11 +8,8 @@
 /* main site container >BEGIN< */
 
 #contact {
-    display: flex;
     width: auto;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
+    margin-top: 50px;
 }
 
 #contact__head {

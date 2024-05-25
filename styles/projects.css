@@ -102,4 +102,12 @@
         max-width: 370px;
         max-height: 280px;
     }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-icons > .card-icon-wrapper > a > img {
+        height: 50px;
+    }
 }
