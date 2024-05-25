@@ -55,3 +55,15 @@ body {
 }
 
 /* ---------- MAIN CONTAINER DESIGN >END< ---------- */
+
+/* mobile device compatibility */
+@media screen and (max-width: 450px) {
+    #intro-window {
+        border: unset;
+        margin: unset;
+    }
+
+    #portrait-container > img {
+        margin-bottom: 20px;
+    }
+}

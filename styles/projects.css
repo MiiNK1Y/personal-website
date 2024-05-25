@@ -93,13 +93,13 @@
 /* ---------- PROJECT CARDS >END< ---------- */
 
 /* mobile device compatibility */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
     .cards-container {
-        grid-template-columns: repeat(auto-fit, 480px);
+        grid-template-columns: repeat(auto-fit, 370px);
     }
 
     .card-content > img {
-        max-width: 480px;
+        max-width: 370px;
         max-height: 280px;
     }
 }

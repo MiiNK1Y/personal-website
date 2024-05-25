@@ -32,3 +32,18 @@
 #contact__address:hover {
     color: var(--catppuccin-red);
 }
+
+/* mobile device compatibility */
+@media screen and (max-width: 450px) {
+    #contact__head {
+        font-size: 2rem;
+    }
+
+    #contact__sub {
+        font-size: 1rem;
+    }
+
+    #contact__address {
+        font-size: 1.2rem;
+    }
+}

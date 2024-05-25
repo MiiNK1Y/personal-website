@@ -244,3 +244,23 @@ footer a:hover {
 }
 
 /* ---------- SITE COMPONENTS >END< ---------- */
+
+/* mobile device compatibility */
+@media screen and (max-width: 450px) {
+    body {
+        height: auto;
+    }
+
+    .header-text {
+        font-size: 2rem;
+    }
+
+    #lang-switch {
+        font-size: 0.7rem;
+    }
+
+    #sources-button {
+        font-size: 0.7rem;
+        left: 10px;
+    }
+}
