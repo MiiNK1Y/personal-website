@@ -11,7 +11,7 @@
 - [x] 4. down-size the cv-file for better performance when previewing.
 - [-] 5. play a GIF of the application in question, in action, when hovering over a project card.
 - [x] 6. get some better colors on page-divider, footer, and font colors.
-- [ ] 7. make a PDF viewer for CV (or rely on built-in viewer?).
+- [-] 7. make a PDF viewer for CV (or rely on built-in viewer?).
 - [ ] 8. fix font on cv.
 - [x] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
 - [x] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
