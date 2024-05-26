@@ -7,6 +7,7 @@
 /* ---------- SITE CONTAINER DESIGN >BEGIN< ---------- */
 
 .site-container {
+    animation: fadeInAnimation ease var(--default-hoverOff-phase);
     max-width: 2500px;
     min-height: 100svh;
     text-align: center;

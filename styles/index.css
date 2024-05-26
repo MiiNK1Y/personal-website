@@ -12,7 +12,8 @@ body {
 
 /* ---------- MAIN CONTAINER DESIGN >BEGIN< ---------- */
 
-#intro-window {
+#main-card {
+    animation: fadeInAnimation ease var(--default-hoverOff-phase);
     padding: 1.5rem 1rem 1.5rem 1rem;
     border: 2px solid var(--catppuccin-lavender);
     border-radius: 2rem;
@@ -58,7 +59,7 @@ body {
 
 /* mobile device compatibility */
 @media screen and (max-width: 450px) {
-    #intro-window {
+    #main-card {
         border: unset;
         margin: unset;
     }

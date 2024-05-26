@@ -1,7 +1,5 @@
 /* base styling sheet for site-wide purpose */
 
-/* ---------- META SITE DESIGN >BEGIN< ---------- */
-
 @font-face {
     font-family: "Nunito";
     src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf) format("truetype");
@@ -17,7 +15,6 @@
 }
 
 :root {
-    /* colors following the catppuccin color schema */
     --catppuccin-background-color: #1e1e2e;
     --catppuccin-footer: #10101a;
 
@@ -44,14 +41,6 @@
     --default-hoverOn-phase: 0.2s;
     --default-hoverOff-phase: 0.4s;
 }
-
-/* setting fade-in animation on the main body components, but not the body itself */
-#intro-window,
-.site-container {
-    animation: fadeInAnimation ease var(--default-hoverOff-phase);
-}
-
-/* ---------- META SITE DESIGN >END< ---------- */
 
 body {
     background-color: var(--catppuccin-background-color);
@@ -88,12 +77,10 @@ body {
 
 #sources-window {
     background-color: inherit;
-    width: auto;
-    height: auto;
     border-radius: 1rem;
     box-shadow: 0 0 15px 3px #000000;
     margin: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
     position: absolute;
     display: none;
@@ -134,8 +121,6 @@ footer a:hover {
     cursor: pointer;
     color: var(--catppuccin-red);
 }
-
-/* ---------- NAVBAR DESIGN >BEGIN< ---------- */
 
 #navbar {
     margin: 30px auto 30px auto;
@@ -205,10 +190,6 @@ footer a:hover {
     box-shadow: 0 0 0 4px var(--catppuccin-green);
 }
 
-/* ---------- NAVBAR DESIGN >END< ---------- */
-
-/* ---------- SITE COMPONENTS >BEGIN< ---------- */
-
 .site-divider {
     background-color: var(--catppuccin-text-color);
     max-width: 2200px;
@@ -242,8 +223,6 @@ footer a:hover {
     cursor: pointer;
     transition: opacity var(--default-hoverOn-phase);
 }
-
-/* ---------- SITE COMPONENTS >END< ---------- */
 
 /* mobile device compatibility */
 @media screen and (max-width: 450px) {

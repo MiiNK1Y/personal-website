@@ -1,33 +1,13 @@
 # We need some fucking order in here
-- [x] -3. re-add language-button.
-- [x] -2. clean up code and abstractions.
-- [x] -1. fix footer not sticking to bottom after cards auto-row past its position.
-- [-] 0. move the language-button to the footer?
-- [x] 1. add project Excel Vertical Data-binder to 'Pojects' page.
-    - [x] 1.1 take pictures for the project.
-    - [x] 1.2 design the project-cards templates
-- [-] 2. add button-hover-dropdown for when clicking "home" while on the home-screen, same with projects page.
-- [x] 3. get language button to work (make javascript read from file and paste? Or hardcode into javascript?).
-- [x] 4. down-size the cv-file for better performance when previewing.
-- [-] 5. play a GIF of the application in question, in action, when hovering over a project card.
-- [x] 6. get some better colors on page-divider, footer, and font colors.
-- [-] 7. make a PDF viewer for CV (or rely on built-in viewer?).
-- [ ] 8. fix font on cv.
-- [x] 9. design the project-card icon shade-overlay for "download (binary)", "visit (if a website)", "see source (github)".
-- [x] 10. "credits" - button in the footer. Pops up a window with credits. (colorscheme: catppuccin, font: Nunito by Google)
-- [x] 11. get language switch to "stick" by using localStorage.
-- [x] 12. better way to go about the language-switch tech?
-- [x] 13. finnish the "contact me" page.
-- [ ] 14. make alt version of the index page with default navbar positioning.
-- [x] 15. not reload page when clicking on current page in navbar.
-- [x] 16. implement the JS function to check the current page-url, to set the language and functions accordingly. (remove that 'try{}catch(){}' B.S dumdum!)
-- [x] 17. change project-card link SVGs to emojis? Photoshop the icons to make them even?
-- [x] 18. add translation for 'credits' window and button.
-- [ ] 19. contact-page is bad. fix that.
-- [x] 20. rename some stuff. Current names bad.
-- [ ] 21. make a proton mail account for website to receive mails.
-- [ ] 22. add rock-paper-scissors game to projects-website.
-- [x] 23. as etiquette, 'button' tag should not be nested inside a 'a' tag, which confuses the browsers site tab-select-rotation. fix that by styling the 'a' tag, and not use 'button'.
-- [ ] 24. see the 'a'-tag sizing on the project-icons, can they cover the whole image-size?
-- [ ] 25. make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
-- [ ] 26. for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?
+
+- [ ] re-write website with a single style file (for darkmode) and a cleaner structure. Write HTML first then style with css. Remember mobile / touch compatibility.
+
+- [ ] clean up code and abstractions.
+- [ ] fix font on cv.
+- [ ] contact-page is bad. fix that.
+- [ ] make a proton mail account for website to receive mails.
+- [ ] add rock-paper-scissors game to projects-website.
+- [ ] 'button' tag should not be nested inside a 'a' tag. Fix that by styling the 'a' tag, and not use 'button'.
+- [ ] see the 'a'-tag sizing on the project-icons, can they cover the whole image-size?
+- [ ] make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
+- [ ] for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?

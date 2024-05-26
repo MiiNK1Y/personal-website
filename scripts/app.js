@@ -142,7 +142,7 @@ if (langSet == null) {
     setLangNor();
 }
 
-function setLangButton() {
+function switchLangButton() {
     let curLang = localStorage.getItem("language");
     if (curLang == "nor") {
         setLangEng();
