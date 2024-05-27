@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(assets/fonts/Nunito/Nunito-VariableFont_wght.ttf) format("truetype");
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+:root {
+    --catppuccin-background-color: #1e1e2e;
+    --catppuccin-footer: #10101a;
+
+    --catppuccin-rosewater: #f5e0dc;
+    --catppuccin-flamingo: #f2cdcd;
+    --catppuccin-pink: #f5c2e7;
+    --catppuccin-mauve: #cba6f7;
+    --catppuccin-red: #f38ba8;
+    --catppuccin-maroon: #eba0ac;
+    --catppuccin-peach: #fab387;
+    --catppuccin-yellow: #f9e2af;
+    --catppuccin-green: #a6e3a1;
+    --catppuccin-teal: #94e2d5;
+    --catppuccin-sky: #89dceb;
+    --catppuccin-sapphire: #74c7ec;
+    --catppuccin-blue: #89b4fa;
+    --catppuccin-lavender: #b4befe;
+
+    --catppuccin-text-color: #cdd6f4;
+    --catppuccin-text-invert-color: #11111b;
+
+    --default-font: Nunito;
+
+    --default-hoverOn-phase: 0.2s;
+    --default-hoverOff-phase: 0.4s;
+}
+
+body {
+    height: 100svh; /* for when the site is non-scrollable. less than 450px voids this */
+    background: var(--catppuccin-background-color);
+    font-family: var(--default-font);
+    color: var(--catppuccin-text-color);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+p,
+a,
+button {
+    font-size: 1.1rem;
+    color: var(--catppuccin-text-color);
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.def-border {
+    border: 2px solid var(--catppuccin-text-color);
+}
+
+.x-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#lang-switch {
+    background: inherit;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.index-wrapper {
+    width: 100%;
+    height: inherit;
+}
+
+#main-card {
+    animation: fadeInAnimation ease var(--default-hoverOff-phase);
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    border-radius: 2rem;
+}
+
+#myself {
+    flex-wrap: wrap-reverse;
+}
+
+#myself > img {
+    height: 170px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#home-text-box {
+    max-width: 550px;
+}
+
+#home-text-box > p > br {
+    margin-bottom: 10px;
+}
+
+#home-text-box > p > br:first-child {
+    margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        height: unset;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .def-border {
+        border: 1px solid var(--catppuccin-lavender);
+    }
+}
