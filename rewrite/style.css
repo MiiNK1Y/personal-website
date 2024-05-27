@@ -50,13 +50,11 @@ body {
 
 h1 {
     font-size: 3rem;
-    padding: 0;
     margin: 0;
 }
 
 h2 {
     font-size: 1.8rem;
-    padding: 0;
     margin: 0;
 }
 
@@ -65,7 +63,6 @@ a,
 button {
     font-size: 1rem;
     color: var(--catppuccin-text-color);
-    padding: 0;
     margin: 0;
 }
 
@@ -138,6 +135,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* navbar buttons */
 #navbar > a {
     text-decoration: none;
     padding: 8px;
@@ -178,7 +176,7 @@ footer {
 
 .card__content > img {
     max-width: 450px;
-    max-height: 450px;
+    max-height: 320px;
     box-shadow: 0 0 15px 1px #000000;
     transition: filter ease var(--default-hoverOff-phase);
 }
@@ -327,7 +325,7 @@ footer {
 
     .card__content > img {
         max-width: 380px;
-        max-height: 380px;
+        max-height: 300px;
     }
 
     .card__icons > img {

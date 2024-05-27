@@ -7,7 +7,7 @@
 - [ ] contact-page is bad. fix that.
 - [ ] make a proton mail account for website to receive mails.
 - [ ] add rock-paper-scissors game to projects-website.
-- [ ] 'button' tag should not be nested inside a 'a' tag. Fix that by styling the 'a' tag, and not use 'button'.
+- [x] 'button' tag should not be nested inside a 'a' tag. Fix that by styling the 'a' tag, and not use 'button'.
 - [ ] see the 'a'-tag sizing on the project-icons, can they cover the whole image-size?
 - [ ] make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
-- [ ] for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?
+- [o] for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?
