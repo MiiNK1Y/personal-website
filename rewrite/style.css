@@ -71,9 +71,9 @@ button {
 
 footer {
     background-color: var(--catppuccin-footer);
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .fade-in-animation {
@@ -99,8 +99,22 @@ footer {
     text-align: center;
 }
 
+.def-site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* space at the top of the site for aesthetic */
+.first-top-padding {
+    padding-top: 20px;
+}
+
 .divider {
     max-width: 1500px;
+    width: 100%;
     height: 1px;
     background-color: var(--catppuccin-text-color);
 }
@@ -152,13 +166,9 @@ footer {
     border-color: var(--catppuccin-teal);
 }
 
-.def-site-wrapper {
-    height: auto;
-    padding: 20px;
-}
-
 #card-wrapper {
     margin-top: 20px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -166,9 +176,28 @@ footer {
     margin: 10px;
 }
 
-.card-content > img {
+.card__content > img {
     max-width: 450px;
     max-height: 450px;
+    box-shadow: 0 0 15px 1px #000000;
+    transition: filter ease var(--default-hoverOff-phase);
+}
+
+.card__icons {
+    position: absolute;
+    opacity: 0;
+    background-color: #1e1e2eaf;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px #1e1e2eaf;
+    transition: opacity ease var(--default-hoverOff-phase);
+    font-size: 0; /* removes whitespace between the links */
+}
+
+.card__icons > img {
+    max-height: 70px;
+    max-width: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #main-card {
@@ -240,6 +269,16 @@ footer {
         box-shadow: 0 0 0 4px var(--catppuccin-teal);
     }
 
+    .card__content:hover > img {
+        filter: blur(4px);
+        transition: filter ease var(--default-hoverOn-phase);
+    }
+
+    .card__content:hover > .card__icons {
+        opacity: 1;
+        transition: opacity ease var(--default-hoverOn-phase);
+    }
+
     #footer-text > a:hover {
         color: var(--catppuccin-red);
     }
@@ -282,12 +321,17 @@ footer {
         margin-top: 50px;
     }
 
-    #projects-wrapper {
-        padding-top: 50px;
+    .def-site-wrapper > h1 {
+        padding-top: 40px;
     }
 
-    .card-content > img {
+    .card__content > img {
         max-width: 380px;
         max-height: 380px;
+    }
+
+    .card__icons > img {
+        max-height: 50px;
+        max-width: 50px;
     }
 }
