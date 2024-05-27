@@ -57,11 +57,21 @@ h1 {
 p,
 a,
 button {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--catppuccin-text-color);
-    text-decoration: none;
     padding: 0;
     margin: 0;
+}
+
+footer {
+    background-color: var(--catppuccin-footer);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.fade-in-animation {
+    animation: fadeInAnimation ease var(--default-hoverOff-phase);
 }
 
 .def-border {
@@ -83,24 +93,68 @@ button {
     text-align: center;
 }
 
+.divider {
+    max-width: 1500px;
+    height: 1px;
+    background-color: var(--catppuccin-text-color);
+}
+
 #lang-switch {
     background: inherit;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 7px;
+    border-radius: 15px;
     position: absolute;
     top: 10px;
     right: 10px;
+    cursor: pointer;
 }
 
-.index-wrapper {
-    width: 100%;
-    height: inherit;
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#navbar > a {
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 7px
+}
+
+#navbar__home {
+    border-color: var(--catppuccin-peach);
+}
+
+#navbar__projects {
+    border-color: var(--catppuccin-maroon);
+}
+
+#navbar__contact {
+    border-color: var(--catppuccin-green);
+}
+
+#navbar__github {
+    border-color: var(--catppuccin-flamingo);
+}
+
+#navbar__cv {
+    border-color: var(--catppuccin-teal);
+}
+
+#projects-wrapper {
+    height: auto;
+    padding: 20px;
 }
 
 #main-card {
-    animation: fadeInAnimation ease var(--default-hoverOff-phase);
     padding: 1.5rem 1rem 1.5rem 1rem;
     border-radius: 2rem;
+    border-color: var(--catppuccin-lavender);
+    margin: 10px;
 }
 
 #myself {
@@ -110,6 +164,7 @@ button {
 #myself > img {
     height: 170px;
     border-radius: 50%;
+    border-color: var(--catppuccin-yellow);
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -126,16 +181,83 @@ button {
     margin: 0;
 }
 
+#footer-text {
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (hover: hover) {
+    #navbar > a:hover {
+        color: var(--catppuccin-text-invert-color);
+        border-color: 2px solid var(--catppuccin-background-color);
+        transition: box-shadow var(--default-hoverOn-phase);
+    }
+
+    #navbar__home:hover {
+        background-color: var(--catppuccin-peach);
+        box-shadow: 0 0 0 4px var(--catppuccin-peach);
+    }
+
+    #navbar__projects:hover {
+        background-color: var(--catppuccin-maroon);
+        box-shadow: 0 0 0 4px var(--catppuccin-maroon);
+    }
+
+    #navbar__contact:hover {
+        background-color: var(--catppuccin-green);
+        box-shadow: 0 0 0 4px var(--catppuccin-green);
+    }
+
+    #navbar__github:hover {
+        background-color: var(--catppuccin-flamingo);
+        box-shadow: 0 0 0 4px var(--catppuccin-flamingo);
+    }
+
+    #navbar__cv:hover {
+        background-color: var(--catppuccin-teal);
+        box-shadow: 0 0 0 4px var(--catppuccin-teal);
+    }
+
+    #footer-text > a:hover {
+        color: var(--catppuccin-red);
+    }
+}
+
 @media screen and (max-width: 450px) {
     body {
         height: unset;
     }
 
     h1 {
-        font-size: 1.2em;
+        font-size: 2.1rem;
+    }
+
+    p,
+    a,
+    button {
+        font-size: 0.8rem;
+    }
+
+    #navbar > a {
+        margin: 5px;
     }
 
     .def-border {
         border: 1px solid var(--catppuccin-lavender);
+    }
+
+    #lang-switch {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    #main-card {
+        padding: 15px;
+        margin-top: 50px;
+    }
+
+    #projects-wrapper {
+        padding-top: 50px;
     }
 }
