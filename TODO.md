@@ -11,3 +11,4 @@
 - [ ] see the 'a'-tag sizing on the project-icons, can they cover the whole image-size?
 - [ ] make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
 - [o] for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?
+- [ ] fix language switch.
