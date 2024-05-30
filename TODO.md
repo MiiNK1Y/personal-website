@@ -12,3 +12,4 @@
 - [ ] make 'GET Academy' project website available. Keep web-projects in their own folder, what to do? 
 - [o] for navbar, make a button-container pr button to fix the overlapping-when-wrapping issue?
 - [ ] fix language switch.
+- [ ] navbar links looks funky on iphone, how to fix?

@@ -66,6 +66,12 @@ button {
     margin: 0;
 }
 
+button {
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 footer {
     background-color: var(--catppuccin-footer);
     display: grid;
@@ -126,12 +132,9 @@ footer {
 
 #lang-switch {
     background: inherit;
-    padding: 7px;
-    border-radius: 15px;
     position: absolute;
     top: 10px;
     right: 10px;
-    cursor: pointer;
 }
 
 #navbar {
@@ -147,7 +150,7 @@ footer {
 #navbar > a {
     text-decoration: none;
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 7px;
     user-select: none;
 }
@@ -257,9 +260,7 @@ footer {
 }
 
 #sources {
-    background-color: var(--catppuccin-background-color);
-    padding: 7px;
-    border-radius: 15px;
+    background-color: inherit;
     width: fit-content;
     height: fit-content;
     margin-left: 10px;
@@ -273,6 +274,10 @@ footer {
 }
 
 @media (hover: hover) {
+    button:hover {
+        opacity: 50%;
+    }
+
     #navbar > a:hover {
         color: var(--catppuccin-text-invert-color);
         border-color: 2px solid var(--catppuccin-background-color);
@@ -323,6 +328,7 @@ footer {
     }
 }
 
+/* generic phone displays */
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 2.1rem;
@@ -336,6 +342,10 @@ footer {
     a,
     button {
         font-size: 0.8rem;
+    }
+
+    button {
+        padding: 6px;
     }
 
     footer {
@@ -356,11 +366,6 @@ footer {
         border: 1px solid var(--catppuccin-lavender);
     }
 
-    #lang-switch {
-        padding: 5px;
-        border-radius: 10px;
-    }
-
     #main-card {
         padding: 15px;
         margin-top: 50px;
@@ -375,8 +380,22 @@ footer {
         max-height: 300px;
     }
 
+    /* to avoid accidental touches on invisible icons, 
+    the icons are removed completely on phone displays */
+    .card__icons {
+        display: none;
+    }
+
     .icon > a > img {
         max-height: 50px;
         max-width: 50px;
+    }
+}
+
+/* iPhone 12/13 mini displays */
+@media screen and (max-width: 400px) {
+    .card__content > img {
+        max-width: 320px;
+        max-height: 280px;
     }
 }
