@@ -1,99 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Aleksanders Projects</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Aleksanders projects.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="styles/projects.css">
+        <title>Aleksander N. Knoph</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Aleksanders projects." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <button id="lang-switch" onclick="setLangButton()">language | &#127468&#127463</button>
-        <div class="site-container">
-            <div id="projects-header-text" class="header-text">Projects</div>
+        <button type="button" id="lang-switch" class="def-border" onclick="switchLangButton()">language | &#127468&#127463</button>
+        <div class="def-site-wrapper fade-in-animation">
+            <h1 class="text-center first-top-padding">Projects</h1>
             <div id="navbar">
-                <button id="navbar__home" onclick="goTo('index.html')">home</button>
-                <button id="navbar__projects">projects</button>
-                <button id="navbar__contact" onclick="goTo('contact.html')">contact</button>
-                <button id="navbar__github" onclick="openTab('https://github.com/MiiNK1Y')">github &#10548;</button>
-                <button id="navbar__cv" onclick="openTab('/download/cv_aleksander-nk.pdf')">curriculum vitae &#10548;</button>
+                <a id="navbar__home" class="def-border" href="index.html">home</a>
+                <a id="navbar__projects" class="def-border">projects</a>
+                <a id="navbar__contact" class="def-border" href="contact.html">contact</a>
+                <a id="navbar__github" class="def-border" href="https://github.com/MiiNK1Y" target="_blank">github &#10548;</a>
+                <a id="navbar__cv" class="def-border" href="aleksander-nk-cv.pdf" target="_blank">curriculum vitae &#10548;</a>
             </div>
-            <div class="site-divider"></div>
-            <div class="cards-container">
+            <div class="divider x-center"></div>
+            <div id="card-container" class="flex-center">
                 <div class="card">
-                    <div class="card-title">.xlsx vertical data binder</div>
-                    <div class="card-content">
-                        <img src="images/project-thumbnails/aksospm.png" draggable="false">
-                        <div class="card-icons">
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/download.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                    <h2 class="text-center">.xlsx Vertical Data Binder</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/aksospm.png" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/github.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/information.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-title">GET Academy submission</div>
-                    <div class="card-content">
-                        <img src="images/project-thumbnails/get-academy-oppgave.png" draggable="false">
-                        <div class="card-icons">
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/arrow.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                    <h2 class="text-center">GET Academy Submission</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/get-academy-oppgave.png" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/download.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/github.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
-                            <div class="card-icon-wrapper">
-                                <a href="https://google.com" target="_blank" draggable="false">
-                                    <img src="icons/information.png" draggable="false">
-                                </a>
-                                <div class="card-icon-underline"></div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="text-center">Vertical_img_demo</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/vertical_l-demo.jpg" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="text-center">horizontal_img_demo</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/hoizontal_l-demo.jpg" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="text-center">21:9_demo</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/21:9_l-demo.jpg" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="text-center">9:21_demo</h2>
+                    <div class="card__content flex-center">
+                        <img src="assets/img/projects/9:21_l-demo.jpg" />
+                        <div class="card__icons flex-center">
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
+                            </div>
+                            <div class="icon">
+                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="icon__hover-bar x-center"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <footer>
+                <button type="button" id="sources" class="footer-1st-item def-border y-center">sources</button>
+                <div id="footer-text" class="text-center x-center">
+                    <p>Author: Aleksander N. Knoph</p>
+                    <div class="divider x-center"></div>
+                    <a href="mailto:alnyk.contact@protonmail.com">alnyk.contact@protonmail.com</a>
+                </div>
+            </footer>
         </div>
-        <div id="sources-window">
-            <p>
-                Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
-                Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
-                Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
-            </p>
-        </div>
-        <footer>
-            <button id="sources-button" onclick="showSources()">sources</button>
-            <div id="footer-author-text"><p>Author: Aleksander N. Knoph</p></div>
-            <div class="signature-divider"></div>
-            <a href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
-        </footer>
-        <script type="text/javascript" src="scripts/app.js"></script>
     </body>
 </html>

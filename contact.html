@@ -1,46 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Aleksander Knoph</title>
-        <meta charset="utf-8">
-        <meta name="description" content="Contact me.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="styles/contact.css">
+        <title>Aleksander N. Knoph</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Contact Aleksander." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
-        <button id="lang-switch" onclick="setLangButton()">language | &#127468&#127463</button>
-        <div class="site-container">
-            <div class="header-text" id="contact-header-text">Contact me</div>
+        <button type="button" id="lang-switch" class="def-border" onclick="switchLangButton()">language | &#127468&#127463</button>
+        <div class="def-site-wrapper fade-in-animation">
+            <h1 class="text-center first-top-padding">Contact me</h1>
             <div id="navbar">
-                <button id="navbar__home" onclick="goTo('index.html')">home</button>
-                <button id="navbar__projects" onclick="goTo('projects.html')">projects</button>
-                <button id="navbar__contact">contact</button>
-                <button id="navbar__github" onclick="openTab('https://github.com/MiiNK1Y')">github &#10548;</button>
-                <button id="navbar__cv" onclick="openTab('/download/cv_aleksander-nk.pdf')">curriculum vitae &#10548;</button>
+                <a id="navbar__home" class="def-border" href="index.html">home</a>
+                <a id="navbar__projects" class="def-border" href="projects.html">projects</a>
+                <a id="navbar__contact" class="def-border">contact</a>
+                <a id="navbar__github" class="def-border" href="https://github.com/MiiNK1Y" target="_blank">github &#10548;</a>
+                <a id="navbar__cv" class="def-border" href="aleksander-nk-cv.pdf" target="_blank">curriculum vitae &#10548;</a>
             </div>
-            <div class="site-divider"></div>
-            <div id="contact">
-                <div id="contact__text">
-                    <div id="contact__head">Nothing beats a good ol' email!</div>
-                    <div id="contact__sub">Clicking on the address bellow opens your email client.</div>
-                    <a id="contact__address" href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
+            <div class="divider x-center"></div>
+            <footer>
+                <button type="button" id="sources" class="footer-1st-item def-border y-center">sources</button>
+                <div id="footer-text" class="text-center x-center">
+                    <p>Author: Aleksander N. Knoph</p>
+                    <div class="divider x-center"></div>
+                    <a href="mailto:alnyk.contact@protonmail.com">alnyk.contact@protonmail.com</a>
                 </div>
-            </div>
+            </footer>
         </div>
-        <div id="sources-window">
-            <p>
-                Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
-                Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
-                Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
-            </p>
-        </div>
-        <footer>
-            <button id="sources-button" onclick="showSources()">sources</button>
-            <div id="footer-author-text"><p>Author: Aleksander N. Knoph</p></div>
-            <div class="signature-divider"></div>
-            <a href="mailto:aleks.nordmann2@gmail.com">aleks.nordmann2@gmail.com</a>
-        </footer>
-        <script type="text/javascript" src="scripts/app.js"></script>
     </body>
 </html>
