@@ -68,6 +68,9 @@ button {
 
 footer {
     background-color: var(--catppuccin-footer);
+    display: grid;
+    grid-template-columns: [sources] 25% [signature] 50% [blank] 25%;
+    overflow: hidden;
     margin-top: auto;
     margin-left: -20px;
     margin-right: -20px;
@@ -84,6 +87,11 @@ footer {
 .x-center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.y-center {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .flex-center {
@@ -248,8 +256,18 @@ footer {
     margin: 0;
 }
 
-#footer-text {
+#sources {
+    background-color: var(--catppuccin-background-color);
+    padding: 7px;
+    border-radius: 15px;
     width: fit-content;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+#footer-text {
+    width: 100%;
+    word-wrap: break-word;
     padding-top: 10px;
     padding-bottom: 10px;
 }
