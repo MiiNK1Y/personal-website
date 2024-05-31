@@ -8,10 +8,10 @@ function switchLang(
     homeTextBox,
     projectsHeader,
     contactHeader,
-    contactTextHead,
-    contactTextSub,
+    // contactTextHead,
+    // contactTextSub,
     sourcesButton,
-    sourcesText,
+    // sourcesText,
     footerText
 ) {
     // present on all pages
@@ -24,15 +24,15 @@ function switchLang(
         document.getElementById("home-text-box").innerHTML = homeTextBox;
     } else if (document.URL.includes("projects.html")) {
         document.getElementById("projects-header-text").innerHTML = projectsHeader;
-        document.getElementById("sources-button").innerHTML = sourcesButton;
-        document.getElementById("sources-window").innerHTML = sourcesText;
+        document.getElementById("sources").innerHTML = sourcesButton;
+        // document.getElementById("sources-window").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     } else if (document.URL.includes("contact.html")) {
         document.getElementById("contact-header-text").innerHTML = contactHeader;
-        document.getElementById("contact__head").innerHTML = contactTextHead;
-        document.getElementById("contact__sub").innerHTML = contactTextSub;
-        document.getElementById("sources-button").innerHTML = sourcesButton;
-        document.getElementById("sources-window").innerHTML = sourcesText;
+        // document.getElementById("contact__head").innerHTML = contactTextHead;
+        // document.getElementById("contact__sub").innerHTML = contactTextSub;
+        document.getElementById("sources").innerHTML = sourcesButton;
+        // document.getElementById("sources-window").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     }
 }
@@ -76,10 +76,10 @@ function setLangEng() {
         homeTextBoxEng,
         projectsHeaderEng,
         contactHeaderEng,
-        contactTextHeadEng,
-        contactTextSubEng,
+        // contactTextHeadEng,
+        // contactTextSubEng,
         sourcesButtonEng,
-        sourcesTextEng,
+        // sourcesTextEng,
         footerTextEng
     );
 }
@@ -123,10 +123,10 @@ function setLangNor() {
         homeTextBoxNor,
         projectsHeaderNor,
         contactHeaderNor,
-        contactTextHeadNor,
-        contactTextSubNor,
+        // contactTextHeadNor,
+        //contactTextSubNor,
         sourcesButtonNor,
-        sourcesTextNor,
+        // sourcesTextNor,
         footerTextNor
     );
 }

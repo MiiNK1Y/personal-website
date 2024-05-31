@@ -259,6 +259,35 @@ footer {
     margin: 0;
 }
 
+#contact-wrapper {
+	max-width: 1000px;
+	margin-top: 50px;
+}
+
+#contact-text {
+	display: flex;
+}
+
+#contact-head-text {
+	border-radius: 20px 0 0 0;
+}
+
+#contact-sub-text {
+	border-radius: 0 20px 0 0;
+}
+
+#contact-address {
+	border-radius: 0 0 20px 20px;
+	font-size: 1.7rem;
+}
+
+#contact-head-text,
+#contact-sub-text,
+#contact-address {
+	padding: 20px;
+	text-align: center;
+}
+
 #sources {
     background-color: inherit;
     width: fit-content;
@@ -323,6 +352,7 @@ footer {
         opacity: 1;
     }
 
+	#contact-address:hover,
     #footer-text > a:hover {
         color: var(--catppuccin-red);
     }
@@ -390,6 +420,16 @@ footer {
         max-height: 50px;
         max-width: 50px;
     }
+
+	#contact-text > #contact-head-text,
+	#contact-text > #contact-sub-text,
+	#contact-address {
+		padding: 5px;
+	}
+
+	#contact-address {
+		font-size: 1.2rem;
+	}
 }
 
 /* iPhone 12/13 mini displays */
@@ -399,3 +439,4 @@ footer {
         max-height: 280px;
     }
 }
+
