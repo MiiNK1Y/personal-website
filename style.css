@@ -75,8 +75,7 @@ button {
 footer {
     background-color: var(--catppuccin-footer);
     display: grid;
-    grid-template-columns: [sources] 25% [signature] 50% [blank] 25%;
-    overflow: hidden;
+    grid-template-columns: 25% 50% 25%;
     margin-top: auto;
     margin-left: -20px;
     margin-right: -20px;
@@ -197,10 +196,9 @@ footer {
 }
 
 .card__icons {
+    display: none;
     flex-wrap: wrap;
     position: absolute;
-    opacity: 0;
-    transition: opacity ease var(--default-hoverOff-phase);
 }
 
 .icon {
@@ -295,6 +293,20 @@ footer {
     margin-left: 10px;
 }
 
+#sources-window {
+    background-color: var(--catppuccin-background-color);
+    position: fixed;
+    bottom: 80px;
+    width: fit-content;
+    word-break: keep-all;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px #00000070;
+}
+
+#sources-window > p {
+    padding: 20px;
+}
+
 #footer-text {
     width: 100%;
     word-wrap: break-word;
@@ -344,12 +356,15 @@ footer {
     }
 
     .card__content:hover > .card__icons {
-        opacity: 1;
-        transition: opacity ease var(--default-hoverOn-phase);
+        display: flex;
     }
 
     .icon:hover > .icon__hover-bar {
         opacity: 1;
+    }
+
+    #sources-window > p > a:hover {
+        color: var(--catppuccin-red);
     }
 
 	#contact-address:hover,
@@ -421,6 +436,11 @@ footer {
         max-width: 50px;
     }
 
+    #sources-window {
+        bottom: 70px;
+        left: 10px;
+    }
+
 	#contact-text > #contact-head-text,
 	#contact-text > #contact-sub-text,
 	#contact-address {
@@ -440,3 +460,16 @@ footer {
     }
 }
 
+/* manually following the footer height
+when author-text wraps */
+@media screen and (max-width: 355px) {
+    #sources-window {
+        bottom: 110px;
+    }
+}
+
+@media screen and (max-width: 242px) {
+    #sources-window {
+        bottom: 130px;
+    }
+}
