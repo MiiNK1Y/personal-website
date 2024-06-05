@@ -426,12 +426,6 @@ footer {
         max-height: 300px;
     }
 
-    /* to avoid accidental touches on invisible icons, 
-    the icons are removed completely on phone displays */
-    .card__icons {
-        display: none;
-    }
-
     .icon > a > img {
         max-height: 50px;
         max-width: 50px;
