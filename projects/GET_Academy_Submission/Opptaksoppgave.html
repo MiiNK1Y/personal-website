@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GET Academy Oppgave</title>
+        <meta name="description" content="Sorter tallene">
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <style>
+            body {
+                background-color: rgb(42, 48, 63);
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                margin: auto;
+            }
+
+            .grid-container {
+                text-align: center;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                column-gap: 1em;
+                row-gap: 1em;
+            }
+
+            .box {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                display: grid;
+                align-items: center;
+                text-align: center;
+                height: 4em;
+                width: 4em;
+                border: 10px solid rgb(215, 112, 84);
+                border-radius: 1em;
+                transition: 0.3s;
+            }
+
+            .box:hover {
+                cursor: pointer;
+                background-color: rgb(36, 40, 51);
+                border: 10px solid rgb(192, 66, 31);
+                transition: 0.3s;
+            }
+
+            .box:active {
+                cursor: grab;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container center">
+            <div id="r1k1" class="box" onclick="press(this, 'r1k2', 'r2k1')"><h1>7</h1></div>
+            <div id="r1k2" class="box" onclick="press(this, 'r1k1', 'r1k3', 'r2k2')"><h1>3</h1></div>
+            <div id="r1k3" class="box" onclick="press(this, 'r1k2', 'r2k3')"><h1>5</h1></div>
+
+            <div id="r2k1" class="box" onclick="press(this, 'r1k1', 'r2k2', 'r3k1')"><h1>1</h1></div>
+            <div id="r2k2" class="box" onclick="press(this, 'r1k2', 'r2k1', 'r2k3', 'r3k2')"><h1>6</h1></div>
+            <div id="r2k3" class="box" onclick="press(this, 'r1k3', 'r2k2', 'r3k3')"> </div>
+
+            <div id="r3k1" class="box" onclick="press(this, 'r2k1', 'r3k2')"><h1>2</h1></div>
+            <div id="r3k2" class="box" onclick="press(this, 'r2k2', 'r3k1', 'r3k3')"><h1>4</h1></div>
+            <div id="r3k3" class="box" onclick="press(this, 'r2k3', 'r3k2')"><h1>8</h1></div>
+        </div>
+
+        <script>
+            function press(tagElement, alt1, alt2, alt3, alt4) {
+                if (document.getElementById(alt1).innerHTML === ' ') {
+                    document.getElementById(alt1).innerHTML = tagElement.innerHTML;
+                    tagElement.innerHTML = ' ';
+                }
+                else if (document.getElementById(alt2).innerHTML === ' ') {
+                    document.getElementById(alt2).innerHTML = tagElement.innerHTML;
+                    tagElement.innerHTML = ' ';
+                }
+                else if (typeof alt3 !== 'undefined' && alt3 !== null && document.getElementById(alt3).innerHTML === ' ') {
+                    document.getElementById(alt3).innerHTML = tagElement.innerHTML;
+                    tagElement.innerHTML = ' ';
+                }
+                else if (typeof alt4 !== 'undefined' && alt3 !== null && document.getElementById(alt4).innerHTML === ' ') {
+                    document.getElementById(alt4).innerHTML = tagElement.innerHTML;
+                    tagElement.innerHTML = ' ';
+                }
+            }
+
+        </script>
+    </body>
+</html>
