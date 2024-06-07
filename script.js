@@ -161,6 +161,10 @@ function showSources() {
     }
 }
 
+function hideSources() {
+    document.getElementById("sources-window").style.display = "none";
+}
+
 function goTo(page) {
     window.location = page;
 }

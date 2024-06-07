@@ -308,6 +308,17 @@ footer {
     box-shadow: 0 0 20px 10px #00000070;
 }
 
+#sources-window__close {
+    background-color: inherit;
+    position: absolute;
+    border: unset;
+    border-radius: unset;
+    padding: 0;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
 #sources-window > p {
     padding: 20px;
 }
@@ -367,6 +378,12 @@ footer {
 
     .icon:hover > .icon__hover-bar {
         opacity: 1;
+    }
+
+
+    #sources-window__close:hover {
+        color: var(--catppuccin-red);
+        opacity: unset;
     }
 
     #sources-window > p > a:hover {
