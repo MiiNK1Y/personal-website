@@ -210,9 +210,11 @@ footer {
 }
 
 .card__icons {
-    display: none;
+    opacity: 0;
     flex-wrap: wrap;
     position: absolute;
+    transition: opacity ease var(--default-hoverOff-phase);
+    z-index: 1;
 }
 
 .icon {
@@ -315,6 +317,59 @@ footer {
     padding-bottom: 10px;
 }
 
+/* leaving this here outside the @media hover query, since it works as intended on mobile */
+.card__content:hover > img {
+    filter: blur(4px);
+    transition: filter ease var(--default-hoverOn-phase);
+}
+
+.card__content:hover > .card__icons {
+    opacity: 1;
+    transition: opacity ease var(--default-hoverOn-phase);
+}
+
+/* testing floating-up animation for info-bar */
+.overflow-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card__icons__overflow {
+    display: flex;
+    position: absolute;
+    bottom: -150px;
+    z-index: 1;
+    transition: bottom ease var(--default-hoverOff-phase);
+}
+
+.card__content:hover .card__icons__overflow {
+    bottom: 100px;
+    transition: bottom ease var(--default-hoverOn-phase);
+}
+
+.card__content-hint {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    border-radius: 0 0 4px 4px;
+    background-color: var(--catppuccin-red);
+    color: #000000;
+    bottom: -30px;
+    transition: bottom ease var(--default-hoverOff-phase);
+    font-size: 1.2rem;
+    z-index: 2;
+    box-shadow: 0 0 0 0 #000000;
+}
+
+.card__content:hover .card__content-hint {
+    bottom: 0px;
+    box-shadow: 0 0 10px 1px #000000;
+    transition: bottom ease var(--default-hoverOn-phase);
+}
+/*-----------------------------------------------*/
+
 @media (hover: hover) {
     button:hover {
         opacity: 50%;
@@ -350,15 +405,6 @@ footer {
     #navbar__cv:hover {
         background-color: var(--catppuccin-teal);
         box-shadow: 0 0 0 4px var(--catppuccin-teal);
-    }
-
-    .card__content:hover > img {
-        filter: blur(4px);
-        transition: filter ease var(--default-hoverOn-phase);
-    }
-
-    .card__content:hover > .card__icons {
-        display: flex;
     }
 
     .icon:hover > .icon__hover-bar {
@@ -439,6 +485,14 @@ footer {
     #sources-window__close {
         font-size: 1.1rem;
         margin-top: 4px;
+    }
+
+    .card__icons {
+        display: none;
+    }
+
+    .card__content:hover > .card__icons {
+        display: flex;
     }
 
 	#contact-head-text {
