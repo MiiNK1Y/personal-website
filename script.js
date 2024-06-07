@@ -8,8 +8,7 @@ function switchLang(
     homeTextBox,
     projectsHeader,
     contactHeader,
-    contactTextHead,
-    contactTextSub,
+    contactText,
     sourcesButton,
     sourcesText,
     footerText
@@ -25,14 +24,13 @@ function switchLang(
     } else if (document.URL.includes("projects.html")) {
         document.getElementById("projects-header-text").innerHTML = projectsHeader;
         document.getElementById("sources").innerHTML = sourcesButton;
-        document.getElementById("sources-window").innerHTML = sourcesText;
+        document.getElementById("sources-window-text").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     } else if (document.URL.includes("contact.html")) {
         document.getElementById("contact-header-text").innerHTML = contactHeader;
-        document.getElementById("contact-head-text").innerHTML = contactTextHead;
-        document.getElementById("contact-sub-text").innerHTML = contactTextSub;
+        document.getElementById("contact-text").innerHTML = contactText;
         document.getElementById("sources").innerHTML = sourcesButton;
-        document.getElementById("sources-window").innerHTML = sourcesText;
+        document.getElementById("sources-window-text").innerHTML = sourcesText;
         document.getElementById("footer-author-text").innerHTML = footerText;
     }
 }
@@ -48,14 +46,13 @@ function setLangEng() {
                                 You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.
                             </p>`;
 
-    const sourcesTextEng = `<p>
-                                Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
-                                Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
-                                Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
-                            </p>`;
+    const sourcesTextEng = `
+                            Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
+                            Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
+                            Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
+                            `;
 
-    const contactTextHeadEng = "Nothing beats a good ol' email!";
-    const contactTextSubEng = "Clicking the address opens your default mail-client, if you have one.";
+    const contactTextEng = "Send me an email!";
     const projectsHeaderEng = "Projects";
     const contactHeaderEng = "Contact me";
     const navbarButtonHomeEng = "home";
@@ -76,8 +73,7 @@ function setLangEng() {
         homeTextBoxEng,
         projectsHeaderEng,
         contactHeaderEng,
-        contactTextHeadEng,
-        contactTextSubEng,
+        contactTextEng,
         sourcesButtonEng,
         sourcesTextEng,
         footerTextEng
@@ -95,14 +91,13 @@ function setLangNor() {
                                 Du kan se gjennom mine prosjekter, ta en titt på min Github eller CV, eller finne min foretrukne måte å bli kontaktet.
                             </p>`;
 
-    const sourcesTextNor = `<p>
-                                Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
-                                Prosjekt ikoner: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
-                                Fargetema: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
-                            </p>`;
+    const sourcesTextNor = `
+                            Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
+                            Prosjekt ikoner: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
+                            Fargetema: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
+                            `;
 
-    const contactTextHeadNor = "Ingenting slår en god, gammel E-post!";
-    const contactTextSubNor = "Trykk på adressen under for å åpne mail-klienten din, om du har en.";
+    const contactTextNor = "Sende meg en E-post!";
     const projectsHeaderNor = "Prosjekter";
     const contactHeaderNor = "Kontakt meg";
     const navbarButtonHomeNor = "hjem";
@@ -123,8 +118,7 @@ function setLangNor() {
         homeTextBoxNor,
         projectsHeaderNor,
         contactHeaderNor,
-        contactTextHeadNor,
-        contactTextSubNor,
+        contactTextNor,
         sourcesButtonNor,
         sourcesTextNor,
         footerTextNor
@@ -151,18 +145,18 @@ function switchLangButton() {
     }
 }
 
+function hideSources() {
+    document.getElementById("sources-window").style.display = "none";
+}
+
 function showSources() {
     sourcesWindow = document.getElementById("sources-window").style.display;
     if (sourcesWindow == "block") {
-        document.getElementById("sources-window").style.display = "none";
+        hideSources();
     }
     else {
         document.getElementById("sources-window").style.display = "block";
     }
-}
-
-function hideSources() {
-    document.getElementById("sources-window").style.display = "none";
 }
 
 function goTo(page) {

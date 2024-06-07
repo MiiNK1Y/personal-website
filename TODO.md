@@ -18,5 +18,6 @@
   - [o] maybe replace the navbar hyperlinks with buttons instead on mobile devices that does not support the tabbing-function?
 - [x] make project icons not available to the 'tabbing' seeker when not hovering (currently they are 'opacity: 0' which makes them seek-able)
 - [o] mount the sources-window with the same container as the footer??
-- [ ] fix so when clicking off the source-window, the window closes.
+- [x] fix so when clicking off the source-window, the window closes.
+      added a close-button instead.
 - [x] fix spelling in CV (krakter bestott meget godt).
