@@ -5,7 +5,7 @@ function switchLang(
     navbarButtonProjects,
     navbarButtonContact,
     // maybe available
-    homeTextBox,
+    homeText,
     projectsHeader,
     contactHeader,
     contactText,
@@ -20,7 +20,7 @@ function switchLang(
     document.getElementById("navbar__contact").innerHTML = navbarButtonContact;
     // try these if they are present, skip if not
     if (document.URL.includes("index.html")) {
-        document.getElementById("home-text-box").innerHTML = homeTextBox;
+        document.getElementById("home-text-wrapper").innerHTML = homeText;
     } else if (document.URL.includes("projects.html")) {
         document.getElementById("projects-header-text").innerHTML = projectsHeader;
         document.getElementById("sources").innerHTML = sourcesButton;
@@ -39,12 +39,11 @@ function setLangEng() {
     // swap the set localStorage language
     localStorage.setItem("language", "eng");
 
-    const homeTextBoxEng = `<p>
-                                Hi there,<br>
-                                I'm Aleksander, welcome to my website.<br>
-                                Here, I share the projects I write trough my career as an "up-and-coming" web developer.<br>
-                                You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.
-                            </p>`;
+    const homeTextEng = `
+                        <p>Hi there,<br>I'm Aleksander, welcome to my website.</p>
+                        <p>Here, I share the projects I write trough my career as a "junior" web developer.</p>
+                        <p>You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.</p>
+                        `;
 
     const sourcesTextEng = `
                             Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
@@ -70,7 +69,7 @@ function setLangEng() {
         navbarButtonProjectsEng,
         navbarButtonContactEng,
         // maybe available
-        homeTextBoxEng,
+        homeTextEng,
         projectsHeaderEng,
         contactHeaderEng,
         contactTextEng,
@@ -84,12 +83,11 @@ function setLangNor() {
     // swap the set localStorage language
     localStorage.setItem("language", "nor");
 
-    const homeTextBoxNor = `<p>
-                                Hei der, <br>
-                                Jeg er Aleksander, velkommen til min nettside.<br>
-                                Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "up-and-coming" webutvikler.<br>
-                                Du kan se gjennom mine prosjekter, ta en titt på min Github eller CV, eller finne min foretrukne måte å bli kontaktet.
-                            </p>`;
+    const homeTextNor = `
+                        <p>Hei der,<br>Jeg er Aleksander, velkommen til min nettside.</p>
+                        <p>Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "junior" webutvikler.</p>
+                        <p>Du kan se gjennom prosjektene mine, ta en titt på Github'en eller CV'en min, eller finne min foretrukne måte å bli kontaktet.</p>
+                        `;
 
     const sourcesTextNor = `
                             Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
@@ -115,7 +113,7 @@ function setLangNor() {
         navbarButtonProjectsNor,
         navbarButtonContactNor,
         // maybe available
-        homeTextBoxNor,
+        homeTextNor,
         projectsHeaderNor,
         contactHeaderNor,
         contactTextNor,
@@ -157,12 +155,4 @@ function showSources() {
     else {
         document.getElementById("sources-window").style.display = "block";
     }
-}
-
-function goTo(page) {
-    window.location = page;
-}
-
-function openTab(page) {
-    window.open(page);
 }
