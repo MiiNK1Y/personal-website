@@ -493,6 +493,7 @@ footer {
 
     .card__content:hover > .card__icons {
         display: flex;
+        transition: opacity ease var(--default-hoverOn-phase);
     }
 
 	#contact-head-text {
