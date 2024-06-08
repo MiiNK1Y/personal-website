@@ -1,5 +1,5 @@
 var showSources = function() {
-    let sourcesWindow = document.getElementById("source-window");
+    let sourcesWindow = document.getElementById("sources-window");
     if (sourcesWindow.style.display == "none") {
         sourcesWindow.style.display = "flex";
     } else {
@@ -7,8 +7,8 @@ var showSources = function() {
     }
 }
 
-var sourcesButton = document.getElementById("source-btn");
+var sourcesButton = document.getElementById("sources-btn");
 sourcesButton.addEventListener("click", showSources, false);
 
-var sourcesXButton = document.getElementById("source-window__x-btn");
+var sourcesXButton = document.getElementById("sources-window__x-btn");
 sourcesXButton.addEventListener("click", showSources, false);

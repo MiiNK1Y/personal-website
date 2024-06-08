@@ -49,20 +49,13 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h6, p {
     margin: 0;
 }
 
 h1 {
     font-size: 3rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1.4rem;
+    padding-top: 20px;
 }
 
 p, a, button {
@@ -85,7 +78,7 @@ button {
 footer {
     background-color: var(--footer);
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: minmax(75px, 25%) 50% 25%;
     margin-top: auto;
     margin-left: -20px;
     margin-right: -20px;
@@ -183,13 +176,14 @@ footer {
     border-color: var(--teal);
 }
 
-#source-btn {
+#sources-btn {
     width: fit-content;
     height: fit-content;
     margin-left: 10px;
 }
 
-#source-window {
+#sources-window {
+    background-color: var(--bg-color);
     position: fixed;
     width: fit-content;
     border-radius: 20px;
@@ -198,7 +192,7 @@ footer {
     box-shadow: 0 0 20px 10px #00000070;
 }
 
-#source-window__x-btn {
+#sources-window__x-btn {
     position: absolute;
     border: unset;
     border-radius: unset;
@@ -208,7 +202,7 @@ footer {
     margin: 10px;
 }
 
-#source-window__txt {
+#sources-window__txt {
     padding: 20px;
 }
 
@@ -226,6 +220,10 @@ footer {
     border-radius: 2rem;
     border-color: var(--lavender);
     margin: 10px;
+}
+
+.idx-card h1 {
+    padding: 0px;
 }
 
 .idx-myself {
@@ -250,18 +248,128 @@ footer {
 
 /*---------------------------------------------------------*/
 
+.proj-card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.proj-card {
+    max-width: 450px;
+    margin: 10px;
+}
+
+.proj-card h3 {
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.proj-card h6 {
+    font-size: 1rem;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+.proj-card__content-overflow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+}
+
+.proj-card__content {
+    position: relative; /* make children 'absolute' positions adhere to the parent dimensions on 'inherit' */
+}
+
+.proj-card__made-for {
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 4px 4px;
+    background-color: var(--maroon);
+    color: var(--txt-invert-color);
+    bottom: -30px;
+    transition: bottom ease var(--df-hoverOff-phase);
+    z-index: 2;
+}
+
+.proj-card__content > img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 25px 2px #000000;
+    transition: filter ease var(--df-hoverOff-phase);
+}
+
+.proj-card__content:hover > img {
+    filter: blur(5px);
+    transition: filter ease var(--df-hoverOn-phase);
+}
+
+.proj-card__content:hover .proj-card__made-for {
+    bottom: 0px;
+    transition: bottom ease var(--df-hoverOn-phase);
+}
+
+.proj-card__icons-shadow {
+    position: absolute;
+    margin-top: 20px;
+    width: 80%;
+    box-shadow: 0 0 50px 40px #000000;
+    z-index: 1;
+}
+
+.proj-card__icons {
+    position: absolute;
+    opacity: 0;
+    flex-wrap: wrap;
+    transition: opacity ease var(--df-hoverOff-phase);
+    z-index: 1;
+}
+
+.proj-card__content:hover .proj-card__icons {
+    opacity: 1;
+    transition: opacity ease var(--df-hoverOn-phase);
+}
+
+.proj-card__icon {
+    max-width: 70px;
+    max-height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.proj-card__icon img {
+    max-width: 60px;
+    max-height: 70px;
+    transition: max-width ease var(--df-hoverOn-phase) ;
+}
+
+.proj-card__content:hover .proj-card__icon img {
+    max-width: 70px;
+    transition: max-width ease var(--df-hoverOn-phase) ;
+}
+
+.proj-card__icon-hover-bar {
+    opacity: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--txt-color);
+    margin-top: 5px;
+}
+
+.proj-card__icon:hover .proj-card__icon-hover-bar {
+    opacity: 1;
+}
+
+/*---------------------------------------------------------*/
+
 /* generic phone displays */
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
+        padding-top: 50px;
     }
 
     p, a, button {
@@ -273,15 +381,15 @@ footer {
     }
 
     footer {
-        margin-left: -5px;
-        margin-right: -5px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
 /*---------------------------------------------------------*/
 
     .df-site-wrapper {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .df-border {
@@ -294,11 +402,37 @@ footer {
         margin: 5px;
     }
 
+    #sources-window {
+        bottom: 70px;
+    }
+
 /*---------------------------------------------------------*/
 
     #idx-card {
         padding: 15px;
         margin-top: 50px;
+    }
+
+/*---------------------------------------------------------*/
+
+    .proj-card__icon img {
+        max-width: 50px;
+    }
+
+    .proj-card__content:hover .proj-card__icon img {
+        max-width: 60px;
+    }
+}
+
+/*---------------------------------------------------------*/
+
+@media screen and (max-width: 430px) {
+    .proj-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .proj-card h6 {
+        font-size: 0.8rem;
     }
 }
 
@@ -341,8 +475,8 @@ footer {
         box-shadow: 0 0 0 4px var(--teal);
     }
 
-    #source-window a:hover,
-    #source-window__x:hover,
+    #sources-window a:hover,
+    #sources-window__x:hover,
     .footer-txt a:hover {
         color: var(--red);
     }
