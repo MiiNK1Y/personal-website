@@ -50,7 +50,11 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h6, p {
+h1,
+h2,
+h3,
+h6,
+p {
     margin: 0;
 }
 
@@ -59,14 +63,17 @@ h1 {
     padding-top: 20px;
 }
 
-p, a, button {
+p,
+a,
+button {
     font-size: 1rem;
     color: var(--txt-color);
 }
 
 a {
     /*THIS FIXES THE HYPERLINK FONT ON iOS NOT GETTING PROPERLY STYLED FOR SOME FUCKING REASON*/
-    font-family: var(--df-font), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--df-font), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 button {
@@ -333,7 +340,7 @@ footer {
 .proj-card__icon img {
     max-width: 60px;
     max-height: 70px;
-    transition: max-width ease var(--df-hoverOn-phase) ;
+    transition: max-width ease var(--df-hoverOn-phase);
 }
 
 .proj-card__icon-hover-bar {
@@ -349,6 +356,7 @@ footer {
 
 .contact-wrapper {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contact-wrapper h2 {
@@ -361,6 +369,14 @@ footer {
 
 /*---------------------------------------------------------*/
 
+@media screen and (max-width: 534px) {
+    #idx-txt {
+        max-width: 400px;
+    }
+}
+
+/*---------------------------------------------------------*/
+
 /* generic phone displays */
 @media screen and (max-width: 450px) {
     h1 {
@@ -368,7 +384,9 @@ footer {
         padding-top: 50px;
     }
 
-    p, a, button {
+    p,
+    a,
+    button {
         font-size: 0.8rem;
     }
 
@@ -394,6 +412,11 @@ footer {
 
     /*---------------------------------------------------------*/
 
+    #lng-switch-btn {
+        padding-top: 3px;
+        padding-bottom: 4px;
+    }
+
     .navbar a {
         margin: 5px;
     }
@@ -404,12 +427,32 @@ footer {
 
     /*---------------------------------------------------------*/
 
+    #idx-body {
+        display: unset;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .idx-card {
+        margin-top: 50px;
+    }
+
+    .idx-card h1 {
+        font-size: 2.8rem;
+    }
+
+    #idx-txt {
+        max-width: 350px;
+    }
+
+    /*---------------------------------------------------------*/
+
     .proj-card__icons {
         display: none;
     }
 }
 
-    /*---------------------------------------------------------*/
+/*---------------------------------------------------------*/
 
 @media screen and (max-width: 430px) {
     .proj-card h3 {
@@ -489,7 +532,7 @@ footer {
 
     .proj-card__content:hover .proj-card__icon img {
         max-width: 70px;
-        transition: max-width ease var(--df-hoverOn-phase) ;
+        transition: max-width ease var(--df-hoverOn-phase);
     }
 
     .proj-card__icon:hover .proj-card__icon-hover-bar {

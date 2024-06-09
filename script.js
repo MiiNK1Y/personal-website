@@ -130,7 +130,7 @@ if (langSet == null) {
 }
 
 var langButton = document.getElementById("lng-switch-btn");
-langButton.addEventListener("click", function() {
+langButton.addEventListener("click", function () {
     let curLang = localStorage.getItem("language");
     if (curLang == "nor") {
         setLangEng();
@@ -141,12 +141,12 @@ langButton.addEventListener("click", function() {
 
 let curPageProjects = document.URL.includes("projects.html");
 let curPageContact = document.URL.includes("contact.html");
-if ((curPageProjects) || (curPageContact)) {
+if (curPageProjects || curPageContact) {
     var siteMask = document.getElementById("site-mask");
     var sourcesWindow = document.getElementById("sources-window");
     var sourcesButton = document.getElementById("sources-btn");
     var sourcesXButton = document.getElementById("sources-window__x-btn");
-    var displaySources = function() {
+    var displaySources = function () {
         if (sourcesWindow.style.display == "none") {
             sourcesWindow.style.display = "flex";
             siteMask.style.display = "block";
@@ -156,7 +156,7 @@ if ((curPageProjects) || (curPageContact)) {
             siteMask.style.display = "none";
             siteMask.style.zIndex = "unset";
         }
-    }
+    };
     sourcesButton.addEventListener("click", displaySources);
     sourcesXButton.addEventListener("click", displaySources);
     siteMask.addEventListener("click", displaySources);
