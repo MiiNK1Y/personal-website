@@ -1,4 +1,4 @@
-function switchLang(
+function setLang(
     // always available
     langButton,
     navbarButtonHome,
@@ -61,7 +61,7 @@ function setLangEng() {
     // HTML Doc Code for Britain flag emoji.
     const langButtonEng = "language | &#127468;&#127463;";
 
-    switchLang(
+    setLang(
         // always available
         langButtonEng,
         navbarButtonHomeEng,
@@ -104,7 +104,7 @@ function setLangNor() {
     // HTML Doc Code for Norwegian flag emoji.
     const langButtonNor = "språk | &#127475;&#127476;";
 
-    switchLang(
+    setLang(
         // always available
         langButtonNor,
         navbarButtonHomeNor,
@@ -121,51 +121,43 @@ function setLangNor() {
     );
 }
 
-// check if there are data stored from a previous visit, setting language accordingly
 let langSet = localStorage.getItem("language");
-
 if (langSet == null) {
     console.log("First time visitor, welcome! Setting default language: English.");
-    // default key pairs
     localStorage.setItem("language", "eng");
 } else if (langSet == "nor") {
     setLangNor();
 }
 
-function switchLangButton() {
+let curPageProjects = document.URL.includes("projects.html");
+let curPageContact = document.URL.includes("contact.html");
+if ((curPageProjects) || (curPageContact)) {
+    var siteMask = document.getElementById("site-mask");
+    var sourcesWindow = document.getElementById("sources-window");
+    var sourcesButton = document.getElementById("sources-btn");
+    var sourcesXButton = document.getElementById("sources-window__x-btn");
+    var displaySources = function() {
+        if (sourcesWindow.style.display == "none") {
+            sourcesWindow.style.display = "flex";
+            siteMask.style.display = "block";
+            siteMask.style.zIndex = "4";
+        } else {
+            sourcesWindow.style.display = "none";
+            siteMask.style.display = "none";
+            siteMask.style.zIndex = "unset";
+        }
+    }
+    sourcesButton.addEventListener("click", displaySources);
+    sourcesXButton.addEventListener("click", displaySources);
+    siteMask.addEventListener("click", displaySources);
+}
+
+var langButton = document.getElementById("lng-switch-btn");
+langButton.addEventListener("click", function() {
     let curLang = localStorage.getItem("language");
     if (curLang == "nor") {
         setLangEng();
     } else if (curLang == "eng") {
         setLangNor();
     }
-}
-
-var showSources = function() {
-    let sourcesWindowMask = document.getElementById("site-mask");
-    let sourcesWindow = document.getElementById("sources-window");
-    if (sourcesWindow.style.display == "none") {
-        sourcesWindow.style.display = "flex";
-        sourcesWindowMask.style.display = "block";
-        sourcesWindowMask.style.zIndex = "4";
-    } else {
-        sourcesWindow.style.display = "none";
-        sourcesWindowMask.style.display = "none";
-        sourcesWindowMask.style.zIndex = "unset";
-    }
-}
-
-var langButton = document.getElementById("lng-switch-btn");
-langButton.addEventListener("click", switchLangButton, false);
-
-if (document.URL.includes("index.html")) {
-} else {
-    var sourcesButton = document.getElementById("sources-btn");
-    sourcesButton.addEventListener("click", showSources, false);
-
-    var sourcesXButton = document.getElementById("sources-window__x-btn");
-    sourcesXButton.addEventListener("click", showSources, false);
-
-    var siteMask = document.getElementById("site-mask");
-    siteMask.addEventListener("click", showSources, false);
-}
+});
