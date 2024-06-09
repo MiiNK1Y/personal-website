@@ -129,6 +129,16 @@ if (langSet == null) {
     setLangNor();
 }
 
+var langButton = document.getElementById("lng-switch-btn");
+langButton.addEventListener("click", function() {
+    let curLang = localStorage.getItem("language");
+    if (curLang == "nor") {
+        setLangEng();
+    } else if (curLang == "eng") {
+        setLangNor();
+    }
+});
+
 let curPageProjects = document.URL.includes("projects.html");
 let curPageContact = document.URL.includes("contact.html");
 if ((curPageProjects) || (curPageContact)) {
@@ -151,13 +161,3 @@ if ((curPageProjects) || (curPageContact)) {
     sourcesXButton.addEventListener("click", displaySources);
     siteMask.addEventListener("click", displaySources);
 }
-
-var langButton = document.getElementById("lng-switch-btn");
-langButton.addEventListener("click", function() {
-    let curLang = localStorage.getItem("language");
-    if (curLang == "nor") {
-        setLangEng();
-    } else if (curLang == "eng") {
-        setLangNor();
-    }
-});
