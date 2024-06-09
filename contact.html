@@ -10,34 +10,40 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <button type="button" id="lang-switch" class="def-border" tabindex="1" onclick="switchLangButton()">language | &#127468&#127463</button>
-        <div class="def-site-wrapper fade-in-animation">
-            <h1 id="contact-header-text" class="text-center first-top-padding">Contact me</h1>
-            <div id="navbar">
-                <a id="navbar__home" class="def-border" href="index.html" tabindex="2">home</a>
-                <a id="navbar__projects" class="def-border" href="projects.html" tabindex="3">projects</a>
-                <a id="navbar__contact" class="def-border" tabindex="4">contact</a>
-                <a id="navbar__github" class="def-border" href="https://github.com/MiiNK1Y" target="_blank" tabindex="4">github &#10548;</a>
-                <a id="navbar__cv" class="def-border" href="assets/aleksander-nk-cv.pdf" target="_blank" tabindex="5">curriculum vitae &#10548;</a>
+        <div id="site-mask" style="display: none;"></div>
+        <button type="button" id="lng-switch-btn" class="df-border" tabindex="1">language | &#127468&#127463</button>
+        <div class="df-site-wrapper fade-in-anim">
+            <h1 id="contact-header-txt" class="txt-center">Contact me</h1>
+
+            <div class="navbar">
+                <a id="navbar__home" class="df-border" href="index.html" tabindex="2">home</a>
+                <a id="navbar__projects" class="df-border" href="projects.html" tabindex="3">projects</a>
+                <a id="navbar__contact" class="df-border" tabindex="4">contact</a>
+                <a id="navbar__github" class="df-border" href="https://github.com/MiiNK1Y" target="_blank" tabindex="5">github &#10548;</a>
+                <a id="navbar__cv" class="df-border" href="assets/aleksander-nk-cv.pdf" target="_blank" tabindex="6">curriculum vitae &#10548;</a>
             </div>
+
             <div class="divider x-center"></div>
-			<div id="contact-wrapper" class="x-center text-center">
-				<h2 id="contact-text">Send me an email!</h2>
+
+			<div class="contact-wrapper x-center txt-center">
+				<h2 id="contact-txt">Send me an email!</h2>
                 <h2>&#9993;<br>&darr;</h2>
 				<a href="mailto:alnyk@protonmail.com">alnyk@protonmail.com</a>
 			</div>
+
             <div id="sources-window" style="display: none;">
-                <button id="sources-window__close" onclick="hideSources()">&#10005;</button>
-                <p id="sources-window-text">
+                <button id="sources-window__x-btn">&#10005;</button>
+                <p id="sources-window__txt">
                     Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
                     Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
                     Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
                 </p>
             </div>
+
             <footer>
-                <button type="button" id="sources" class="def-border y-center" onclick="showSources()">sources</button>
-                <div id="footer-text" class="text-center x-center">
-                    <p id="footer-author-text">Author: Aleksander N. Knoph</p>
+                <button type="button" id="sources-btn" class="df-border y-center">sources</button>
+                <div class="footer-txt txt-center x-center">
+                    <p id="footer-author-txt">Author: Aleksander N. Knoph</p>
                     <div class="divider x-center"></div>
                     <a href="mailto:alnyk@protonmail.com">alnyk@protonmail.com</a>
                 </div>

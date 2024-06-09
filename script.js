@@ -14,24 +14,24 @@ function switchLang(
     footerText
 ) {
     // present on all pages
-    document.getElementById("lang-switch").innerHTML = langButton;
+    document.getElementById("lng-switch-btn").innerHTML = langButton;
     document.getElementById("navbar__home").innerHTML = navbarButtonHome;
     document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
     document.getElementById("navbar__contact").innerHTML = navbarButtonContact;
     // try these if they are present, skip if not
     if (document.URL.includes("index.html")) {
-        document.getElementById("home-text-wrapper").innerHTML = homeText;
+        document.getElementById("idx-txt").innerHTML = homeText;
     } else if (document.URL.includes("projects.html")) {
-        document.getElementById("projects-header-text").innerHTML = projectsHeader;
-        document.getElementById("sources").innerHTML = sourcesButton;
-        document.getElementById("sources-window-text").innerHTML = sourcesText;
-        document.getElementById("footer-author-text").innerHTML = footerText;
+        document.getElementById("projects-header-txt").innerHTML = projectsHeader;
+        document.getElementById("sources-btn").innerHTML = sourcesButton;
+        document.getElementById("sources-window__txt").innerHTML = sourcesText;
+        document.getElementById("footer-author-txt").innerHTML = footerText;
     } else if (document.URL.includes("contact.html")) {
-        document.getElementById("contact-header-text").innerHTML = contactHeader;
-        document.getElementById("contact-text").innerHTML = contactText;
-        document.getElementById("sources").innerHTML = sourcesButton;
-        document.getElementById("sources-window-text").innerHTML = sourcesText;
-        document.getElementById("footer-author-text").innerHTML = footerText;
+        document.getElementById("contact-header-txt").innerHTML = contactHeader;
+        document.getElementById("contact-txt").innerHTML = contactText;
+        document.getElementById("sources-btn").innerHTML = sourcesButton;
+        document.getElementById("sources-window__txt").innerHTML = sourcesText;
+        document.getElementById("footer-author-txt").innerHTML = footerText;
     }
 }
 
@@ -41,7 +41,6 @@ function setLangEng() {
 
     const homeTextEng = `
                         <p>Hi there,<br>I'm Aleksander, welcome to my website.</p>
-                        <p>Here, I share the projects I write trough my career as a "junior" web developer.</p>
                         <p>You may peruse my projects, have a look at my Github or CV, or find my preferred way to be contacted.</p>
                         `;
 
@@ -85,7 +84,6 @@ function setLangNor() {
 
     const homeTextNor = `
                         <p>Hei der,<br>Jeg er Aleksander, velkommen til min nettside.</p>
-                        <p>Her deler jeg prosjektene jeg skriver i løpet av min karriere som en "junior" webutvikler.</p>
                         <p>Du kan se gjennom prosjektene mine, ta en titt på Github'en eller CV'en min, eller finne min foretrukne måte å bli kontaktet.</p>
                         `;
 
@@ -143,16 +141,31 @@ function switchLangButton() {
     }
 }
 
-function hideSources() {
-    document.getElementById("sources-window").style.display = "none";
+var showSources = function() {
+    let sourcesWindowMask = document.getElementById("site-mask");
+    let sourcesWindow = document.getElementById("sources-window");
+    if (sourcesWindow.style.display == "none") {
+        sourcesWindow.style.display = "flex";
+        sourcesWindowMask.style.display = "block";
+        sourcesWindowMask.style.zIndex = "4";
+    } else {
+        sourcesWindow.style.display = "none";
+        sourcesWindowMask.style.display = "none";
+        sourcesWindowMask.style.zIndex = "unset";
+    }
 }
 
-function showSources() {
-    sourcesWindow = document.getElementById("sources-window").style.display;
-    if (sourcesWindow == "block") {
-        hideSources();
-    }
-    else {
-        document.getElementById("sources-window").style.display = "block";
-    }
+var langButton = document.getElementById("lng-switch-btn");
+langButton.addEventListener("click", switchLangButton, false);
+
+if (document.URL.includes("index.html")) {
+} else {
+    var sourcesButton = document.getElementById("sources-btn");
+    sourcesButton.addEventListener("click", showSources, false);
+
+    var sourcesXButton = document.getElementById("sources-window__x-btn");
+    sourcesXButton.addEventListener("click", showSources, false);
+
+    var siteMask = document.getElementById("site-mask");
+    siteMask.addEventListener("click", showSources, false);
 }

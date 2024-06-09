@@ -3,7 +3,8 @@
     src: url(assets/fonts/Nunito/Nunito-VariableFont_wght.ttf) format("truetype");
 }
 
-@keyframes fadeInAnimation {
+/* fade-in when changing page. */
+@keyframes fadeInAnim {
     0% {
         opacity: 0;
     }
@@ -13,85 +14,81 @@
 }
 
 :root {
-    --catppuccin-background-color: #1e1e2e;
-    --catppuccin-footer: #10101a;
+    /* using the Catppuccin colorscheme */
+    --bg-color: #1e1e2e;
+    --footer: #10101a;
+    --txt-color: #cdd6f4;
+    --txt-invert-color: #11111b;
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
 
-    --catppuccin-rosewater: #f5e0dc;
-    --catppuccin-flamingo: #f2cdcd;
-    --catppuccin-pink: #f5c2e7;
-    --catppuccin-mauve: #cba6f7;
-    --catppuccin-red: #f38ba8;
-    --catppuccin-maroon: #eba0ac;
-    --catppuccin-peach: #fab387;
-    --catppuccin-yellow: #f9e2af;
-    --catppuccin-green: #a6e3a1;
-    --catppuccin-teal: #94e2d5;
-    --catppuccin-sky: #89dceb;
-    --catppuccin-sapphire: #74c7ec;
-    --catppuccin-blue: #89b4fa;
-    --catppuccin-lavender: #b4befe;
+    --df-font: Nunito;
+    --df-hoverOn-phase: 0.2s;
+    --df-hoverOff-phase: 0.4s;
+}
 
-    --catppuccin-text-color: #cdd6f4;
-    --catppuccin-text-invert-color: #11111b;
-
-    --default-font: Nunito;
-
-    --default-hoverOn-phase: 0.2s;
-    --default-hoverOff-phase: 0.4s;
+* {
+    color: var(--txt-color);
+    font-family: var(--df-font);
 }
 
 body {
-    min-height: 100svh; /* for when the site is non-scrollable. less than 450px voids this */
-    background: var(--catppuccin-background-color);
-    font-family: var(--default-font);
-    color: var(--catppuccin-text-color);
+    min-height: 100vh;
+    background: var(--bg-color);
+    margin: 0;
+}
+
+h1, h2, h3, h6, p {
     margin: 0;
 }
 
 h1 {
     font-size: 3rem;
-    margin: 0;
+    padding-top: 20px;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-p,
-a,
-button {
+p, a, button {
     font-size: 1rem;
-    color: var(--catppuccin-text-color);
-    margin: 0;
+    color: var(--txt-color);
 }
 
 a {
     /*THIS FIXES THE HYPERLINK FONT ON iOS NOT GETTING PROPERLY STYLED FOR SOME FUCKING REASON*/
-    font-family: var(--default-font), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--df-font), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 button {
+    background-color: inherit;
     padding: 7px;
     border-radius: 20px;
     cursor: pointer;
 }
 
 footer {
-    background-color: var(--catppuccin-footer);
+    background-color: var(--footer);
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: minmax(75px, 25%) 50% 25%;
     margin-top: auto;
     margin-left: -20px;
     margin-right: -20px;
 }
 
-.fade-in-animation {
-    animation: fadeInAnimation ease var(--default-hoverOff-phase);
-}
+/*---------------------------------------------------------*/
 
-.def-border {
-    border: 2px solid var(--catppuccin-text-color);
+.fade-in-anim {
+    animation: fadeInAnim ease var(--df-hoverOff-phase);
 }
 
 .x-center {
@@ -104,17 +101,24 @@ footer {
     margin-bottom: auto;
 }
 
-.flex-center {
+.flx-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.text-center {
+.txt-center {
     text-align: center;
 }
 
-.def-site-wrapper {
+#site-mask {
+    position: fixed;
+    background-color: #000000b2;
+    min-width: 100%;
+    height: 100%;
+}
+
+.df-site-wrapper {
     display: flex;
     flex-direction: column;
     min-height: inherit;
@@ -122,317 +126,249 @@ footer {
     padding-right: 20px;
 }
 
-/* space at the top of the site for aesthetic */
-.first-top-padding {
-    padding-top: 20px;
+.df-border {
+    border: 2px solid var(--txt-color);
 }
 
 .divider {
     max-width: 1500px;
     width: 100%;
     height: 1px;
-    background-color: var(--catppuccin-text-color);
+    background-color: var(--txt-color);
 }
 
-#lang-switch {
+/*---------------------------------------------------------*/
+
+#lng-switch-btn {
     background: inherit;
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-#navbar {
+.navbar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 0; /* removes whitespace between the links */
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* navbar buttons */
-#navbar > a {
+.navbar a {
     text-decoration: none;
     padding: 8px;
     border-radius: 30px;
     margin: 7px;
     user-select: none;
+    transition: box-shadow ease var(--df-hoverOff-phase);
 }
 
 #navbar__home {
-    border-color: var(--catppuccin-peach);
+    border-color: var(--peach);
 }
 
 #navbar__projects {
-    border-color: var(--catppuccin-maroon);
+    border-color: var(--maroon);
 }
 
 #navbar__contact {
-    border-color: var(--catppuccin-green);
+    border-color: var(--green);
 }
 
 #navbar__github {
-    border-color: var(--catppuccin-flamingo);
+    border-color: var(--flamingo);
 }
 
 #navbar__cv {
-    border-color: var(--catppuccin-teal);
+    border-color: var(--teal);
 }
 
-#card-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    margin: 10px;
-}
-
-.card__content {
-    position: relative; /* make children 'absolute' positions adhere to the parent dimensions on 'inherit' */
-}
-
-.card__content > img {
-    max-width: 450px;
-    max-height: 320px;
-    box-shadow: 0 0 25px 1px #000000;
-    transition: filter ease var(--default-hoverOff-phase);
-}
-
-.card__icons-shadow {
-    position: absolute;
-    z-index: 1;
-    margin-top: 20px;
-    width: 80%;
-    border-radius: 3px;
-    box-shadow: 0 0 50px 40px #000000e3;
-}
-
-.card__icons {
-    opacity: 0;
-    flex-wrap: wrap;
-    position: absolute;
-    transition: opacity ease var(--default-hoverOff-phase);
-    z-index: 1;
-}
-
-.icon {
-    z-index: 2;
-    padding-top: 20px;
-}
-
-.icon > a {
-    font-size: 0; /* removes whitespace between the links */
-}
-
-.icon > a > img {
-    max-height: 70px;
-    max-width: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.icon__hover-bar {
-    opacity: 0;
-    width: 80%;
-    height: 5px;
-    border-radius: 3px;
-    background-color: var(--catppuccin-text-color);
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#main-card {
-    padding: 1.5rem 1rem 1.5rem 1rem;
-    border-radius: 2rem;
-    border-color: var(--catppuccin-lavender);
-    margin: 10px;
-}
-
-#myself {
-    flex-wrap: wrap-reverse;
-}
-
-#myself > img {
-    height: 170px;
-    border-radius: 50%;
-    border-color: var(--catppuccin-yellow);
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#home-text-wrapper {
-    max-width: 530px;
-}
-
-#home-text-wrapper > p {
-    padding-top: 5px;
-}
-
-#contact-wrapper {
-    margin-top: 20px;
-}
-
-#contact-wrapper > a {
-    font-size: 1.5rem;
-}
-
-#sources {
-    background-color: inherit;
+#sources-btn {
     width: fit-content;
     height: fit-content;
     margin-left: 10px;
 }
 
 #sources-window {
-    background-color: var(--catppuccin-background-color);
+    background-color: var(--bg-color);
     position: fixed;
-    bottom: 80px;
     width: fit-content;
-    word-break: keep-all;
     border-radius: 20px;
+    word-break: keep-all;
+    bottom: 20px;
     box-shadow: 0 0 20px 10px #00000070;
+    z-index: 5;
 }
 
-#sources-window__close {
-    background-color: inherit;
+#sources-window__x-btn {
     position: absolute;
     border: unset;
     border-radius: unset;
-    padding: 0;
+    padding: unset;
     top: 0;
     right: 0;
     margin: 10px;
 }
 
-#sources-window > p {
+#sources-window__txt {
     padding: 20px;
 }
 
-#footer-text {
+.footer-txt {
     width: 100%;
     word-wrap: break-word;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/* leaving this here outside the @media hover query, since it works as intended on mobile */
-.card__content:hover > img {
-    filter: blur(4px);
-    transition: filter ease var(--default-hoverOn-phase);
+/*---------------------------------------------------------*/
+
+.idx-card {
+    margin: 10px;
 }
 
-.card__content:hover > .card__icons {
-    opacity: 1;
-    transition: opacity ease var(--default-hoverOn-phase);
+.idx-card h1 {
+    padding: 0px;
 }
 
-/* testing floating-up animation for info-bar */
-.overflow-wrapper {
+.idx-myself {
+    flex-wrap: wrap-reverse;
+}
+
+.idx-myself img {
+    height: 170px;
+    border-radius: 50%;
+    border-color: var(--yellow);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#idx-txt {
+    max-width: 530px;
+}
+
+#idx-txt p {
+    padding-top: 5px;
+}
+
+/*---------------------------------------------------------*/
+
+.proj-card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.proj-card {
+    max-width: 450px;
+    margin: 10px;
+}
+
+.proj-card h3 {
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.proj-card h6 {
+    font-size: 1rem;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+.proj-card__content-overflow {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 0 0 4px 4px;
     overflow: hidden;
 }
 
-.card__icons__overflow {
-    display: flex;
-    position: absolute;
-    bottom: -150px;
-    z-index: 1;
-    transition: bottom ease var(--default-hoverOff-phase);
+.proj-card__content {
+    position: relative; /* make children 'absolute' positions adhere to the parent dimensions on 'inherit' */
 }
 
-.card__content:hover .card__icons__overflow {
-    bottom: 100px;
-    transition: bottom ease var(--default-hoverOn-phase);
-}
-
-.card__content-hint {
+.proj-card__made-for {
     position: absolute;
     width: 100%;
-    height: fit-content;
     border-radius: 0 0 4px 4px;
-    background-color: var(--catppuccin-red);
-    color: #000000;
+    background-color: var(--maroon);
+    color: var(--txt-invert-color);
     bottom: -30px;
-    transition: bottom ease var(--default-hoverOff-phase);
-    font-size: 1.2rem;
+    transition: bottom ease var(--df-hoverOff-phase);
     z-index: 2;
-    box-shadow: 0 0 0 0 #000000;
 }
 
-.card__content:hover .card__content-hint {
-    bottom: 0px;
-    box-shadow: 0 0 10px 1px #000000;
-    transition: bottom ease var(--default-hoverOn-phase);
+.proj-card__content > img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 0 25px 2px #000000;
+    transition: filter ease var(--df-hoverOff-phase);
 }
-/*-----------------------------------------------*/
 
-@media (hover: hover) {
-    button:hover {
-        opacity: 50%;
-    }
-
-    #navbar > a:hover {
-        color: var(--catppuccin-text-invert-color);
-        border-color: 2px solid var(--catppuccin-background-color);
-        transition: box-shadow var(--default-hoverOn-phase);
-        cursor: pointer;
-    }
-
-    #navbar__home:hover {
-        background-color: var(--catppuccin-peach);
-        box-shadow: 0 0 0 4px var(--catppuccin-peach);
-    }
-
-    #navbar__projects:hover {
-        background-color: var(--catppuccin-maroon);
-        box-shadow: 0 0 0 4px var(--catppuccin-maroon);
-    }
-
-    #navbar__contact:hover {
-        background-color: var(--catppuccin-green);
-        box-shadow: 0 0 0 4px var(--catppuccin-green);
-    }
-
-    #navbar__github:hover {
-        background-color: var(--catppuccin-flamingo);
-        box-shadow: 0 0 0 4px var(--catppuccin-flamingo);
-    }
-
-    #navbar__cv:hover {
-        background-color: var(--catppuccin-teal);
-        box-shadow: 0 0 0 4px var(--catppuccin-teal);
-    }
-
-    .icon:hover > .icon__hover-bar {
-        opacity: 1;
-    }
-
-    #sources-window > p > a:hover,
-    #sources-window__close:hover,
-    #contact-wrapper > a:hover,
-    #footer-text > a:hover {
-        color: var(--catppuccin-red);
-        opacity: unset;
-    }
+.proj-card__icons-shadow {
+    position: absolute;
+    margin-top: 20px;
+    width: 80%;
+    box-shadow: 0 0 50px 40px #000000;
+    z-index: 1;
 }
+
+.proj-card__icons {
+    position: absolute;
+    opacity: 0;
+    flex-wrap: wrap;
+    transition: opacity ease var(--df-hoverOff-phase);
+    z-index: 1;
+}
+
+.proj-card__icon {
+    max-width: 70px;
+    max-height: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.proj-card__icon img {
+    max-width: 60px;
+    max-height: 70px;
+    transition: max-width ease var(--df-hoverOn-phase) ;
+}
+
+.proj-card__icon-hover-bar {
+    opacity: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--txt-color);
+    margin-top: 5px;
+}
+
+/*---------------------------------------------------------*/
+
+.contact-wrapper {
+    margin-top: 20px;
+}
+
+.contact-wrapper h2 {
+    font-size: 2rem;
+}
+
+.contact-wrapper a {
+    font-size: 2rem;
+}
+
+/*---------------------------------------------------------*/
 
 /* generic phone displays */
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 2.5rem;
+        padding-top: 50px;
     }
 
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p,
-    a,
-    button {
+    p, a, button {
         font-size: 0.8rem;
     }
 
@@ -441,98 +377,140 @@ footer {
     }
 
     footer {
-        margin-left: -5px;
-        margin-right: -5px;
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
-    .def-site-wrapper {
-        padding-left: 5px;
-        padding-right: 5px;
+    /*---------------------------------------------------------*/
+
+    .df-site-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    #navbar > a {
+    .df-border {
+        border: 1px solid var(--lavender);
+    }
+
+    /*---------------------------------------------------------*/
+
+    .navbar a {
         margin: 5px;
     }
 
-    .def-border {
-        border: 1px solid var(--catppuccin-lavender);
-    }
-
-    #main-card {
-        padding: 15px;
-        margin-top: 50px;
-    }
-
-    .def-site-wrapper > h1 {
-        padding-top: 40px;
-    }
-
-    .card__content > img {
-        max-width: 380px;
-        max-height: 300px;
-    }
-
-    .icon > a > img {
-        max-height: 50px;
-        max-width: 50px;
-    }
-
     #sources-window {
-        bottom: 70px;
-        left: 10px;
+        bottom: 10px;
     }
 
-    #sources-window__close {
-        font-size: 1.1rem;
-        margin-top: 4px;
-    }
+    /*---------------------------------------------------------*/
 
-    .card__icons {
+    .proj-card__icons {
         display: none;
     }
-
-    .card__content:hover > .card__icons {
-        display: flex;
-        transition: opacity ease var(--default-hoverOn-phase);
-    }
-
-	#contact-head-text {
-        font-size: 1.5rem;
-    }
-
-    #contact-sub-text {
-        font-size: 1.1rem;
-    }
-
-	#contact-head-text,
-	#contact-sub-text,
-	#contact-address {
-		padding: 10px;
-	}
-
-	#contact-address {
-		font-size: 1.2rem;
-	}
 }
 
-/* iPhone 12/13 mini displays */
-@media screen and (max-width: 400px) {
-    .card__content > img {
-        max-width: 320px;
-        max-height: 280px;
+    /*---------------------------------------------------------*/
+
+@media screen and (max-width: 430px) {
+    .proj-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .proj-card h6 {
+        font-size: 0.8rem;
     }
 }
 
-/* manually following the footer height
-when author-text wraps */
-@media screen and (max-width: 355px) {
-    #sources-window {
-        bottom: 110px;
-    }
-}
+/*---------------------------------------------------------*/
 
-@media screen and (max-width: 242px) {
-    #sources-window {
-        bottom: 130px;
+@media (hover: hover) {
+    button:hover {
+        opacity: 50%;
+    }
+
+    a:hover {
+        color: var(--red);
+    }
+
+    /*---------------------------------------------------------*/
+
+    .navbar a:hover {
+        color: var(--txt-invert-color);
+        border-color: 2px solid var(--bg-color) !important;
+        transition: box-shadow ease var(--df-hoverOn-phase);
+        cursor: pointer;
+    }
+
+    #navbar__home:hover {
+        background-color: var(--peach);
+        box-shadow: 0 0 0 4px var(--peach);
+    }
+
+    #navbar__projects:hover {
+        background-color: var(--maroon);
+        box-shadow: 0 0 0 4px var(--maroon);
+    }
+
+    #navbar__contact:hover {
+        background-color: var(--green);
+        box-shadow: 0 0 0 4px var(--green);
+    }
+
+    #navbar__github:hover {
+        background-color: var(--flamingo);
+        box-shadow: 0 0 0 4px var(--flamingo);
+    }
+
+    #navbar__cv:hover {
+        background-color: var(--teal);
+        box-shadow: 0 0 0 4px var(--teal);
+    }
+
+    #sources-window__x:hover {
+        color: var(--red);
+    }
+
+    /*---------------------------------------------------------*/
+
+    .proj-card__content:hover > img {
+        filter: blur(5px);
+        transition: filter ease var(--df-hoverOn-phase);
+    }
+
+    .proj-card__content:hover .proj-card__made-for {
+        bottom: 0px;
+        transition: bottom ease var(--df-hoverOn-phase);
+    }
+
+    .proj-card__content:hover .proj-card__icons {
+        opacity: 1;
+        transition: opacity ease var(--df-hoverOn-phase);
+    }
+
+    .proj-card__content:hover .proj-card__icon img {
+        max-width: 70px;
+        transition: max-width ease var(--df-hoverOn-phase) ;
+    }
+
+    .proj-card__icon:hover .proj-card__icon-hover-bar {
+        opacity: 1;
+    }
+
+    /*---------------------------------------------------------*/
+
+    @media screen and (max-width: 450px) {
+        .proj-card__icons {
+            display: flex;
+        }
+
+        .proj-card__icon img {
+            max-width: 50px;
+        }
+
+        /*---------------------------------------------------------*/
+
+        .proj-card__content:hover .proj-card__icon img {
+            max-width: 60px;
+        }
     }
 }

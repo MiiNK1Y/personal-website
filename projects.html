@@ -10,106 +10,120 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <button type="button" id="lang-switch" class="def-border" tabindex="1" onclick="switchLangButton()">language | &#127468&#127463</button>
-        <div class="def-site-wrapper fade-in-animation">
-            <h1 id="projects-header-text" class="text-center first-top-padding">Projects</h1>
-            <div id="navbar">
-                <a id="navbar__home" class="def-border" href="index.html" tabindex="2">home</a>
-                <a id="navbar__projects" class="def-border" tabindex="3">projects</a>
-                <a id="navbar__contact" class="def-border" href="contact.html" tabindex="4">contact</a>
-                <a id="navbar__github" class="def-border" href="https://github.com/MiiNK1Y" target="_blank" tabindex="4">github &#10548;</a>
-                <a id="navbar__cv" class="def-border" href="assets/aleksander-nk-cv.pdf" target="_blank" tabindex="5">curriculum vitae &#10548;</a>
+        <div id="site-mask" style="display: none;"></div> 
+        <button type="button" id="lng-switch-btn" class="df-border" tabindex="1">language | &#127468&#127463</button>
+        <div class="df-site-wrapper fade-in-anim" style="z-index: 0;">
+            <h1 id="projects-header-txt" class="txt-center">Projects</h1>
+
+            <div class="navbar">
+                <a id="navbar__home" class="df-border" href="index.html" tabindex="2">home</a>
+                <a id="navbar__projects" class="df-border" tabindex="3">projects</a>
+                <a id="navbar__contact" class="df-border" href="contact.html" tabindex="4">contact</a>
+                <a id="navbar__github" class="df-border" href="https://github.com/MiiNK1Y" target="_blank" tabindex="5">github &#10548;</a>
+                <a id="navbar__cv" class="df-border" href="assets/aleksander-nk-cv.pdf" target="_blank" tabindex="6">curriculum vitae &#10548;</a>
             </div>
+
             <div class="divider x-center"></div>
-            <div id="card-container" class="flex-center">
-                <div class="card">
-                    <div class="flex-center">
-                        <h5 style="margin: 0; padding: 0; z-index: 1;">(work)</h5>
-                        <h2 style="z-index: 1; padding-left: 5px;">AKSOSPM</h2>
+
+            <div class="proj-card-container flx-center">
+                <div class="proj-card">
+                    <div class="flx-center">
+                        <h6>(work)</h6>
+                        <h3>AKSOSPM</h3>
                     </div>
-                    <div class="card__content flex-center">
-                        <div class="overflow-wrapper flex-center">
-                            <div class="card__content-hint text-center">Made for: Windows, MacOS & Linux</div>
+                    <div class="proj-card__content flx-center">
+                        <div class="proj-card__content-overflow">
+                            <div class="proj-card__made-for txt-center">Made for: Windows, MacOS & Linux</div>
                         </div>
-                        <div class="card__icons flex-center">
-                            <div class="card__icons-shadow"></div>
-                            <div class="icon">
-                                <a tabindex="-1" href="https://github.com/MiiNK1Y/akso-sn-po-merger/archive/refs/tags/v1.1.zip" download=""><img src="assets/img/icons/download.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                        <div class="proj-card__icons flx-center">
+                            <div class="proj-card__icons-shadow"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/download.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a tabindex="-1" href="https://github.com/MiiNK1Y/akso-sn-po-merger" target="_blank"><img src="assets/img/icons/github.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a tabindex="-1" href="https://github.com/MiiNK1Y/akso-sn-po-merger/blob/main/README.md" target="_blank"><img src="assets/img/icons/information.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
                         </div>
                         <img src="projects/AKSOSPM/thumbnail.png" />
                     </div>
                 </div>
-                <div class="card">
-                    <div class="flex-center"">
-                        <h5 style="margin: 0; padding: 0; z-index: 1;">(exercise)</h5>
-                        <h2 style="z-index: 1; padding-left: 5px;">Rock Paper Scissors</h2>
+
+                <div class="proj-card">
+                    <div class="flx-center">
+                        <h6>(exercise)</h6>
+                        <h3>Rock Paper Scissors</h3>
                     </div>
-                    <div class="card__content flex-center">
-                        <img src="projects/Rock-paper-scissors/thumbnail.png" />
-                        <div class="card__icons flex-center">
-                            <div class="card__icons-shadow"></div>
-                            <div class="icon">
-                                <a href="projects/Rock-paper-scissors/index.html" target="_blank"><img src="assets/img/icons/arrow.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                    <div class="proj-card__content flx-center">
+                        <div class="proj-card__content-overflow">
+                            <div class="proj-card__made-for txt-center">Made for: Web</div>
+                        </div>
+                        <div class="proj-card__icons flx-center">
+                            <div class="proj-card__icons-shadow"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a href="https://github.com/MiiNK1Y" target="_blank"><img src="assets/img/icons/github.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
                         </div>
+                        <img src="projects/Rock-paper-scissors/thumbnail.png" />
                     </div>
                 </div>
-                <div class="card">
-                    <div class="flex-center">
-                        <h5 style="margin: 0; padding: 0; z-index: 1;">(submission)</h5>
-                        <h2 style="z-index: 1; padding-left: 5px;">Number Shuffle</h2>
+
+                <div class="proj-card">
+                    <div class="flx-center">
+                        <h6>(submission)</h6>
+                        <h3>Number Shuffle</h3>
                     </div>
-                    <div class="card__content flex-center">
-                        <img src="projects/GET_Academy_Submission/thumbnail.png" />
-                        <div class="card__icons flex-center">
-                            <div class="card__icons-shadow"></div>
-                            <div class="icon">
-                                <a href="projects/GET_Academy_Submission/Opptaksoppgave.html" target="_blank"><img src="assets/img/icons/arrow.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                    <div class="proj-card__content flx-center">
+                        <div class="proj-card__content-overflow">
+                            <div class="proj-card__made-for txt-center">Made for: Web</div>
+                        </div>
+                        <div class="proj-card__icons flx-center">
+                            <div class="proj-card__icons-shadow"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/arrow.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a href="https://github.com/MiiNK1Y" target="_blank"><img src="assets/img/icons/github.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/github.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
-                            <div class="icon">
-                                <a href="https://google.com"><img src="assets/img/icons/information.png" /></a>
-                                <div class="icon__hover-bar x-center"></div>
+                            <div class="proj-card__icon">
+                                <a tabindex="-1" href="google.com"><img src="assets/img/icons/information.png" /></a>
+                                <div class="proj-card__icon-hover-bar x-center"></div>
                             </div>
                         </div>
+                        <img src="projects/GET_Academy_Submission/thumbnail.png" />
                     </div>
                 </div>
             </div>
+
             <div id="sources-window" style="display: none;">
-                <button id="sources-window__close" onclick="hideSources()">&#10005;</button>
-                <p id="sources-window-text">
+                <button id="sources-window__x-btn">&#10005;</button>
+                <p id="sources-window__txt">
                     Font: <a href="https://fonts.google.com/specimen/Nunito?query=Nunito" target="_blank">Nunito</a><br>
                     Project icons: <a href="https://www.svgrepo.com" target="_blank">svgrepo.com</a><br>
                     Colorscheme: <a href="https://catppuccin.com/palette" target="_blank">Catppuccin</a>
                 </p>
             </div>
+
             <footer>
-                <button type="button" id="sources" class="def-border y-center" onclick="showSources()">sources</button>
-                <div id="footer-text" class="text-center x-center">
-                    <p id="footer-author-text">Author: Aleksander N. Knoph</p>
+                <button type="button" id="sources-btn" class="df-border y-center">sources</button>
+                <div class="footer-txt txt-center x-center">
+                    <p id="footer-author-txt">Author: Aleksander N. Knoph</p>
                     <div class="divider x-center"></div>
                     <a href="mailto:alnyk@protonmail.com">alnyk@protonmail.com</a>
                 </div>
