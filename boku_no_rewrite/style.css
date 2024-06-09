@@ -3,6 +3,7 @@
     src: url(assets/fonts/Nunito/Nunito-VariableFont_wght.ttf) format("truetype");
 }
 
+/* fade-in when changing page. */
 @keyframes fadeInAnim {
     0% {
         opacity: 0;
@@ -238,11 +239,11 @@ footer {
     margin-right: 20px;
 }
 
-#idx-txt-wrapper {
+#idx-txt {
     max-width: 530px;
 }
 
-#idx-txt-wrapper p {
+#idx-txt p {
     padding-top: 5px;
 }
 
@@ -300,16 +301,6 @@ footer {
     transition: filter ease var(--df-hoverOff-phase);
 }
 
-.proj-card__content:hover > img {
-    filter: blur(5px);
-    transition: filter ease var(--df-hoverOn-phase);
-}
-
-.proj-card__content:hover .proj-card__made-for {
-    bottom: 0px;
-    transition: bottom ease var(--df-hoverOn-phase);
-}
-
 .proj-card__icons-shadow {
     position: absolute;
     margin-top: 20px;
@@ -326,11 +317,6 @@ footer {
     z-index: 1;
 }
 
-.proj-card__content:hover .proj-card__icons {
-    opacity: 1;
-    transition: opacity ease var(--df-hoverOn-phase);
-}
-
 .proj-card__icon {
     max-width: 70px;
     max-height: 80px;
@@ -345,11 +331,6 @@ footer {
     transition: max-width ease var(--df-hoverOn-phase) ;
 }
 
-.proj-card__content:hover .proj-card__icon img {
-    max-width: 70px;
-    transition: max-width ease var(--df-hoverOn-phase) ;
-}
-
 .proj-card__icon-hover-bar {
     opacity: 0;
     width: 100%;
@@ -359,8 +340,24 @@ footer {
     margin-top: 5px;
 }
 
-.proj-card__icon:hover .proj-card__icon-hover-bar {
+.proj-card__content:hover > img {
+    filter: blur(5px);
+    transition: filter ease var(--df-hoverOn-phase);
+}
+
+.proj-card__content:hover .proj-card__made-for {
+    bottom: 0px;
+    transition: bottom ease var(--df-hoverOn-phase);
+}
+
+.proj-card__content:hover .proj-card__icons {
     opacity: 1;
+    transition: opacity ease var(--df-hoverOn-phase);
+}
+
+.proj-card__content:hover .proj-card__icon img {
+    max-width: 70px;
+    transition: max-width ease var(--df-hoverOn-phase) ;
 }
 
 /*---------------------------------------------------------*/
@@ -473,6 +470,10 @@ footer {
     #navbar__cv:hover {
         background-color: var(--teal);
         box-shadow: 0 0 0 4px var(--teal);
+    }
+
+    .proj-card__icon:hover .proj-card__icon-hover-bar {
+        opacity: 1;
     }
 
     #sources-window a:hover,
