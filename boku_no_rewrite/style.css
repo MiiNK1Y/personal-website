@@ -191,6 +191,7 @@ footer {
     word-break: keep-all;
     bottom: 80px;
     box-shadow: 0 0 20px 10px #00000070;
+    z-index: 1;
 }
 
 #sources-window__x-btn {
