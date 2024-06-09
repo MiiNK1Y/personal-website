@@ -111,6 +111,13 @@ footer {
     text-align: center;
 }
 
+#site-mask {
+    position: fixed;
+    background-color: #000000b2;
+    min-width: 100%;
+    height: 100%;
+}
+
 .df-site-wrapper {
     display: flex;
     flex-direction: column;
@@ -189,9 +196,9 @@ footer {
     width: fit-content;
     border-radius: 20px;
     word-break: keep-all;
-    bottom: 80px;
+    bottom: 20px;
     box-shadow: 0 0 20px 10px #00000070;
-    z-index: 1;
+    z-index: 5;
 }
 
 #sources-window__x-btn {
@@ -401,7 +408,7 @@ footer {
     }
 
     #sources-window {
-        bottom: 70px;
+        bottom: 10px;
     }
 
 /*---------------------------------------------------------*/

@@ -144,11 +144,16 @@ function switchLangButton() {
 }
 
 var showSources = function() {
+    let sourcesWindowMask = document.getElementById("site-mask");
     let sourcesWindow = document.getElementById("sources-window");
     if (sourcesWindow.style.display == "none") {
         sourcesWindow.style.display = "flex";
+        sourcesWindowMask.style.display = "block";
+        sourcesWindowMask.style.zIndex = "4";
     } else {
         sourcesWindow.style.display = "none";
+        sourcesWindowMask.style.display = "none";
+        sourcesWindowMask.style.zIndex = "unset";
     }
 }
 
@@ -162,4 +167,7 @@ if (document.URL.includes("index.html")) {
 
     var sourcesXButton = document.getElementById("sources-window__x-btn");
     sourcesXButton.addEventListener("click", showSources, false);
+
+    var siteMask = document.getElementById("site-mask");
+    siteMask.addEventListener("click", showSources, false);
 }
