@@ -509,7 +509,7 @@ footer {
         box-shadow: 0 0 0 4px var(--teal);
     }
 
-    #sources-window__x:hover {
+    #sources-window__x-btn:hover {
         color: var(--red);
     }
 
