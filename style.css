@@ -301,6 +301,7 @@ footer {
     border-radius: 0 0 4px 4px;
     background-color: var(--maroon);
     color: var(--txt-invert-color);
+    text-wrap: nowrap;
     bottom: -30px;
     transition: bottom ease var(--df-hoverOff-phase);
     z-index: 2;
