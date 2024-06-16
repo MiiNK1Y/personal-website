@@ -571,8 +571,6 @@ footer {
             max-width: 50px;
         }
 
-        /*---------------------------------------------------------*/
-
         .proj-card__content:hover .proj-card__icon img {
             max-width: 60px;
         }
