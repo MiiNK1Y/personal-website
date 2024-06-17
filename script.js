@@ -32,7 +32,11 @@ function setLang(
         document.getElementById("sources-btn").innerHTML = sourcesButton;
         document.getElementById("sources-window__txt").innerHTML = sourcesText;
         document.getElementById("footer-author-txt").innerHTML = footerText;
-    }
+    } else {
+		// if none of the above works, that means the url field does not include them,
+		// meaning they are on index.html, since that is what is shown when visiting the site.
+        document.getElementById("idx-txt").innerHTML = homeText;
+	}
 }
 
 function setLangEng() {
@@ -123,7 +127,6 @@ function setLangNor() {
 
 let langSet = localStorage.getItem("language");
 if (langSet == null) {
-    console.log("First time visitor, welcome! Setting default language: English.");
     localStorage.setItem("language", "eng");
 } else if (langSet == "nor") {
     setLangNor();

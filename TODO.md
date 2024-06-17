@@ -4,3 +4,5 @@
 - [ ] apparently the "*" to set site-wide font is inefficient, fix that.
 
 - [ ] set the Safari-specific font only on the items that need them, the other should have the default font. (buttons need the the Safari-specific, but email can keep the default font).
+
+- [ ] language button does not work for first-time visitors for some reason. fix that.
