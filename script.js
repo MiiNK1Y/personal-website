@@ -1,10 +1,10 @@
 function setLang(
-    // always available
+    // always available.
     langButton,
     navbarButtonHome,
     navbarButtonProjects,
     navbarButtonContact,
-    // maybe available
+    // maybe available.
     homeText,
     projectsHeader,
     contactHeader,
@@ -13,12 +13,12 @@ function setLang(
     sourcesText,
     footerText
 ) {
-    // present on all pages
+    // present on all pages.
     document.getElementById("lng-switch-btn").innerHTML = langButton;
     document.getElementById("navbar__home").innerHTML = navbarButtonHome;
     document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
     document.getElementById("navbar__contact").innerHTML = navbarButtonContact;
-    // try these if they are present, skip if not
+    // try these if they are present, skip if not.
     if (document.URL.includes("index.html")) {
         document.getElementById("idx-txt").innerHTML = homeText;
     } else if (document.URL.includes("projects.html")) {
@@ -40,7 +40,7 @@ function setLang(
 }
 
 function setLangEng() {
-    // swap the set localStorage language
+    // swap the set localStorage language.
     localStorage.setItem("language", "eng");
 
     const homeTextEng = `
@@ -66,12 +66,12 @@ function setLangEng() {
     const langButtonEng = "language | &#127468;&#127463;";
 
     setLang(
-        // always available
+        // always available.
         langButtonEng,
         navbarButtonHomeEng,
         navbarButtonProjectsEng,
         navbarButtonContactEng,
-        // maybe available
+        // maybe available.
         homeTextEng,
         projectsHeaderEng,
         contactHeaderEng,
@@ -83,7 +83,7 @@ function setLangEng() {
 }
 
 function setLangNor() {
-    // swap the set localStorage language
+    // swap the set localStorage language.
     localStorage.setItem("language", "nor");
 
     const homeTextNor = `
@@ -109,12 +109,12 @@ function setLangNor() {
     const langButtonNor = "språk | &#127475;&#127476;";
 
     setLang(
-        // always available
+        // always available.
         langButtonNor,
         navbarButtonHomeNor,
         navbarButtonProjectsNor,
         navbarButtonContactNor,
-        // maybe available
+        // maybe available.
         homeTextNor,
         projectsHeaderNor,
         contactHeaderNor,
@@ -125,6 +125,7 @@ function setLangNor() {
     );
 }
 
+// using setting localStorage key value.
 let langSet = localStorage.getItem("language");
 if (langSet == null) {
     localStorage.setItem("language", "eng");
@@ -132,6 +133,7 @@ if (langSet == null) {
     setLangNor();
 }
 
+// setting up language button functionality.
 var langButton = document.getElementById("lng-switch-btn");
 langButton.addEventListener("click", function () {
     let curLang = localStorage.getItem("language");
@@ -142,6 +144,7 @@ langButton.addEventListener("click", function () {
     }
 });
 
+// setting up event listeners for the "source" button functionality.
 let curPageProjects = document.URL.includes("projects.html");
 let curPageContact = document.URL.includes("contact.html");
 if (curPageProjects || curPageContact) {
@@ -164,3 +167,4 @@ if (curPageProjects || curPageContact) {
     sourcesXButton.addEventListener("click", displaySources);
     siteMask.addEventListener("click", displaySources);
 }
+
