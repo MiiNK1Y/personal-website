@@ -19,9 +19,7 @@ function setLang(
     document.getElementById("navbar__projects").innerHTML = navbarButtonProjects;
     document.getElementById("navbar__contact").innerHTML = navbarButtonContact;
     // try these if they are present, skip if not.
-    if (document.URL.includes("index.html")) {
-        document.getElementById("idx-txt").innerHTML = homeText;
-    } else if (document.URL.includes("projects.html")) {
+	if (document.URL.includes("projects.html")) {
         document.getElementById("projects-header-txt").innerHTML = projectsHeader;
         document.getElementById("sources-btn").innerHTML = sourcesButton;
         document.getElementById("sources-window__txt").innerHTML = sourcesText;
@@ -34,7 +32,8 @@ function setLang(
         document.getElementById("footer-author-txt").innerHTML = footerText;
     } else {
 		// if none of the above works, that means the url field does not include them,
-		// meaning they are on index.html, since that is what is shown when visiting the site.
+		// meaning they are on index.html, since that is what is shown when visiting the site,
+		// although it is not visible in the url, which is supposed to happen.
         document.getElementById("idx-txt").innerHTML = homeText;
 	}
 }

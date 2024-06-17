@@ -10,4 +10,5 @@
 
 - [x] language button does not work for first-time visitors for some reason. fix that.
 
-- [ ] android (old, atleast) thinks they are desktops, and has the 'hover' query figured out... So buttons and links are 'hovered' when clicked... fix that.
+- [!] android (old, atleast) thinks they are desktops, and has the 'hover' query figured out... So buttons and links are 'hovered' when clicked... fix that.
+    - this should be fixed with the inclusion of "(pointer: fine)", but remains to be tested (19:33 17.06.2024).
