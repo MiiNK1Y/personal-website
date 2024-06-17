@@ -15,3 +15,6 @@
 
 - [!] iPad in horizontal mode makes project-icons not tappable, but shows okey in vertical mode.
     - this should be fixed with the inclusion of "(hover: none) and (eny-pointer: coarse)", but remains to be tested (21:49 17.06.2024).
+
+- [!] Samsung still got problems with "hovering" on project cards. Card icons are there but are 'opacity: 0;'. How to fix?
+    - now the icons should not be able to be accidentally tapped, added 'pointer-events: none;' rules.

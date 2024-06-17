@@ -346,6 +346,7 @@ footer {
     flex-wrap: wrap;
     transition: opacity ease var(--df-hoverOff-phase);
     z-index: 1;
+    pointer-events: none; /* should fix accidental touch on icons if they don't show. */
 }
 
 .proj-card__icon {
@@ -391,11 +392,6 @@ footer {
 /* mobile & touch devices stuff */
 
 @media (hover: none) and (any-pointer: coarse) {
-	.proj-card__icons {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	.proj-card__content:focus-within > img {
 		filter: blur(5px);
 	}
@@ -583,6 +579,7 @@ fixing the hover issue. */
     .proj-card__content:hover .proj-card__icons {
         opacity: 1;
         transition: opacity ease var(--df-hoverOn-phase);
+        pointer-events: auto;
     }
 
     .proj-card__content:hover .proj-card__icon img {
