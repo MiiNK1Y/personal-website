@@ -9,3 +9,5 @@
     - Ignored for now, since things are working well. If it aint broken...
 
 - [x] language button does not work for first-time visitors for some reason. fix that.
+
+- [ ] android (old, atleast) thinks they are desktops, and has the 'hover' query figured out... So buttons and links are 'hovered' when clicked... fix that.

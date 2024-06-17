@@ -511,7 +511,8 @@ footer {
 
 /*---------------------------------------------------------*/
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) { /* 'pointer: fine' should make 
+	Samsung devices ignore this query, fixing the hover issue. */
     button:hover {
         opacity: 50%;
     }
