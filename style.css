@@ -381,29 +381,27 @@ footer {
 
 /* For mobile & touch devices */
 @media (pointer: coarse) {
-    @media screen and (max-width: 900px) {
-        .proj-card__icons {
-            opacity: 0;
-            pointer-events: none;
-        }
+	.proj-card__icons {
+		opacity: 0;
+		pointer-events: none;
+	}
 
-        .proj-card__content:focus-within > img {
-            filter: blur(5px);
-        }
+	.proj-card__content:focus-within > img {
+		filter: blur(5px);
+	}
 
-        .proj-card__content:focus-within .proj-card__made-for {
-            bottom: 0px;
-        }
+	.proj-card__content:focus-within .proj-card__made-for {
+		bottom: 0px;
+	}
 
-        .proj-card__content:focus-within .proj-card__icons {
-            opacity: 1;
-            pointer-events: auto;
-        }
+	.proj-card__content:focus-within .proj-card__icons {
+		opacity: 1;
+		pointer-events: auto;
+	}
 
-        .proj-card__content:focus-within .proj-card__icon img {
-            max-width: 70px;
-        }
-    }
+	.proj-card__content:focus-within .proj-card__icon img {
+		max-width: 70px;
+	}
 }
 
 /*---------------------------------------------------------*/
