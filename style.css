@@ -94,6 +94,7 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* meta stuff */
 
 .fade-in-anim {
     animation: fadeInAnim ease var(--df-hoverOff-phase);
@@ -146,6 +147,7 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* site-wide stuff */
 
 #lng-switch-btn {
     background: inherit;
@@ -230,7 +232,13 @@ footer {
     padding-bottom: 10px;
 }
 
+.ver-ctrl {
+    text-align: right;
+    margin-right: 10px;
+}
+
 /*---------------------------------------------------------*/
+/* index.html stuff */
 
 .idx-card {
     margin: 10px;
@@ -268,6 +276,7 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* projects.html stuff */
 
 .proj-card-container {
     margin-top: 20px;
@@ -363,6 +372,7 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* contact.html stuff */
 
 .contact-wrapper {
     margin-top: 20px;
@@ -378,9 +388,9 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* mobile & touch devices stuff */
 
-/* For mobile & touch devices */
-@media (pointer: coarse) {
+@media (hover: none) and (any-pointer: coarse) {
 	.proj-card__icons {
 		opacity: 0;
 		pointer-events: none;
@@ -405,6 +415,7 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* thin display desktop stuff */
 
 @media screen and (max-width: 534px) {
     #idx-txt {
@@ -412,17 +423,16 @@ footer {
         text-align: center;
     }
 
-/*---------------------------------------------------------*/
+	/*---------------------------------------------------------*/
 
     .proj-card__name {
         text-wrap: wrap;
     }
-
 }
 
 /*---------------------------------------------------------*/
+/* generic phone display stuff */
 
-/* generic phone displays */
 @media screen and (max-width: 450px) {
     h1 {
         font-size: 2.5rem;
@@ -508,9 +518,10 @@ footer {
 }
 
 /*---------------------------------------------------------*/
+/* 'pointer: fine' should make Samsung devices ignore this query,
+fixing the hover issue. */
 
-@media (hover: hover) and (pointer: fine) { /* 'pointer: fine' should make 
-	Samsung devices ignore this query, fixing the hover issue. */
+@media (hover: hover) and (pointer: fine) { 
     button:hover {
         opacity: 50%;
     }

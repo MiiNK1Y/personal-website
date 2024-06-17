@@ -13,4 +13,5 @@
 - [!] android (old, atleast) thinks they are desktops, and has the 'hover' query figured out... So buttons and links are 'hovered' when clicked... fix that.
     - this should be fixed with the inclusion of "(pointer: fine)", but remains to be tested (19:33 17.06.2024).
 
-- [ ] iPad in horizontal mode makes project-icons not tappable, but shows okey in vertical mode.
+- [!] iPad in horizontal mode makes project-icons not tappable, but shows okey in vertical mode.
+    - this should be fixed with the inclusion of "(hover: none) and (eny-pointer: coarse)", but remains to be tested (21:49 17.06.2024).

@@ -1,6 +1,10 @@
 {
     "liveServer.settings.port": 5501,
     "cSpell.words": [
-        "catppuccin"
-    ]
+        "AKSOSPM",
+        "catppuccin",
+        "svgrepo",
+        "wght"
+    ],
+    "workbench.colorTheme": "Catppuccin Noctis Mocha",
 }
